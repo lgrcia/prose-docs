@@ -120,8 +120,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/quickstart.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../core.html">What is a pipeline?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../blocks.html">Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api.html">Objects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api.html#pipelines">Pipelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
@@ -170,10 +169,22 @@
 <li><p><strong>n</strong> (<em>int, optional</em>) – max number of stars to show, by default None,</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>AssertionError</strong> – [description]</p>
-</dd>
 </dl>
+<p class="rubric">Example</p>
+<div class="jupyter_cell jupyter_container docutils container">
+<div class="cell_input code_cell docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">Observation</span>
+<span class="kn">from</span> <span class="nn">prose.tutorials</span> <span class="kn">import</span> <span class="n">example_phot</span>
+
+<span class="n">obs</span> <span class="o">=</span> <span class="n">Observation</span><span class="p">(</span><span class="n">example_phot</span><span class="p">)</span>
+<span class="n">obs</span><span class="o">.</span><span class="n">show_stars</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/prose.Observation.show_stars_0_01.png" src="../_images/prose.Observation.show_stars_0_01.png" />
+</div>
+</div>
 </dd></dl>
 
 </section>

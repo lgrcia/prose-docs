@@ -18,8 +18,6 @@
       ~Observation.binn
       ~Observation.broeg2005
       ~Observation.compute_bjd
-      ~Observation.compute_psf_model
-      ~Observation.convert_flip
       ~Observation.copy
       ~Observation.diff
       ~Observation.dm_bic
@@ -31,21 +29,17 @@
       ~Observation.load
       ~Observation.lstsq
       ~Observation.mask
-      ~Observation.mask_transits
       ~Observation.noise_stats
       ~Observation.pick_best_aperture
       ~Observation.plate_solve
       ~Observation.plot
-      ~Observation.plot_circle
       ~Observation.plot_comps_lcs
       ~Observation.plot_detrended
-      ~Observation.plot_flip
       ~Observation.plot_meridian_flip
       ~Observation.plot_precision
       ~Observation.plot_psf_model
       ~Observation.plot_radial_psf
       ~Observation.plot_raw_diff
-      ~Observation.plot_rms
       ~Observation.plot_systematics
       ~Observation.plot_systematics_signal
       ~Observation.polynomial
@@ -53,7 +47,6 @@
       ~Observation.pont2006
       ~Observation.query_catalog
       ~Observation.query_tic
-      ~Observation.radec_to_pixel
       ~Observation.save
       ~Observation.set_attribute
       ~Observation.set_catalog_target
@@ -89,6 +82,7 @@
       ~Observation.raw_flux
       ~Observation.simbad
       ~Observation.simbad_url
+      ~Observation.stack
       ~Observation.target
       ~Observation.tfop_prefix
       ~Observation.tic_id

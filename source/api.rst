@@ -3,6 +3,8 @@
 API
 ===
 
+.. currentmodule:: prose
+
 Objects
 ---------
 
@@ -11,12 +13,12 @@ Objects
    :nosignatures:
    :template: class.rst
 
-   ~prose.Image
-   ~prose.Block
-   ~prose.Sequence
-   ~prose.Telescope
-   ~prose.FitsManager
-   ~prose.Observation
+   Image
+   Block
+   Sequence
+   Telescope
+   FitsManager
+   Observation
 
 Pipelines
 ---------
@@ -26,5 +28,15 @@ Pipelines
    :nosignatures:
    :template: class.rst
 
-   ~prose.pipeline.Calibration
-   ~prose.pipeline.AperturePhotometry
+   pipeline.Calibration
+   pipeline.AperturePhotometry
+
+Other
+---------
+
+.. autosummary::
+   :toctree: generated/
+   :nosignatures:
+   :template: class.rst
+
+   fluxes.ApertureFluxes

@@ -120,8 +120,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/quickstart.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../core.html">What is a pipeline?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../blocks.html">Blocks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api.html">Objects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api.html#pipelines">Pipelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
@@ -236,7 +235,7 @@ night: 1955-11-22
 <dd><p>Copy of image object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>data</strong> (<em>bool, optional</em>) – wether to copy data, by default True</p>
+<dd class="field-odd"><p><strong>data</strong> (<em>bool, optional</em>) – whether to copy data, by default True</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>copied object</p>
@@ -400,10 +399,10 @@ night: 1955-11-22
 <li><p><strong>cmap</strong> (<em>str, optional</em>) – matplotlib colormap, by default “Greys_r”</p></li>
 <li><p><strong>ax</strong> (<em>subplot, optional</em>) – matplotlbib Axes in which to plot, by default None</p></li>
 <li><p><strong>figsize</strong> (<em>tuple, optional</em>) – matplotlib figure size if ax not sepcified, by default (10,10)</p></li>
-<li><p><strong>stars</strong> (<em>bool, optional</em>) – wether to show <code class="docutils literal notranslate"><span class="pre">Image.stars_coords</span></code>, by default None</p></li>
-<li><p><strong>stars_labels</strong> (<em>bool, optional</em>) – wether top show stars indexes, by default True</p></li>
-<li><p><strong>zscale</strong> (<em>bool, optional</em>) – wether to apply a z scale to plotted image data, by default False</p></li>
-<li><p><strong>frame</strong> (<em>bool, optional</em>) – wether to show astronomical coordinates axes, by default False</p></li>
+<li><p><strong>stars</strong> (<em>bool, optional</em>) – whether to show <code class="docutils literal notranslate"><span class="pre">Image.stars_coords</span></code>, by default None</p></li>
+<li><p><strong>stars_labels</strong> (<em>bool, optional</em>) – whether top show stars indexes, by default True</p></li>
+<li><p><strong>zscale</strong> (<em>bool, optional</em>) – whether to apply a z scale to plotted image data, by default False</p></li>
+<li><p><strong>frame</strong> (<em>bool, optional</em>) – whether to show astronomical coordinates axes, by default False</p></li>
 <li><p><strong>contrast</strong> (<em>float, optional</em>) – image contrast used in image scaling, by default 0.1</p></li>
 </ul>
 </dd>
@@ -489,7 +488,7 @@ night: 1955-11-22
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – catalog name as stored in :py:class:Image.catalog`</p></li>
 <li><p><strong>color</strong> (<em>str, optional</em>) – color of stars markers, by default “y”</p></li>
-<li><p><strong>label</strong> (<em>bool, optional</em>) – wether to show stars catalogs ids, by default False</p></li>
+<li><p><strong>label</strong> (<em>bool, optional</em>) – whether to show stars catalogs ids, by default False</p></li>
 <li><p><strong>n</strong> (<em>int, optional</em>) – number of brightest catalog stars to show, by default 100000</p></li>
 </ul>
 </dd>
@@ -499,7 +498,7 @@ night: 1955-11-22
 <dl class="py property">
 <dt class="sig sig-object py" id="prose.Image.plate_solved">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">plate_solved</span></span><a class="headerlink" href="#prose.Image.plate_solved" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return wether the image is plate solved</p>
+<dd><p>Return whether the image is plate solved</p>
 </dd></dl>
 
 </dd></dl>
@@ -511,8 +510,8 @@ night: 1955-11-22
 <p>Reading, processing and writing <a class="reference internal" href="../generated/prose.Image.html#prose.Image" title="prose.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a> attributes. When placed in a sequence, it goes through two steps:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p><a class="reference internal" href="#prose.Block.run" title="prose.Block.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a> on each image fed to the <a class="reference internal" href="#prose.Sequence" title="prose.Sequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a></p></li>
-<li><p><a class="reference internal" href="#prose.Block.terminate" title="prose.Block.terminate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">terminate()</span></code></a> called after the <a class="reference internal" href="#prose.Sequence" title="prose.Sequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a> is terminated</p></li>
+<li><p><a class="reference internal" href="../generated/prose.Block.run.html#prose.Block.run" title="prose.Block.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a> on each image fed to the <a class="reference internal" href="../generated/prose.Sequence.html#prose.Sequence" title="prose.Sequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a></p></li>
+<li><p><a class="reference internal" href="../generated/prose.Block.terminate.html#prose.Block.terminate" title="prose.Block.terminate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">terminate()</span></code></a> called after the <a class="reference internal" href="../generated/prose.Sequence.html#prose.Sequence" title="prose.Sequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a> is terminated</p></li>
 </ol>
 </div></blockquote>
 <dl class="field-list simple">
@@ -537,7 +536,7 @@ night: 1955-11-22
 <dl class="py method">
 <dt class="sig sig-object py" id="prose.Block.terminate">
 <span class="sig-name descname"><span class="pre">terminate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#prose.Block.terminate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Method called after block’s <a class="reference internal" href="#prose.Sequence" title="prose.Sequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a> is finished (if any)</p>
+<dd><p>Method called after block’s <a class="reference internal" href="../generated/prose.Sequence.html#prose.Sequence" title="prose.Sequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a> is finished (if any)</p>
 </dd></dl>
 
 </dd></dl>

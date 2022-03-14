@@ -442,7 +442,8 @@ section#api code {
     display: none;
 }
 
-img.align-center {
+img.align-center,
+img {
     display: block;
     margin: auto;
     margin: 30px auto 30px auto;

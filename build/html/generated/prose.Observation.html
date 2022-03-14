@@ -122,16 +122,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/quickstart.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../core.html">What is a pipeline?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../blocks.html">Blocks</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../api.html">Objects</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="prose.Image.html">prose.Image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.Block.html">prose.Block</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.Sequence.html">prose.Sequence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.Telescope.html">prose.Telescope</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.FitsManager.html">prose.FitsManager</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">prose.Observation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#objects">Objects</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="prose.Image.html">prose.Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prose.Block.html">prose.Block</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prose.Sequence.html">prose.Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prose.Telescope.html">prose.Telescope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prose.FitsManager.html">prose.FitsManager</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">prose.Observation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../api.html#pipelines">Pipelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#pipelines">Pipelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#other">Other</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
@@ -200,12 +204,6 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.compute_bjd.html#prose.Observation.compute_bjd" title="prose.Observation.compute_bjd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_bjd</span></code></a>([version])</p></td>
 <td><p>Compute BJD_tdb based on current time</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.compute_psf_model.html#prose.Observation.compute_psf_model" title="prose.Observation.compute_psf_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_psf_model</span></code></a>([star, size, model])</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.convert_flip.html#prose.Observation.convert_flip" title="prose.Observation.convert_flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_flip</span></code></a>(keyword)</p></td>
-<td><p></p></td>
-</tr>
 <tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.copy.html#prose.Observation.copy" title="prose.Observation.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
 <td><p></p></td>
 </tr>
@@ -222,13 +220,13 @@
 <td><p>Align all differential fluxes using a step model of the meridian flip</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.folder_to_phot.html#prose.Observation.folder_to_phot" title="prose.Observation.folder_to_phot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">folder_to_phot</span></code></a>([confirm])</p></td>
-<td><p></p></td>
+<td><p>replace all the <code class="docutils literal notranslate"><span class="pre">phot</span></code> file parent folder content by the <code class="docutils literal notranslate"><span class="pre">phot</span></code> file</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.keep_good_stars.html#prose.Observation.keep_good_stars" title="prose.Observation.keep_good_stars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keep_good_stars</span></code></a>([lower_threshold, ...])</p></td>
 <td><p>Keep only  stars with a median flux higher than <a href="#id1"><span class="problematic" id="id2">`</span></a>threshold`*sky.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.lc_widget.html#prose.Observation.lc_widget" title="prose.Observation.lc_widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lc_widget</span></code></a>([width])</p></td>
-<td><p></p></td>
+<td><p>[notebook/jupyter feature] displays a widget to play with light curve aperture and binning</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.load.html#prose.Observation.load" title="prose.Observation.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>(filepath)</p></td>
 <td><p></p></td>
@@ -239,23 +237,17 @@
 <tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.mask.html#prose.Observation.mask" title="prose.Observation.mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask</span></code></a>(mask[, dim])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.mask_transits.html#prose.Observation.mask_transits" title="prose.Observation.mask_transits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_transits</span></code></a>(epoch, period, duration)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.noise_stats.html#prose.Observation.noise_stats" title="prose.Observation.noise_stats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">noise_stats</span></code></a>([bins, verbose])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.noise_stats.html#prose.Observation.noise_stats" title="prose.Observation.noise_stats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">noise_stats</span></code></a>([bins, verbose])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.pick_best_aperture.html#prose.Observation.pick_best_aperture" title="prose.Observation.pick_best_aperture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pick_best_aperture</span></code></a>([method, return_criterion])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.pick_best_aperture.html#prose.Observation.pick_best_aperture" title="prose.Observation.pick_best_aperture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pick_best_aperture</span></code></a>([method, return_criterion])</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.plate_solve.html#prose.Observation.plate_solve" title="prose.Observation.plate_solve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plate_solve</span></code></a>()</p></td>
+<td><p>Plate solve the current py::stack``</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.plate_solve.html#prose.Observation.plate_solve" title="prose.Observation.plate_solve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plate_solve</span></code></a>()</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.plot.html#prose.Observation.plot" title="prose.Observation.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>([star, meridian_flip, bins, color, std])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.plot.html#prose.Observation.plot" title="prose.Observation.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>([star, meridian_flip, bins, color, std])</p></td>
 <td><p>Plot observation light curve</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.plot_circle.html#prose.Observation.plot_circle" title="prose.Observation.plot_circle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_circle</span></code></a>([center, arcmin])</p></td>
-<td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.plot_comps_lcs.html#prose.Observation.plot_comps_lcs" title="prose.Observation.plot_comps_lcs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_comps_lcs</span></code></a>([n, ylim])</p></td>
 <td><p>Plot comparison stars light curves along target star light curve</p></td>
@@ -263,26 +255,20 @@
 <tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.plot_detrended.html#prose.Observation.plot_detrended" title="prose.Observation.plot_detrended"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_detrended</span></code></a>([star, bins, color, std, ...])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.plot_flip.html#prose.Observation.plot_flip" title="prose.Observation.plot_flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_flip</span></code></a>()</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.plot_meridian_flip.html#prose.Observation.plot_meridian_flip" title="prose.Observation.plot_meridian_flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_meridian_flip</span></code></a>()</p></td>
+<td><p>Plot vertical line marking the meridian flip time if any</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.plot_meridian_flip.html#prose.Observation.plot_meridian_flip" title="prose.Observation.plot_meridian_flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_meridian_flip</span></code></a>()</p></td>
-<td><p>Plot meridian flip line over existing axe</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.plot_precision.html#prose.Observation.plot_precision" title="prose.Observation.plot_precision"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_precision</span></code></a>([bins, aperture])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.plot_precision.html#prose.Observation.plot_precision" title="prose.Observation.plot_precision"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_precision</span></code></a>([bins, aperture])</p></td>
 <td><p>Plot observation precision estimate against theorethical error (background noise, photon noise and CCD equation)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.plot_psf_model.html#prose.Observation.plot_psf_model" title="prose.Observation.plot_psf_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_psf_model</span></code></a>([star, size, cmap, c, model, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.plot_psf_model.html#prose.Observation.plot_psf_model" title="prose.Observation.plot_psf_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_psf_model</span></code></a>([star, size, cmap, c, model, ...])</p></td>
 <td><p>Plot a PSF model fit of the a PSF</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.plot_radial_psf.html#prose.Observation.plot_radial_psf" title="prose.Observation.plot_radial_psf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_radial_psf</span></code></a>([star, n, zscale, aperture, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.plot_radial_psf.html#prose.Observation.plot_radial_psf" title="prose.Observation.plot_radial_psf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_radial_psf</span></code></a>([star, n, zscale, aperture, ...])</p></td>
 <td><p>Plot star cutout overalid with aperture and radial flux.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.plot_raw_diff.html#prose.Observation.plot_raw_diff" title="prose.Observation.plot_raw_diff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_raw_diff</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.plot_raw_diff.html#prose.Observation.plot_raw_diff" title="prose.Observation.plot_raw_diff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_raw_diff</span></code></a>()</p></td>
 <td><p>Plot raw target flux and differantial flux</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.plot_rms.html#prose.Observation.plot_rms" title="prose.Observation.plot_rms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_rms</span></code></a>([bins])</p></td>
-<td><p>Plot binned rms of lightcurves vs the CCD equation</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.plot_systematics.html#prose.Observation.plot_systematics" title="prose.Observation.plot_systematics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_systematics</span></code></a>([fields, ylim])</p></td>
 <td><p>Plot systematics measurements along target light curve</p></td>
@@ -305,37 +291,34 @@
 <tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.query_tic.html#prose.Observation.query_tic" title="prose.Observation.query_tic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">query_tic</span></code></a>([cone_radius])</p></td>
 <td><p>Query TIC catalog (through MAST) for stars in the field</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.radec_to_pixel.html#prose.Observation.radec_to_pixel" title="prose.Observation.radec_to_pixel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">radec_to_pixel</span></code></a>(radecs[, unit])</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.save.html#prose.Observation.save" title="prose.Observation.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>([destination])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.save.html#prose.Observation.save" title="prose.Observation.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>([destination])</p></td>
 <td><p>Save current observation</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.set_attribute.html#prose.Observation.set_attribute" title="prose.Observation.set_attribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_attribute</span></code></a>(file, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.set_attribute.html#prose.Observation.set_attribute" title="prose.Observation.set_attribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_attribute</span></code></a>(file, **kwargs)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.set_catalog_target.html#prose.Observation.set_catalog_target" title="prose.Observation.set_catalog_target"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_catalog_target</span></code></a>(catalog_name, designation)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.set_catalog_target.html#prose.Observation.set_catalog_target" title="prose.Observation.set_catalog_target"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_catalog_target</span></code></a>(catalog_name, designation)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.set_tic_target.html#prose.Observation.set_tic_target" title="prose.Observation.set_tic_target"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_tic_target</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.set_tic_target.html#prose.Observation.set_tic_target" title="prose.Observation.set_tic_target"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_tic_target</span></code></a>()</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.show_stars.html#prose.Observation.show_stars" title="prose.Observation.show_stars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_stars</span></code></a>([size, view, n, flip, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.show_stars.html#prose.Observation.show_stars" title="prose.Observation.show_stars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_stars</span></code></a>([size, view, n, flip, ...])</p></td>
 <td><p>Show detected stars over stack image</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.sigma_clip.html#prose.Observation.sigma_clip" title="prose.Observation.sigma_clip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sigma_clip</span></code></a>([sigma, star])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.sigma_clip.html#prose.Observation.sigma_clip" title="prose.Observation.sigma_clip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sigma_clip</span></code></a>([sigma, star])</p></td>
 <td><p>Sigma clipping</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.step.html#prose.Observation.step" title="prose.Observation.step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">step</span></code></a>([t0])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.step.html#prose.Observation.step" title="prose.Observation.step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">step</span></code></a>([t0])</p></td>
 <td><p>Two parameter step model model.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.to_csv.html#prose.Observation.to_csv" title="prose.Observation.to_csv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_csv</span></code></a>(destination[, sep])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.to_csv.html#prose.Observation.to_csv" title="prose.Observation.to_csv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_csv</span></code></a>(destination[, sep])</p></td>
 <td><p>Export a typical csv of the observation's data</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.transit.html#prose.Observation.transit" title="prose.Observation.transit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transit</span></code></a>(t0, duration[, depth])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.transit.html#prose.Observation.transit" title="prose.Observation.transit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transit</span></code></a>(t0, duration[, depth])</p></td>
 <td><p>A simple transit model</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.where.html#prose.Observation.where" title="prose.Observation.where"><code class="xref py py-obj docutils literal notranslate"><span class="pre">where</span></code></a>(condition)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.where.html#prose.Observation.where" title="prose.Observation.where"><code class="xref py py-obj docutils literal notranslate"><span class="pre">where</span></code></a>(condition)</p></td>
 <td><p>return filtered observation given a boolean mask of time</p></td>
 </tr>
 </tbody>
@@ -395,25 +378,28 @@
 <tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.simbad_url.html#prose.Observation.simbad_url" title="prose.Observation.simbad_url"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simbad_url</span></code></a></p></td>
 <td><p>[notebook feature] clickable simbad query url for specified target</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.target.html#prose.Observation.target" title="prose.Observation.target"><code class="xref py py-obj docutils literal notranslate"><span class="pre">target</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">stack</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.tfop_prefix.html#prose.Observation.tfop_prefix" title="prose.Observation.tfop_prefix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tfop_prefix</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.target.html#prose.Observation.target" title="prose.Observation.target"><code class="xref py py-obj docutils literal notranslate"><span class="pre">target</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.tic_id.html#prose.Observation.tic_id" title="prose.Observation.tic_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tic_id</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.tfop_prefix.html#prose.Observation.tfop_prefix" title="prose.Observation.tfop_prefix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tfop_prefix</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.tic_id.html#prose.Observation.tic_id" title="prose.Observation.tic_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tic_id</span></code></a></p></td>
 <td><p>TIC id from digits found in target name</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.trend.html#prose.Observation.trend" title="prose.Observation.trend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trend</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.trend.html#prose.Observation.trend" title="prose.Observation.trend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trend</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.wcs.html#prose.Observation.wcs" title="prose.Observation.wcs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wcs</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.wcs.html#prose.Observation.wcs" title="prose.Observation.wcs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wcs</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.X.html#prose.Observation.x" title="prose.Observation.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.X.html#prose.Observation.x" title="prose.Observation.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.xlabel.html#prose.Observation.xlabel" title="prose.Observation.xlabel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xlabel</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.xlabel.html#prose.Observation.xlabel" title="prose.Observation.xlabel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xlabel</span></code></a></p></td>
 <td><p>Plot xlabel (time) according to its units</p></td>
 </tr>
 </tbody>
