@@ -3,13 +3,28 @@
 API
 ===
 
-.. toctree::
-   :titlesonly:
+Objects
+---------
 
-   api/fitsmanager
-   api/observation
-   api/telescope
-   api/aperturephotometry
-   api/calibration
-   api/converters
-   api/viz
+.. autosummary::
+   :toctree: generated/
+   :nosignatures:
+   :template: class.rst
+
+   ~prose.Image
+   ~prose.Block
+   ~prose.Sequence
+   ~prose.Telescope
+   ~prose.FitsManager
+   ~prose.Observation
+
+Pipelines
+---------
+
+.. autosummary::
+   :toctree: generated/
+   :nosignatures:
+   :template: class.rst
+
+   ~prose.pipeline.Calibration
+   ~prose.pipeline.AperturePhotometry

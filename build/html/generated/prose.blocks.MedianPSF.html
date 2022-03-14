@@ -90,9 +90,9 @@
 
                 <div class="version text-icon">
                   <!-- <i data-feather="git-branch"></i> -->
-                  
+                   <!--
                     deving
-                  
+                  -->
                 </div>
           
 
@@ -137,7 +137,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../blocks.html#utils">Utils</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html#pipelines">Pipelines</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
@@ -175,7 +176,7 @@
 <h1>MedianPSF<a class="headerlink" href="#medianpsf" title="Permalink to this headline">¶</a></h1>
 <img src="../_images/block.png" class="block-image"></img><dl class="py class">
 <dt class="sig sig-object py" id="prose.blocks.MedianPSF">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">prose.blocks.</span></span><span class="sig-name descname"><span class="pre">MedianPSF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cutout_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.blocks.MedianPSF" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">prose.blocks.</span></span><span class="sig-name descname"><span class="pre">MedianPSF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cutout_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.blocks.MedianPSF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get median psf from image.</p>
 <p><span class="blockread">reads</span> <code class="docutils literal notranslate"><span class="pre">Image.cutouts</span></code></p>
 <p>If <code class="docutils literal notranslate"><span class="pre">Image.cutouts</span></code> is not present (because a <code class="docutils literal notranslate"><span class="pre">Cutouts</span></code> block has not been included in the sequence), set cutout_size, which instantiate a <code class="docutils literal notranslate"><span class="pre">Cutouts</span></code> block within this one</p>

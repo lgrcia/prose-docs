@@ -50,9 +50,7 @@
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Observation" href="observation.html" />
-    <link rel="prev" title="API" href="../api.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="">
@@ -90,9 +88,9 @@
 
                 <div class="version text-icon">
                   <!-- <i data-feather="git-branch"></i> -->
-                  
+                   <!--
                     deving
-                  
+                  -->
                 </div>
           
 
@@ -117,23 +115,12 @@
             
             
               <p class="caption" role="heading"><span class="caption-text">References</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/quickstart.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../core.html">What is a pipeline?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../blocks.html">Blocks</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Fits Manager</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#api">API</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="observation.html">Observation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="telescope.html">Telescope</a></li>
-<li class="toctree-l2"><a class="reference internal" href="calibration.html">Calibration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="converters.html">Converters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="viz.html">Visualization</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
@@ -169,29 +156,114 @@
           
   <section id="fits-manager">
 <h1>Fits Manager<a class="headerlink" href="#fits-manager" title="Permalink to this headline">¶</a></h1>
-<p><em>prose</em> provides a <a class="reference internal" href="#prose.FitsManager" title="prose.FitsManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">FitsManager</span></code></a> class to deal with fits folder exploration, mainly to identify and retrieve calibration files
+<p><em>prose</em> provides a <a class="reference internal" href="../generated/prose.FitsManager.html#prose.FitsManager" title="prose.FitsManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">FitsManager</span></code></a> class to deal with fits folder exploration, mainly to identify and retrieve calibration files
 associated with specific observations. This class is heavily used and comes handy to deal with unorganized fits folders (e.g. where there is no separation between multiple observations, science and calibration images)</p>
 <section id="api">
 <h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="prose.FitsManager">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">prose.</span></span><span class="sig-name descname"><span class="pre">FitsManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.f*ts*'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.FitsManager" title="Permalink to this definition">¶</a></dt>
-<dd><p>Object to parse and retrive FITS files from a folder and its sub-folders</p>
-<dl class="field-list simple">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">prose.</span></span><span class="sig-name descname"><span class="pre">FitsManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.f*t*'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.FitsManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object to parse and retrieve FITS files from folder and sub-folders</p>
+<p>This object scans files in a folder and stores the data in a mysql database for conveniance (but all products can be accessed without knowledge of the SQL language)</p>
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
+<dd class="field-odd"><ul>
 <li><p><strong>folder</strong> (<em>str</em>) – path of the folder to parse</p></li>
 <li><p><strong>depth</strong> (<em>int, optional</em>) – maxiumum depth of the sub-folders to explore, by default 0</p></li>
 <li><p><strong>hdu</strong> (<em>int, optional</em>) – by default 0</p></li>
 <li><p><strong>extension</strong> (<em>str, optional</em>) – by default “.f*ts*”</p></li>
+<li><p><strong>file</strong> (<em>_type_, optional</em>) – _description_, by default None</p></li>
+<li><p><strong>batch_size</strong> (<em>bool or int, optional</em>) –</p>
+<ul class="simple">
+<li><p>if False: update database after all FITS files are parsed</p></li>
+<li><p>if int: update database every time <code class="docutils literal notranslate"><span class="pre">batch_size</span></code> FITS files are parsed</p></li>
+</ul>
+<p>by default False</p>
+</li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="prose.FitsManager.scan_files">
+<span class="sig-name descname"><span class="pre">scan_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.FitsManager.scan_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scan a folder and add data to database</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul>
+<li><p><strong>folder</strong> (<em>str ot Path</em>) – path of folder</p></li>
+<li><p><strong>extension</strong> (<em>str, optional</em>) – by default “.f*ts*”</p></li>
+<li><p><strong>batch_size</strong> (<em>bool or int, optional</em>) –</p>
+<ul class="simple">
+<li><p>if False: update database after all FITS files are parsed</p></li>
+<li><p>if int: update database every time <code class="docutils literal notranslate"><span class="pre">batch_size</span></code> FITS files are parse</p></li>
+</ul>
+<p>by default False</p>
+</li>
+<li><p><strong>verbose</strong> (<em>bool, optional</em>) – wether to show progress bar during parsing, by default True</p></li>
+<li><p><strong>depth</strong> (<em>int, optional</em>) – maxiumum depth of the sub-folders to explore, by default 0</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="prose.FitsManager.print">
+<span class="sig-name descname"><span class="pre">print</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">calib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.FitsManager.print" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print database observations, calibrations and other files in nice table</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>calib</strong> (<em>bool, optional</em>) – wether to show calibration files, by default True</p></li>
+<li><p><strong>repr</strong> (<em>bool, optional</em>) – wether to return a str of the table, by default False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="prose.FitsManager.observations">
+<span class="sig-name descname"><span class="pre">observations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telescope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">afilter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'light'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.FitsManager.observations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print of return current observations</p>
+<p>An observation is defined as a unique set of images with common date, telescope, target, filter and exposure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>telescope</strong> (<em>str, optional</em>)</p></li>
+<li><p><strong>target</strong> (<em>str, optional</em>)</p></li>
+<li><p><strong>date</strong> (<em>str, optional</em>)</p></li>
+<li><p><strong>afilter</strong> (<em>str, optional</em>)</p></li>
+<li><p><strong>imtype</strong> (<em>str, optional</em>)</p></li>
+<li><p><strong>show</strong> (<em>bool, optional</em>) – wether to print the table (otherwise return it as a string), default True</p></li>
+<li><p><strong>index</strong> (<em>bool, optional</em>) – wether to show observation index, default True</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="prose.FitsManager.files">
+<span class="sig-name descname"><span class="pre">files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telescope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">afilter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exposure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exposure_tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000000000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.FitsManager.files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return files given criteria</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>telescope</strong> (<em>str, optional</em>)</p></li>
+<li><p><strong>target</strong> (<em>str, optional</em>)</p></li>
+<li><p><strong>date</strong> (<em>str, optional</em>)</p></li>
+<li><p><strong>afilter</strong> (<em>str, optional</em>)</p></li>
+<li><p><strong>imtype</strong> (<em>str, optional</em>)</p></li>
+<li><p><strong>exposure</strong> (<em>float, optional</em>) – exposure of the files to retrieve, as specified in their headers, defaut is 0 (see next kwarg)</p></li>
+<li><p><strong>exposure_tolerance</strong> (<em>float, optional</em>) – tolerance of the exposure. Files with exposure - exposure_tolerance &lt; exposure &lt; exposure + exposure_tolerance will be retrieve, default 10000000000, which account with potentially all exposures</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="prose.FitsManager.observation_files">
-<span class="sig-name descname"><span class="pre">observation_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_days</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_days</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">same_telescope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'images'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.FitsManager.observation_files" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">observation_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_days</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_days</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">same_telescope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'images'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">darkexp_tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.FitsManager.observation_files" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a dictionary of all the files (including calibration ones) corresponding to a given observation.</p>
-<p>The index <code class="docutils literal notranslate"><span class="pre">i</span></code> corresponds to the observation index displayed when printing the <code class="docutils literal notranslate"><span class="pre">FitsManager</span></code> object</p>
+<p>The index <code class="docutils literal notranslate"><span class="pre">i</span></code> corresponds to the observation index displayed when printing with <a class="reference internal" href="../generated/generated/prose.FitsManager.print.html#prose.FitsManager.print" title="prose.FitsManager.print"><code class="xref py py-meth docutils literal notranslate"><span class="pre">print()</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -205,7 +277,7 @@ associated with specific observations. This class is heavily used and comes hand
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><dl class="simple">
 <dt>The keys of the dictionnary are:</dt><dd><ul class="simple">
-<li><p><a href="#id1"><span class="problematic" id="id2">``</span></a>images` for the science images</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">images</span></code> for the science images</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">flats</span></code>, <code class="docutils literal notranslate"><span class="pre">darks</span></code> and <code class="docutils literal notranslate"><span class="pre">bias</span></code> for the corresponding calibration images</p></li>
 </ul>
 </dd>
@@ -285,14 +357,31 @@ associated with specific observations. This class is heavily used and comes hand
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="prose.FitsManager.calibrated">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">calibrated</span></span><a class="headerlink" href="#prose.FitsManager.calibrated" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="prose.FitsManager.reduced">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reduced</span></span><a class="headerlink" href="#prose.FitsManager.reduced" title="Permalink to this definition">¶</a></dt>
 <dd><p>fits paths of the observation calibrated images if present</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>list of str</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="prose.FitsManager.label">
+<span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.FitsManager.label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return ‘{telescope}_{date}_{target}_{filter}’ string</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>i</strong> (<em>int, optional</em>) – index of the observation as showin in <a class="reference internal" href="../generated/generated/prose.FitsManager.print.html#prose.FitsManager.print" title="prose.FitsManager.print"><code class="xref py py-meth docutils literal notranslate"><span class="pre">print()</span></code></a>, by default 0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="prose.FitsManager.obs_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">obs_name</span></span><a class="headerlink" href="#prose.FitsManager.obs_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Observation name ({telescope}_{date}_{target}_{filter}) if a single observation is present</p>
 </dd></dl>
 
 </dd></dl>
@@ -305,10 +394,6 @@ associated with specific observations. This class is heavily used and comes hand
         
         </div>
         <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="observation.html" class="btn btn-neutral float-right" title="Observation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../api.html" class="btn btn-neutral float-left" title="API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
 
   <hr/>
 

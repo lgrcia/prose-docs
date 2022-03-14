@@ -103,6 +103,4 @@ Utils
    Set
    Stack
    Trim
-   Video
-   Plot
    XArray

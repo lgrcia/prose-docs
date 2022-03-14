@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>prose.Image &mdash; prose  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/jupyter-sphinx.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/thebelab.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/thebelab-helper.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="prose.Block" href="prose.Block.html" />
+    <link rel="prev" title="Objects" href="../api.html" /> 
+</head>
+
+<body class="">
+
+   
+    
+
+  <div class="main">
+    <div id="small-menu">
+      <div id="title">
+        <div class="icon-home">prose</div>
+        <div class="version text-icon">
+          <!-- <i data-feather="git-branch"></i> -->
+          
+            latest
+          
+        </div>
+      </div>
+      <div id="small-menu-button">MENU</div>
+    </div>
+    
+    <nav id="navmenu">
+        <div class="nav-head" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> prose
+          
+
+          
+          </a>
+
+          
+            
+
+                <div class="version text-icon">
+                  <!-- <i data-feather="git-branch"></i> -->
+                   <!--
+                    deving
+                  -->
+                </div>
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../core.html">What is a pipeline?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../blocks.html">Blocks</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">Objects</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">prose.Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.Block.html">prose.Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.Sequence.html">prose.Sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.Telescope.html">prose.Telescope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.FitsManager.html">prose.FitsManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.Observation.html">prose.Observation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html#pipelines">Pipelines</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/fits_manager.html">Fits manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/reduction.html">Photometric reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/manual_reduction.html">Manual reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/custom_pipeline.html">Custom pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/modeling.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/neb.html">Near Eclipsing Binary diagnostic</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/phot.html">Data products: <code class="docutils literal notranslate"><span class="pre">.phot</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/extra.html">Useful tips</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      <div class="github-link">
+        <!-- <a href="https://github.com/lgrcia/prose">view on github</a> -->
+      </div>
+    </nav>
+
+    <div class="content">
+      
+      <div class="rst-content">
+      
+        <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+        <div itemprop="articleBody">
+          
+  <section id="prose-image">
+<h1>prose.Image<a class="headerlink" href="#prose-image" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="prose.Image">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">prose.</span></span><span class="sig-name descname"><span class="pre">Image</span></span><a class="headerlink" href="#prose.Image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base object containing FITS image data and metadata</p>
+<p>When a FITS path (or header) is provided, keyword values are used to identify and instantiate a <a class="reference internal" href="prose.Telescope.html#prose.Telescope" title="prose.Telescope"><code class="xref py py-class docutils literal notranslate"><span class="pre">Telescope</span></code></a> object. Image attributes then use this object to retrieve specific image information such as ra, dec, untis… etc</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fitspath</strong> (<em>str or Path, optional</em>) – file path , by default None</p></li>
+<li><p><strong>data</strong> (<em>numpy.ndarray, optional</em>) – image data, by default None</p></li>
+<li><p><strong>header</strong> (<em>dict-like, optional</em>) – image metadata, by default None</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="jupyter_cell jupyter_container docutils container">
+<div class="cell_input code_cell docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose.tutorials</span> <span class="kn">import</span> <span class="n">image_sample</span>
+
+<span class="c1"># loading and showing an example image</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">image_sample</span><span class="p">(</span><span class="s2">&quot;05 38 44.851&quot;</span><span class="p">,</span> <span class="s2">&quot;+04 32 47.68&quot;</span><span class="p">)</span>
+<span class="n">image</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[94mINFO[39m Querying https://archive.stsci.edu/cgi-bin/dss_form
+</pre></div>
+</div>
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[94mINFO[39m telescope Palomar Schmidt not found - using default
+</pre></div>
+</div>
+<img alt="../_images/prose.Image_0_2.png" src="../_images/prose.Image_0_2.png" />
+</div>
+</div>
+<div class="jupyter_cell jupyter_container docutils container">
+<div class="cell_input code_cell docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span> <span class="c1"># the 10 first lines</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>SIMPLE  =                    T /FITS: Compliance                                
+BITPIX  =                   16 /FITS: I*2 Data                                  
+NAXIS   =                    2 /FITS: 2-D Image Data                            
+NAXIS1  =                  713 /FITS: X Dimension                               
+NAXIS2  =                  714 /FITS: Y Dimension                               
+EXTEND  =                    T /FITS: File can contain extensions               
+DATE    = &#39;2022-03-14        &#39;  /FITS: Creation Date                            
+ORIGIN  = &#39;STScI/MAST&#39;         /GSSS: STScI Digitized Sky Survey                
+SURVEY  = &#39;POSSI-O &#39;           /GSSS: Sky Survey                                
+REGION  = &#39;XO538   &#39;           /GSSS: Region Name                               
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once this object is instantiated, its parameters are mapped to the ones of the telescope, detected from the header information. This exposes conveniant attributres, for example:</p>
+<div class="jupyter_cell jupyter_container docutils container">
+<div class="cell_input code_cell docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pixel scale : </span><span class="si">{</span><span class="n">image</span><span class="o">.</span><span class="n">pixel_scale</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="se">\n</span><span class="s2">FOV: </span><span class="si">{</span><span class="n">image</span><span class="o">.</span><span class="n">fov</span><span class="si">}</span><span class="se">\n</span><span class="s2">night: </span><span class="si">{</span><span class="n">image</span><span class="o">.</span><span class="n">night_date</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>pixel scale : 1.01 arcsec
+FOV: [0.20031318 0.20003263] deg
+night: 1955-11-22
+
+</pre></div>
+</div>
+</div>
+</div>
+<p>some of them being directly translated into astropy Quantity or datetime object.</p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.Image.__init__.html#prose.Image.__init__" title="prose.Image.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([fitspath, data, header])</p></td>
+<td><p>Image instanciation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Image.copy.html#prose.Image.copy" title="prose.Image.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>([data])</p></td>
+<td><p>Copy of image object</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Image.get.html#prose.Image.get" title="prose.Image.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(key[, default])</p></td>
+<td><p>Return corresponding value from header, similar to <code class="docutils literal notranslate"><span class="pre">dict.get</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.Image.plot_aperture.html#prose.Image.plot_aperture" title="prose.Image.plot_aperture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_aperture</span></code></a>(center[, arcmin])</p></td>
+<td><p>Plot an aperture with radius defined in arcmin</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Image.plot_catalog.html#prose.Image.plot_catalog" title="prose.Image.plot_catalog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_catalog</span></code></a>(name[, color, label, n])</p></td>
+<td><p>Plot catalog stars</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Image.show.html#prose.Image.show" title="prose.Image.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>([cmap, ax, figsize, stars, ...])</p></td>
+<td><p>Show image data</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Image.show_cutout.html#prose.Image.show_cutout" title="prose.Image.show_cutout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_cutout</span></code></a>([star, size, marks])</p></td>
+<td><p>Show a zoomed cutout around a detected star or coordinates</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Image.airmass.html#prose.Image.airmass" title="prose.Image.airmass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">airmass</span></code></a></p></td>
+<td><p>Observation airmass as written in image header</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Image.bjd_tdb.html#prose.Image.bjd_tdb" title="prose.Image.bjd_tdb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bjd_tdb</span></code></a></p></td>
+<td><p>BJD TDB time of the observation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Image.date.html#prose.Image.date" title="prose.Image.date"><code class="xref py py-obj docutils literal notranslate"><span class="pre">date</span></code></a></p></td>
+<td><p>datetime of the observation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Image.dec.html#prose.Image.dec" title="prose.Image.dec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dec</span></code></a></p></td>
+<td><p>DEC of the image as written in header</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Image.exposure.html#prose.Image.exposure" title="prose.Image.exposure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exposure</span></code></a></p></td>
+<td><p>Image exposure time in seconds</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Image.filter.html#prose.Image.filter" title="prose.Image.filter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filter</span></code></a></p></td>
+<td><p>Observation filter as written in image header</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Image.flip.html#prose.Image.flip" title="prose.Image.flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flip</span></code></a></p></td>
+<td><p>Telescope flip as written in image header</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Image.fov.html#prose.Image.fov" title="prose.Image.fov"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fov</span></code></a></p></td>
+<td><p>Field of view of the image in degrees</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Image.jd_utc.html#prose.Image.jd_utc" title="prose.Image.jd_utc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">jd_utc</span></code></a></p></td>
+<td><p>JD UTC time of the observation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Image.label.html#prose.Image.label" title="prose.Image.label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">label</span></code></a></p></td>
+<td><p>A conveniant {Telescope}_{Date}_{Object}_{Filter} string</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Image.night_date.html#prose.Image.night_date" title="prose.Image.night_date"><code class="xref py py-obj docutils literal notranslate"><span class="pre">night_date</span></code></a></p></td>
+<td><p>date of the night when night started.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Image.pixel_scale.html#prose.Image.pixel_scale" title="prose.Image.pixel_scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pixel_scale</span></code></a></p></td>
+<td><p>Pixel scale (or plate scale) in arcseconds</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Image.plate_solved.html#prose.Image.plate_solved" title="prose.Image.plate_solved"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plate_solved</span></code></a></p></td>
+<td><p>Return wether the image is plate solved</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Image.ra.html#prose.Image.ra" title="prose.Image.ra"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ra</span></code></a></p></td>
+<td><p>RA of the image as written in header</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Image.seeing.html#prose.Image.seeing" title="prose.Image.seeing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">seeing</span></code></a></p></td>
+<td><p>Seeing of the image as written is header</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Image.shape.html#prose.Image.shape" title="prose.Image.shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shape</span></code></a></p></td>
+<td><p>Shape of the image data np.ndarray</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Image.skycoord.html#prose.Image.skycoord" title="prose.Image.skycoord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">skycoord</span></code></a></p></td>
+<td><p>astropy SkyCoord object based on header RAn, DEC</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Image.wcs.html#prose.Image.wcs" title="prose.Image.wcs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wcs</span></code></a></p></td>
+<td><p>astropy.wcs.WCS object associated with the FITS <code class="docutils literal notranslate"><span class="pre">Image.header</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+
+
+        </div>
+        
+        </div>
+        <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="prose.Block.html" class="btn btn-neutral float-right" title="prose.Block" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../api.html" class="btn btn-neutral float-left" title="Objects" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Lionel Garcia.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    modified by <a href="https://github.com/lgrcia">lgrcia</a> from <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+      </div>
+    </div>
+  </div>
+
+   
+  <!-- small screen menu click -->
+  <script>
+    var smb = document.getElementById("small-menu-button")
+    var navmenu = document.getElementById("navmenu")
+    smb.onclick = () => {
+      if (navmenu.style.display == ""){
+        navmenu.style.display = "flex"
+      } else {
+        navmenu.style.display = (navmenu.style.display == "none")?"flex":"none"
+      } 
+      
+    }
+  </script>
+
+</body>
+</html>

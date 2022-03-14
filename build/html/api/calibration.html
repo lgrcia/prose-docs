@@ -50,9 +50,7 @@
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Converters" href="converters.html" />
-    <link rel="prev" title="Telescope" href="telescope.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="">
@@ -90,9 +88,9 @@
 
                 <div class="version text-icon">
                   <!-- <i data-feather="git-branch"></i> -->
-                  
+                   <!--
                     deving
-                  
+                  -->
                 </div>
           
 
@@ -117,20 +115,13 @@
             
             
               <p class="caption" role="heading"><span class="caption-text">References</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/quickstart.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../core.html">What is a pipeline?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../blocks.html">Blocks</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="fitsmanager.html">Fits Manager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="observation.html">Observation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="telescope.html">Telescope</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Calibration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="converters.html">Converters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="viz.html">Visualization</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html#pipelines">Pipelines</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
@@ -168,25 +159,17 @@
 <h1>Calibration<a class="headerlink" href="#calibration" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="prose.pipeline.Calibration">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">prose.pipeline.</span></span><span class="sig-name descname"><span class="pre">Calibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reference=0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flats=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">darks=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">images=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psf=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detection=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twirl=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loader=&lt;class</span> <span class="pre">'prose.core.Image'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cores=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_pixels=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.pipeline.Calibration" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">prose.pipeline.</span></span><span class="sig-name descname"><span class="pre">Calibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">overwrite=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flats=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">darks=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psf_block=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detection_block=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twirl=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loader=&lt;class</span> <span class="pre">'prose.image.Image'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cores=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bad_pixels=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_masters=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.pipeline.Calibration" title="Permalink to this definition">¶</a></dt>
 <dd><p>A calibration unit producing a reduced FITS folder</p>
 <p>The calibration encompass more than simple flat, dark and bias calibration. It contains two sequences whose …
 TODO</p>
-<dl class="field-list">
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul>
-<li><p><strong>reference</strong> (<em>float or str, optional</em>) – Reference image to use for alignment:</p>
-<ul class="simple">
-<li><p>if <code class="docutils literal notranslate"><span class="pre">float</span></code>: from 0 (first image) to 1 (last image)</p></li>
-<li><p>if <code class="docutils literal notranslate"><span class="pre">str</span></code>: path of the reference image</p></li>
-</ul>
-<p>by default 1/2</p>
-</li>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>overwrite</strong> (<em>bool, optional</em>) – whether to overwrite existing products, by default False</p></li>
 <li><p><strong>flats</strong> (<em>list, optional</em>) – list of flats images paths, by default None</p></li>
 <li><p><strong>bias</strong> (<em>list, optional</em>) – list of bias images paths, by default None</p></li>
 <li><p><strong>darks</strong> (<em>list, optional</em>) – list of darks images paths, by default None</p></li>
-<li><p><strong>images</strong> (<em>list, optional</em>) – list of images paths to be calibrated, by default None</p></li>
 <li><p><strong>psf</strong> (<cite>Block</cite>, optional) – a <cite>Block</cite> to be used to characterise the effective psf, by default None, setting a default blocks.Moffat2D</p></li>
 <li><p><strong>detection</strong> (<cite>Block</cite>, optional) – a <cite>Block</cite> to be used for stars detection, by default None, setting a default blocks.SegmentedPeaks</p></li>
 <li><p><strong>show</strong> (<em>bool, optional</em>) – within a notebook, whether to show processed image during reduction, by default False</p></li>
@@ -199,11 +182,30 @@ TODO</p>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="prose.pipeline.Calibration.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destination</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gif</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.pipeline.Calibration.run" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">movie</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gif'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.pipeline.Calibration.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run the calibration pipeline</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>destination</strong> (<em>str</em>) – Destination where to save the calibrated images folder</p>
+<dd class="field-odd"><ul>
+<li><p><strong>images</strong> (<em>list, optional</em>) – List of images paths to be calibrated</p></li>
+<li><p><strong>destination</strong> (<em>str, optional</em>) – Destination where to save the calibrated images folder, by default reference Image.label</p></li>
+<li><p><strong>reference</strong> (<em>float or str, optional</em>) –</p>
+<dl class="simple">
+<dt>Reference image to use for alignment:</dt><dd><ul class="simple">
+<li><p>if <code class="docutils literal notranslate"><span class="pre">float</span></code>: from 0 (first image) to 1 (last image)</p></li>
+<li><p>if <code class="docutils literal notranslate"><span class="pre">str</span></code>: path of the reference image</p></li>
+</ul>
+</dd>
+</dl>
+<p>by default 1/2</p>
+</li>
+<li><p><strong>movie</strong> (<em>str or False, optional</em>) –</p>
+<ul class="simple">
+<li><p>if str, produce a movie of the sequence with format ‘movie’</p></li>
+<li><p>if False movie not produced</p></li>
+</ul>
+</li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -217,10 +219,6 @@ TODO</p>
         
         </div>
         <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="converters.html" class="btn btn-neutral float-right" title="Converters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="telescope.html" class="btn btn-neutral float-left" title="Telescope" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
 
   <hr/>
 
