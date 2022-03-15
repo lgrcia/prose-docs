@@ -420,13 +420,13 @@ div.rendered_html tbody tr:hover {
 <h2>Synthetic data<a class="headerlink" href="#Synthetic-data" title="Permalink to this headline">¶</a></h2>
 <p>Let’s generate some synthetic data to work with</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">prose.tutorials</span> <span class="kn">import</span> <span class="n">simulate_observation</span>
 
-<span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2450000</span>
 <span class="n">target_dflux</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">time</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="mf">1e-2</span>
 
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
@@ -440,8 +440,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: No module named &#39;mkl&#39;
-100%|█████████████████████████████████████████| 100/100 [00:02&lt;00:00, 33.82it/s]
+100%|█████████████████████████████████████████| 100/100 [00:02&lt;00:00, 33.88it/s]
 </pre></div></div>
 </div>
 </section>
@@ -449,7 +448,7 @@ WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: N
 <h2>Telescope setting and fits manager<a class="headerlink" href="#Telescope-setting-and-fits-manager" title="Permalink to this headline">¶</a></h2>
 <p>As in our previous tutorials we set the telescope (if not set yet)</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">Telescope</span>
@@ -474,7 +473,7 @@ Telescope &#39;a&#39; saved
 </div>
 <p>and explore our raw images folder using the <code class="docutils literal notranslate"><span class="pre">FitsManager</span></code></p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">FitsManager</span>
@@ -490,7 +489,7 @@ Telescope &#39;a&#39; saved
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|███████████████████████████████████████| 106/106 [00:00&lt;00:00, 1678.94it/s]
+100%|███████████████████████████████████████| 106/106 [00:00&lt;00:00, 1259.78it/s]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -499,21 +498,21 @@ Telescope &#39;a&#39; saved
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Observations:
-╒═════════╤════════════╤═════════════╤══════════╤══════════╤════════╤════════════╕
-│   index │ date       │ telescope   │ target   │ filter   │ type   │   quantity │
-╞═════════╪════════════╪═════════════╪══════════╪══════════╪════════╪════════════╡
-│       0 │ 2022-02-05 │ A           │ prose    │ a        │ light  │        100 │
-╘═════════╧════════════╧═════════════╧══════════╧══════════╧════════╧════════════╛
+╒═════════╤════════════╤═════════════╤══════════╤══════════╤════════════╤════════╤════════════╕
+│   index │ date       │ telescope   │ target   │ filter   │   exposure │ type   │   quantity │
+╞═════════╪════════════╪═════════════╪══════════╪══════════╪════════════╪════════╪════════════╡
+│       0 │ 2022-03-14 │ A           │ prose    │ a        │          1 │ light  │        100 │
+╘═════════╧════════════╧═════════════╧══════════╧══════════╧════════════╧════════╧════════════╛
 Calibrations:
-╒════════════╤═════════════╤══════════╤══════════╤════════╤════════════╕
-│ date       │ telescope   │ target   │ filter   │ type   │   quantity │
-╞════════════╪═════════════╪══════════╪══════════╪════════╪════════════╡
-│ 2022-02-05 │ A           │ prose    │          │ bias   │          1 │
-├────────────┼─────────────┼──────────┼──────────┼────────┼────────────┤
-│ 2022-02-05 │ A           │ prose    │          │ dark   │          1 │
-├────────────┼─────────────┼──────────┼──────────┼────────┼────────────┤
-│ 2022-02-05 │ A           │ prose    │ a        │ flat   │          4 │
-╘════════════╧═════════════╧══════════╧══════════╧════════╧════════════╛
+╒════════════╤═════════════╤══════════╤══════════╤════════════╤════════╤════════════╕
+│ date       │ telescope   │ target   │ filter   │   exposure │ type   │   quantity │
+╞════════════╪═════════════╪══════════╪══════════╪════════════╪════════╪════════════╡
+│ 2022-03-14 │ A           │ prose    │          │          1 │ bias   │          1 │
+├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
+│ 2022-03-14 │ A           │ prose    │          │          1 │ dark   │          1 │
+├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
+│ 2022-03-14 │ A           │ prose    │ a        │          1 │ flat   │          4 │
+╘════════════╧═════════════╧══════════╧══════════╧════════════╧════════╧════════════╛
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -530,7 +529,7 @@ Calibrations:
 <p>We will now dig into reducing the raw data using <code class="docutils literal notranslate"><span class="pre">Block</span></code> arranged in <code class="docutils literal notranslate"><span class="pre">Sequence</span></code> in which images are succesively processed.</p>
 <p>The first step of the manual reduction is to get a reference image from which we will flip and and align other images accordingly</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">blocks</span><span class="p">,</span> <span class="n">viz</span>
@@ -553,7 +552,7 @@ Calibrations:
 </div>
 <p>Here, for conveniance, we used the <code class="docutils literal notranslate"><span class="pre">Sequence</span></code> although we are processing only a single image. Now that we set a reference image, let’s throw all images through the reduction steps</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We first set the destination of our reduction files</span>
@@ -566,11 +565,13 @@ Calibrations:
     <span class="n">blocks</span><span class="o">.</span><span class="n">Flip</span><span class="p">(</span><span class="n">reference_image</span><span class="p">),</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">SegmentedPeaks</span><span class="p">(</span><span class="n">n_stars</span><span class="o">=</span><span class="mi">50</span><span class="p">),</span>                            <span class="c1"># stars detected for alignment</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">XYShift</span><span class="p">(</span><span class="n">reference_image</span><span class="o">.</span><span class="n">stars_coords</span><span class="p">),</span>                 <span class="c1"># finding the shift between consecutive images</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">Cutouts</span><span class="p">(),</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">MedianPSF</span><span class="p">(),</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">Moffat2D</span><span class="p">(),</span>                                            <span class="c1"># measure of the effective psf</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">Cutout2D</span><span class="p">(</span><span class="n">reference_image</span><span class="o">.</span><span class="n">data</span><span class="p">),</span>                           <span class="c1"># full-pixels alignment of the image</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">Stack</span><span class="p">(</span><span class="n">stack_path</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">reference_image</span><span class="o">.</span><span class="n">header</span><span class="p">),</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">SaveReduced</span><span class="p">(</span><span class="n">destination</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;reduced&quot;</span><span class="p">),</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">Video</span><span class="p">(</span><span class="n">video_path</span><span class="p">,</span> <span class="n">from_fits</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">RawVideo</span><span class="p">(</span><span class="n">video_path</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
 <span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Reduction&quot;</span><span class="p">)</span>
 
 <span class="n">calibration</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">images</span><span class="p">)</span>
@@ -582,12 +583,12 @@ Calibrations:
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-blue-intense-fg">RUN</span> Reduction: 100%|<span class="ansi-blue-intense-fg">██████████████████████</span>| 100/100 [00:07&lt;00:00, 13.42images/s]
+<span class="ansi-blue-intense-fg">RUN</span> Reduction: 100%|<span class="ansi-blue-intense-fg">██████████████████████</span>| 100/100 [00:05&lt;00:00, 19.35images/s]
 </pre></div></div>
 </div>
 <p>This leads to a folder containing all reduced images, a stack fits and a gif of the observation. If you want to see the time spent on each block:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">calibration</span><span class="p">)</span>
@@ -606,19 +607,23 @@ Calibrations:
 ├─────────┼────────────────┼───────────────┤
 │         │ Flip           │ 0.001 s (0%)  │
 ├─────────┼────────────────┼───────────────┤
-│         │ SegmentedPeaks │ 0.692 s (14%) │
+│         │ SegmentedPeaks │ 0.669 s (29%) │
 ├─────────┼────────────────┼───────────────┤
-│         │ XYShift        │ 0.051 s (1%)  │
+│         │ XYShift        │ 0.042 s (2%)  │
 ├─────────┼────────────────┼───────────────┤
-│         │ Moffat2D       │ 3.186 s (65%) │
+│         │ Cutouts        │ 0.058 s (3%)  │
 ├─────────┼────────────────┼───────────────┤
-│         │ Cutout2D       │ 0.140 s (3%)  │
+│         │ MedianPSF      │ 0.013 s (1%)  │
 ├─────────┼────────────────┼───────────────┤
-│         │ Stack          │ 0.010 s (0%)  │
+│         │ Moffat2D       │ 0.600 s (26%) │
 ├─────────┼────────────────┼───────────────┤
-│ reduced │ SaveReduced    │ 0.570 s (12%) │
+│         │ Cutout2D       │ 0.120 s (5%)  │
 ├─────────┼────────────────┼───────────────┤
-│         │ Video          │ 0.253 s (5%)  │
+│         │ Stack          │ 0.027 s (1%)  │
+├─────────┼────────────────┼───────────────┤
+│ reduced │ SaveReduced    │ 0.567 s (25%) │
+├─────────┼────────────────┼───────────────┤
+│         │ RawVideo       │ 0.185 s (8%)  │
 ╘═════════╧════════════════╧═══════════════╛
 </pre></div></div>
 </div>
@@ -627,12 +632,14 @@ Calibrations:
 <h2>Photometry<a class="headerlink" href="#Photometry" title="Permalink to this headline">¶</a></h2>
 <p>We can now proceed with the photometry. For that, we use the stack as a reference to get all stars positions. Since we aligned all images during the calibration process, we should be able to work at fixed apertures postions. We also make a measurement of the psf fwhm to adapt the apertures sizes</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stack_detection</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">([</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">SegmentedPeaks</span><span class="p">(</span><span class="n">n_stars</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">1.05</span><span class="p">),</span> <span class="c1"># stars detection</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">Gaussian2D</span><span class="p">(</span><span class="n">cutout_size</span><span class="o">=</span><span class="mi">51</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;psf&quot;</span><span class="p">),</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">Cutouts</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">51</span><span class="p">),</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">MedianPSF</span><span class="p">(),</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">Gaussian2D</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;psf&quot;</span><span class="p">),</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">ImageBuffer</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;buffer&quot;</span><span class="p">),</span>
 <span class="p">])</span>
 
@@ -653,7 +660,7 @@ Calibrations:
 </div>
 <p>Let’s now run the photometry. As mentioned before we will set equal stars coordinates and psf size for every image</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">phot_path</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">destination</span><span class="p">,</span> <span class="s2">&quot;observation.phot&quot;</span><span class="p">)</span>
@@ -674,7 +681,7 @@ Calibrations:
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-blue-intense-fg">RUN</span> Photometry: 100%|<span class="ansi-blue-intense-fg">█████████████████████</span>| 100/100 [00:02&lt;00:00, 38.01images/s]
+<span class="ansi-blue-intense-fg">RUN</span> Photometry: 100%|<span class="ansi-blue-intense-fg">█████████████████████</span>| 100/100 [00:02&lt;00:00, 43.84images/s]
 </pre></div></div>
 </div>
 </section>
@@ -682,16 +689,16 @@ Calibrations:
 <h2>Exploring blocks data<a class="headerlink" href="#Exploring-blocks-data" title="Permalink to this headline">¶</a></h2>
 <p>All <code class="docutils literal notranslate"><span class="pre">Blocks</span></code> and <code class="docutils literal notranslate"><span class="pre">Sequences</span></code> used so far contain data obtained from processing all images. There are many ways to access these data, for example:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fluxes</span> <span class="o">=</span> <span class="n">photometry</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;fluxes&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fluxes</span> <span class="o">=</span> <span class="n">photometry</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">](</span><span class="s2">&quot;fluxes&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <p>Other options can be found <a class="reference internal" href="extra.html"><span class="doc">here</span></a>. The difference of what we just did compared to the condensed form found in <a class="reference internal" href="reduction.html"><span class="doc">the photometric reduction tutorial</span></a> is that the <code class="docutils literal notranslate"><span class="pre">AperturePhotometry</span></code> pipeline includes <code class="docutils literal notranslate"><span class="pre">Blocks</span></code> to save the measurements as an <a class="reference external" href="http://xarray.pydata.org/en/stable/index.html">xarray</a> into a <code class="docutils literal notranslate"><span class="pre">phot</span></code> file.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># hidden</span>

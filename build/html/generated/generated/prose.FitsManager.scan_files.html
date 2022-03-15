@@ -158,12 +158,12 @@
 <h1>prose.FitsManager.scan_files<a class="headerlink" href="#prose-fitsmanager-scan-files" title="Permalink to this headline">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="prose.FitsManager.scan_files">
-<span class="sig-prename descclassname"><span class="pre">FitsManager.</span></span><span class="sig-name descname"><span class="pre">scan_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.FitsManager.scan_files" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FitsManager.</span></span><span class="sig-name descname"><span class="pre">scan_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folders</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.FitsManager.scan_files" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scan a folder and add data to database</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul>
-<li><p><strong>folder</strong> (<em>str ot Path</em>) – path of folder</p></li>
+<li><p><strong>folder</strong> (<em>str ot Path</em>) – path of folder (or list of folders as of prose 2.0.1)</p></li>
 <li><p><strong>extension</strong> (<em>str, optional</em>) – by default “.f*ts*”</p></li>
 <li><p><strong>batch_size</strong> (<em>bool or int, optional</em>) –</p>
 <ul class="simple">

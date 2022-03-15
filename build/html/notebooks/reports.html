@@ -417,13 +417,13 @@ div.rendered_html tbody tr:hover {
 <h2>Loading the phot<a class="headerlink" href="#Loading-the-phot" title="Permalink to this headline">¶</a></h2>
 <p>Let’s firts load some data you might have used or generated in previous tutorials (in my case I take the <code class="docutils literal notranslate"><span class="pre">.phot</span></code> we produced <a class="reference internal" href="reduction.html"><span class="doc">here</span></a>)</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">load</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">obs</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="s2">&quot;A_20220208_prose_a/A_20220208_prose_a.phot&quot;</span><span class="p">)</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="s2">&quot;A_20220314_prose_a/A_20220314_prose_a.phot&quot;</span><span class="p">)</span>
 <span class="n">obs</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 <span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">0.98</span><span class="p">,</span> <span class="mf">1.02</span><span class="p">)</span>
 </pre></div>
@@ -432,9 +432,9 @@ div.rendered_html tbody tr:hover {
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area stderr docutils container">
+<div class="output_area docutils container">
 <div class="highlight"><pre>
-WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: No module named &#39;mkl&#39;
+<span class="ansi-blue-intense-fg">INFO</span> Could not convert time to BJD TDB
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -449,7 +449,7 @@ WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: N
 <h2>Basic Summary report<a class="headerlink" href="#Basic-Summary-report" title="Permalink to this headline">¶</a></h2>
 <p>You can produce many reports in prose and arange them into the <code class="docutils literal notranslate"><span class="pre">Report</span></code> object so that they are all contained in a single <span class="math notranslate nohighlight">\(\LaTeX\)</span>/PDF. We will make a report out of the very basic <code class="docutils literal notranslate"><span class="pre">Summary</span></code> template, which namely shows a summary of the observation:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose.reports</span> <span class="kn">import</span> <span class="n">Report</span><span class="p">,</span> <span class="n">Summary</span>
@@ -459,7 +459,7 @@ WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: N
 
 <span class="c1"># The report</span>
 <span class="n">report</span> <span class="o">=</span> <span class="n">Report</span><span class="p">([</span><span class="n">summary</span><span class="p">])</span>
-<span class="n">report</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">obs</span><span class="o">.</span><span class="n">denominator</span><span class="si">}</span><span class="s2">_report&quot;</span><span class="p">)</span>
+<span class="n">report</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">obs</span><span class="o">.</span><span class="n">label</span><span class="si">}</span><span class="s2">_report&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -468,26 +468,19 @@ WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: N
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
+<span class="ansi-blue-intense-fg">INFO</span> Could not convert time to BJD TDB
 making summary ...
-</pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
-/Users/lgrcia/code/prose/prose/utils.py:213: RuntimeWarning: invalid value encountered in true_divide
-  return ry/np.std(ry)
-/opt/homebrew/Caskroom/miniforge/base/envs/modelling-2/lib/python3.9/site-packages/matplotlib/axes/_base.py:2475: UserWarning: Warning: converting a masked element to nan.
-  xys = np.asarray(xys)
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area docutils container">
+<div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-&lt;Figure size 432x288 with 0 Axes&gt;
+/Users/lgrcia/code/prose/prose/observation.py:516: RuntimeWarning: invalid value encountered in true_divide
+  scaled_data /= np.max([10*np.mean(be), (np.percentile(by, 95) - np.percentile(by, 5))])
+/opt/homebrew/Caskroom/miniforge/base/envs/modelling-2/lib/python3.9/site-packages/matplotlib/axes/_base.py:2475: UserWarning: Warning: converting a masked element to nan.
+  xys = np.asarray(xys)
 </pre></div></div>
 </div>
 <div class="admonition note">

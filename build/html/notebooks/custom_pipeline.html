@@ -442,8 +442,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: No module named &#39;mkl&#39;
-100%|███████████████████████████████████████████| 20/20 [00:00&lt;00:00, 32.59it/s]
+100%|███████████████████████████████████████████| 20/20 [00:00&lt;00:00, 32.41it/s]
 </pre></div></div>
 </div>
 <p>We directly instantiate a <code class="docutils literal notranslate"><span class="pre">FitsManager</span></code> object to explore this folder</p>
@@ -463,7 +462,7 @@ WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: N
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|█████████████████████████████████████████| 26/26 [00:00&lt;00:00, 2192.79it/s]
+100%|██████████████████████████████████████████| 26/26 [00:00&lt;00:00, 790.98it/s]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -472,21 +471,21 @@ WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: N
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Observations:
-╒═════════╤════════════╤═════════════╤══════════╤══════════╤════════╤════════════╕
-│   index │ date       │ telescope   │ target   │ filter   │ type   │   quantity │
-╞═════════╪════════════╪═════════════╪══════════╪══════════╪════════╪════════════╡
-│       0 │ 2022-02-05 │ A           │ prose    │ a        │ light  │         20 │
-╘═════════╧════════════╧═════════════╧══════════╧══════════╧════════╧════════════╛
+╒═════════╤════════════╤═════════════╤══════════╤══════════╤════════════╤════════╤════════════╕
+│   index │ date       │ telescope   │ target   │ filter   │   exposure │ type   │   quantity │
+╞═════════╪════════════╪═════════════╪══════════╪══════════╪════════════╪════════╪════════════╡
+│       0 │ 2022-03-14 │ A           │ prose    │ a        │          1 │ light  │         20 │
+╘═════════╧════════════╧═════════════╧══════════╧══════════╧════════════╧════════╧════════════╛
 Calibrations:
-╒════════════╤═════════════╤══════════╤══════════╤════════╤════════════╕
-│ date       │ telescope   │ target   │ filter   │ type   │   quantity │
-╞════════════╪═════════════╪══════════╪══════════╪════════╪════════════╡
-│ 2022-02-05 │ A           │ prose    │          │ bias   │          1 │
-├────────────┼─────────────┼──────────┼──────────┼────────┼────────────┤
-│ 2022-02-05 │ A           │ prose    │          │ dark   │          1 │
-├────────────┼─────────────┼──────────┼──────────┼────────┼────────────┤
-│ 2022-02-05 │ A           │ prose    │ a        │ flat   │          4 │
-╘════════════╧═════════════╧══════════╧══════════╧════════╧════════════╛
+╒════════════╤═════════════╤══════════╤══════════╤════════════╤════════╤════════════╕
+│ date       │ telescope   │ target   │ filter   │   exposure │ type   │   quantity │
+╞════════════╪═════════════╪══════════╪══════════╪════════════╪════════╪════════════╡
+│ 2022-03-14 │ A           │ prose    │          │          1 │ bias   │          1 │
+├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
+│ 2022-03-14 │ A           │ prose    │          │          1 │ dark   │          1 │
+├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
+│ 2022-03-14 │ A           │ prose    │ a        │          1 │ flat   │          4 │
+╘════════════╧═════════════╧══════════╧══════════╧════════════╧════════╧════════════╛
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -595,7 +594,7 @@ Calibrations:
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-blue-intense-fg">RUN</span> default: 100%|<span class="ansi-blue-intense-fg">█████████████████████████</span>| 20/20 [00:00&lt;00:00, 282.55images/s]
+<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">██████████████████████████████████</span>| 20/20 [00:00&lt;00:00, 152.88images/s]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">

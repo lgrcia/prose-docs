@@ -416,8 +416,8 @@ div.rendered_html tbody tr:hover {
 </style>
 <section id="Fits-manager">
 <h1>Fits manager<a class="headerlink" href="#Fits-manager" title="Permalink to this headline">¶</a></h1>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">FitsManager</span><span class="p">,</span> <span class="n">Telescope</span>
@@ -425,21 +425,13 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
-WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: No module named &#39;mkl&#39;
-</pre></div></div>
-</div>
 <p>Astronomical observations often generate highly disorganised fits images folders. To know the content of these files, file names can be used but have their limitations. At the end it is not rare to start opening these files to acces the information in their headers.</p>
 <p>To solve this organisation problem, prose features the <code class="docutils literal notranslate"><span class="pre">FitsManager</span></code> object, a conveniant tool to ease the sorting process.</p>
 <section id="Generating-fake-fits">
 <h2>Generating fake fits<a class="headerlink" href="#Generating-fake-fits" title="Permalink to this headline">¶</a></h2>
 <p>Lets’ generate a set of fake images all stored in the same folder but with different attributes and no way to distinguish them from their file names. These data will be taken from telescope <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> , let’s define them:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="n">Telescope</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">))</span>
@@ -458,7 +450,7 @@ Telescope &#39;b&#39; saved
 </div>
 <p>We will now simulate some images from <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> all located in a single folder, featuring different sizes, filters and associated calibration:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">destination</span> <span class="o">=</span> <span class="s2">&quot;./fake_observations&quot;</span>
@@ -471,7 +463,7 @@ Telescope &#39;b&#39; saved
 <h2>The Fits Manager object<a class="headerlink" href="#The-Fits-Manager-object" title="Permalink to this headline">¶</a></h2>
 <p>To dig into these disorganised data, we instantiate a <code class="docutils literal notranslate"><span class="pre">FitsManager</span></code> on the folder and see its content</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fm</span> <span class="o">=</span> <span class="n">FitsManager</span><span class="p">(</span><span class="n">destination</span><span class="p">)</span>
@@ -484,7 +476,7 @@ Telescope &#39;b&#39; saved
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|█████████████████████████████████████████| 26/26 [00:00&lt;00:00, 2019.11it/s]
+100%|██████████████████████████████████████████| 28/28 [00:00&lt;00:00, 909.95it/s]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -493,27 +485,29 @@ Telescope &#39;b&#39; saved
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Observations:
-╒═════════╤════════════╤═════════════╤══════════╤══════════╤════════╤════════════╕
-│   index │ date       │ telescope   │ target   │ filter   │ type   │   quantity │
-╞═════════╪════════════╪═════════════╪══════════╪══════════╪════════╪════════════╡
-│       0 │ 2022-02-05 │ A           │ prose    │ a        │ light  │          5 │
-├─────────┼────────────┼─────────────┼──────────┼──────────┼────────┼────────────┤
-│       1 │ 2022-02-05 │ A           │ prose    │ ab       │ light  │          5 │
-├─────────┼────────────┼─────────────┼──────────┼──────────┼────────┼────────────┤
-│       2 │ 2022-02-05 │ A           │ prose    │ b        │ light  │          5 │
-├─────────┼────────────┼─────────────┼──────────┼──────────┼────────┼────────────┤
-│       3 │ 2022-02-05 │ B           │ prose    │ b        │ light  │          5 │
-╘═════════╧════════════╧═════════════╧══════════╧══════════╧════════╧════════════╛
+╒═════════╤════════════╤═════════════╤══════════╤══════════╤════════════╤════════╤════════════╕
+│   index │ date       │ telescope   │ target   │ filter   │   exposure │ type   │   quantity │
+╞═════════╪════════════╪═════════════╪══════════╪══════════╪════════════╪════════╪════════════╡
+│       0 │ 2022-03-14 │ A           │ prose    │ a        │          1 │ light  │          5 │
+├─────────┼────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
+│       1 │ 2022-03-14 │ A           │ prose    │ ab       │          1 │ light  │          5 │
+├─────────┼────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
+│       2 │ 2022-03-14 │ A           │ prose    │ b        │          1 │ light  │          5 │
+├─────────┼────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
+│       3 │ 2022-03-14 │ B           │ prose    │ b        │          1 │ light  │          5 │
+╘═════════╧════════════╧═════════════╧══════════╧══════════╧════════════╧════════╧════════════╛
 Calibrations:
-╒════════════╤═════════════╤══════════╤══════════╤════════╤════════════╕
-│ date       │ telescope   │ target   │ filter   │ type   │   quantity │
-╞════════════╪═════════════╪══════════╪══════════╪════════╪════════════╡
-│ 2022-02-05 │ A           │ prose    │          │ dark   │          2 │
-├────────────┼─────────────┼──────────┼──────────┼────────┼────────────┤
-│ 2022-02-05 │ A           │ prose    │ b        │ flat   │          2 │
-├────────────┼─────────────┼──────────┼──────────┼────────┼────────────┤
-│ 2022-02-05 │ A           │ prose    │ c        │ flat   │          2 │
-╘════════════╧═════════════╧══════════╧══════════╧════════╧════════════╛
+╒════════════╤═════════════╤══════════╤══════════╤════════════╤════════╤════════════╕
+│ date       │ telescope   │ target   │ filter   │   exposure │ type   │   quantity │
+╞════════════╪═════════════╪══════════╪══════════╪════════════╪════════╪════════════╡
+│ 2022-03-14 │ A           │ prose    │          │          1 │ dark   │          2 │
+├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
+│ 2022-03-14 │ A           │ prose    │ c        │          8 │ dark   │          2 │
+├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
+│ 2022-03-14 │ A           │ prose    │ b        │          1 │ flat   │          2 │
+├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
+│ 2022-03-14 │ A           │ prose    │ c        │          1 │ flat   │          2 │
+╘════════════╧═════════════╧══════════╧══════════╧════════════╧════════╧════════════╛
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -529,7 +523,7 @@ Calibrations:
 <h2>Picking an observation<a class="headerlink" href="#Picking-an-observation" title="Permalink to this headline">¶</a></h2>
 <p>From there let say we want to keep the files from observation indexed <code class="docutils literal notranslate"><span class="pre">2</span></code> in the previous table:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fm</span><span class="o">.</span><span class="n">observation_files</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -537,22 +531,24 @@ Calibrations:
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-{&#39;images&#39;: array([&#39;/Users/lgrcia/code/prose/docs/source/notebooks/fake_observations/A-bis-test0.fits&#39;,
-        &#39;/Users/lgrcia/code/prose/docs/source/notebooks/fake_observations/A-bis-test1.fits&#39;,
-        &#39;/Users/lgrcia/code/prose/docs/source/notebooks/fake_observations/A-bis-test2.fits&#39;,
-        &#39;/Users/lgrcia/code/prose/docs/source/notebooks/fake_observations/A-bis-test3.fits&#39;,
-        &#39;/Users/lgrcia/code/prose/docs/source/notebooks/fake_observations/A-bis-test4.fits&#39;],
+{&#39;images&#39;: array([&#39;/Users/lgrcia/code/prose-docs/source/notebooks/fake_observations/A-bis-test0.fits&#39;,
+        &#39;/Users/lgrcia/code/prose-docs/source/notebooks/fake_observations/A-bis-test1.fits&#39;,
+        &#39;/Users/lgrcia/code/prose-docs/source/notebooks/fake_observations/A-bis-test2.fits&#39;,
+        &#39;/Users/lgrcia/code/prose-docs/source/notebooks/fake_observations/A-bis-test3.fits&#39;,
+        &#39;/Users/lgrcia/code/prose-docs/source/notebooks/fake_observations/A-bis-test4.fits&#39;],
        dtype=&#39;&lt;U81&#39;),
  &#39;bias&#39;: array([], dtype=float64),
- &#39;darks&#39;: [&#39;/Users/lgrcia/code/prose/docs/source/notebooks/fake_observations/A-bis-test_d1.fits&#39;,
-  &#39;/Users/lgrcia/code/prose/docs/source/notebooks/fake_observations/A-bis-test_d0.fits&#39;],
- &#39;flats&#39;: [&#39;/Users/lgrcia/code/prose/docs/source/notebooks/fake_observations/A-bis-testf1_0.fits&#39;,
-  &#39;/Users/lgrcia/code/prose/docs/source/notebooks/fake_observations/A-bis-testf1_1.fits&#39;]}
+ &#39;darks&#39;: [&#39;/Users/lgrcia/code/prose-docs/source/notebooks/fake_observations/A-bis-test_d0.fits&#39;,
+  &#39;/Users/lgrcia/code/prose-docs/source/notebooks/fake_observations/A-bis-test_d1.fits&#39;,
+  &#39;/Users/lgrcia/code/prose-docs/source/notebooks/fake_observations/A-bis-testf2_0_8s_dark.fits&#39;,
+  &#39;/Users/lgrcia/code/prose-docs/source/notebooks/fake_observations/A-bis-testf2_1_8s_dark.fits&#39;],
+ &#39;flats&#39;: [&#39;/Users/lgrcia/code/prose-docs/source/notebooks/fake_observations/A-bis-testf1_0.fits&#39;,
+  &#39;/Users/lgrcia/code/prose-docs/source/notebooks/fake_observations/A-bis-testf1_1.fits&#39;]}
 </pre></div></div>
 </div>
 <p>flats with the right filter have been kept, as well as darks</p>
@@ -562,7 +558,7 @@ Calibrations:
 <p>Since we just specified the telescope names all the rest is default. For example the filter is taken from the keyword <code class="docutils literal notranslate"><span class="pre">FILTER</span></code> and the image type from <code class="docutils literal notranslate"><span class="pre">IMAGETYP</span></code>, knowing that <code class="docutils literal notranslate"><span class="pre">IMAGETYP=light</span></code> is a light (a.k.a science) frame. These keywords can be set in more details when registering the telescope.</p>
 <p>For more details, chcek the <code class="docutils literal notranslate"><span class="pre">Telescope</span></code> object</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># hidden</span>
