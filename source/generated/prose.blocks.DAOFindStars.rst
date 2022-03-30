@@ -1,10 +1,5 @@
-﻿
-DAOFindStars
-============
-
-.. raw:: html
-
-    <img src="../_images/block.png" class="block-image"></img>
+﻿prose.blocks.DAOFindStars
+=========================
 
 .. currentmodule:: prose.blocks
 

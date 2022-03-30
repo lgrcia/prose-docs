@@ -1,10 +1,5 @@
-﻿
-Stack
-=====
-
-.. raw:: html
-
-    <img src="../_images/block.png" class="block-image"></img>
+﻿prose.blocks.Stack
+==================
 
 .. currentmodule:: prose.blocks
 

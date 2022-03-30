@@ -1,10 +1,5 @@
-﻿
-PhotutilsPSFPhotometry
-======================
-
-.. raw:: html
-
-    <img src="../_images/block.png" class="block-image"></img>
+﻿prose.blocks.PhotutilsPSFPhotometry
+===================================
 
 .. currentmodule:: prose.blocks
 

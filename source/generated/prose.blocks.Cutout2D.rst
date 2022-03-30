@@ -1,10 +1,5 @@
-﻿
-Cutout2D
-========
-
-.. raw:: html
-
-    <img src="../_images/block.png" class="block-image"></img>
+﻿prose.blocks.Cutout2D
+=====================
 
 .. currentmodule:: prose.blocks
 

@@ -1,10 +1,5 @@
-﻿
-Gaussian2D
-==========
-
-.. raw:: html
-
-    <img src="../_images/block.png" class="block-image"></img>
+﻿prose.blocks.Gaussian2D
+=======================
 
 .. currentmodule:: prose.blocks
 

@@ -1,10 +1,5 @@
-﻿
-Moffat2D
-========
-
-.. raw:: html
-
-    <img src="../_images/block.png" class="block-image"></img>
+﻿prose.blocks.Moffat2D
+=====================
 
 .. currentmodule:: prose.blocks
 

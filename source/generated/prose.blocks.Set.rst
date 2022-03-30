@@ -1,10 +1,5 @@
-﻿
-Set
-===
-
-.. raw:: html
-
-    <img src="../_images/block.png" class="block-image"></img>
+﻿prose.blocks.Set
+================
 
 .. currentmodule:: prose.blocks
 

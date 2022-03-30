@@ -1,10 +1,5 @@
-﻿
-SegmentedPeaks
-==============
-
-.. raw:: html
-
-    <img src="../_images/block.png" class="block-image"></img>
+﻿prose.blocks.SegmentedPeaks
+===========================
 
 .. currentmodule:: prose.blocks
 
