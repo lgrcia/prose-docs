@@ -32,6 +32,8 @@ exclude_patterns = ['_build', '**.ipynb_checkpoints']
 source_suffix = {'.rst': 'restructuredtext'}
 
 # -- Options for HTML output -------------------------------------------------
+
+html_title = "prose"
 html_theme = "furo"
 html_static_path = ['_static']
 templates_path = ["templates"]

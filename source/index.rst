@@ -7,21 +7,36 @@
 .. role:: underline
     :class: underline
 
-
-prose
-=====
-
+   
 .. image:: prose_illustration.png
    :width: 500
    :align: center
+   
+.. raw:: html
 
-.. image:: https://img.shields.io/badge/github-lgrcia/prose-blue.svg?style=flat
-    :target: https://github.com/lgrcia/prose
-.. image:: https://img.shields.io/badge/read-thedoc-black.svg?style=flat
-    :target: https://prose.readthedocs.io/en/latest/
-.. image:: https://img.shields.io/badge/license-MIT-lightgray.svg?style=flat
+   <p align="center">
+   <br>  
+   <br>
+   A python framework to build FITS images pipelines.
+   <br>
+   <p align="center">
+      <a href="https://github.com/lgrcia/prose">
+         <img src="https://img.shields.io/badge/github-lgrcia/prose-blue.svg?style=flat" alt="github"/>
+      </a>
+      <a href="">
+         <img src="https://img.shields.io/badge/license-MIT-lightgray.svg?style=flat" alt="license"/>
+      </a>
+      <a href="https://arxiv.org/abs/2111.02814">
+         <img src="https://img.shields.io/badge/paper-yellow.svg?style=flat" alt="paper"/>
+      </a>
+      <a href="https://lgrcia.github.io/prose-docs">
+         <img src="https://img.shields.io/badge/documentation-black.svg?style=flat" alt="documentation"/>
+      </a>
+   </p>
+   </p>
 
-|prose| is a tool to build pipelines dedicated to astronomical images processing, :underline:`only based on pip installable dependencies` (e.g. no IRAF, Sextractor or Astrometry.net install needed 🎉). It features default pipelines to perform common tasks (such as automated calibration, reduction and photometry) and makes building custom ones easy.
+
+|prose| is a Python tool to build pipelines dedicated to astronomical images processing (all based on pip packages 📦). Beyond providing all the blocks to do so, it features default pipelines to perform common tasks such as automated calibration, reduction and photometry.
 
 
 .. toctree::
