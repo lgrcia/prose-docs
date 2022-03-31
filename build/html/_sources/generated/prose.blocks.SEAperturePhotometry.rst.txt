@@ -1,10 +1,5 @@
-﻿
-SEAperturePhotometry
-====================
-
-.. raw:: html
-
-    <img src="../_images/block.png" class="block-image"></img>
+﻿prose.blocks.SEAperturePhotometry
+=================================
 
 .. currentmodule:: prose.blocks
 

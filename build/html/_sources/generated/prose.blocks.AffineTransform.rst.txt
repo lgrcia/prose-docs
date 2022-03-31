@@ -1,10 +1,5 @@
-﻿
-AffineTransform
-===============
-
-.. raw:: html
-
-    <img src="../_images/block.png" class="block-image"></img>
+﻿prose.blocks.AffineTransform
+============================
 
 .. currentmodule:: prose.blocks
 

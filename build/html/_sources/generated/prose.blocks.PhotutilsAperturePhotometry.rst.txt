@@ -1,10 +1,5 @@
-﻿
-PhotutilsAperturePhotometry
-===========================
-
-.. raw:: html
-
-    <img src="../_images/block.png" class="block-image"></img>
+﻿prose.blocks.PhotutilsAperturePhotometry
+========================================
 
 .. currentmodule:: prose.blocks
 

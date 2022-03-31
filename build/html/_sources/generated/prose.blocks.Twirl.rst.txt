@@ -1,10 +1,5 @@
-﻿
-Twirl
-=====
-
-.. raw:: html
-
-    <img src="../_images/block.png" class="block-image"></img>
+﻿prose.blocks.Twirl
+==================
 
 .. currentmodule:: prose.blocks
 

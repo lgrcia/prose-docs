@@ -1,10 +1,5 @@
-﻿
-Flip
-====
-
-.. raw:: html
-
-    <img src="../_images/block.png" class="block-image"></img>
+﻿prose.blocks.Flip
+=================
 
 .. currentmodule:: prose.blocks
 

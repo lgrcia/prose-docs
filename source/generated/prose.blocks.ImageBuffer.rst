@@ -1,10 +1,5 @@
-﻿
-ImageBuffer
-===========
-
-.. raw:: html
-
-    <img src="../_images/block.png" class="block-image"></img>
+﻿prose.blocks.ImageBuffer
+========================
 
 .. currentmodule:: prose.blocks
 

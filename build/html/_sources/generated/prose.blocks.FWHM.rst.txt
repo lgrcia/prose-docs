@@ -1,10 +1,5 @@
-﻿
-FWHM
-====
-
-.. raw:: html
-
-    <img src="../_images/block.png" class="block-image"></img>
+﻿prose.blocks.FWHM
+=================
 
 .. currentmodule:: prose.blocks
 

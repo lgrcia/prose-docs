@@ -1,10 +1,5 @@
-﻿
-MedianPSF
-=========
-
-.. raw:: html
-
-    <img src="../_images/block.png" class="block-image"></img>
+﻿prose.blocks.MedianPSF
+======================
 
 .. currentmodule:: prose.blocks
 

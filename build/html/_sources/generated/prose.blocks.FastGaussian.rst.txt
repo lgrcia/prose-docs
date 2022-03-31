@@ -1,10 +1,5 @@
-﻿
-FastGaussian
-============
-
-.. raw:: html
-
-    <img src="../_images/block.png" class="block-image"></img>
+﻿prose.blocks.FastGaussian
+=========================
 
 .. currentmodule:: prose.blocks
 
