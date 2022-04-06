@@ -15,7 +15,7 @@
    "source": [
     "When doing an observation to commission a new instrument, or simply to know what's going on with a certain night, it is sometimes usefull to fully visualize the reduction process of raw images 🧐\n",
     "\n",
-    "In this tutorial we will see how to produce that with prose. One thing we will focus on is how well images are aligned and what's the shape of the PSF over the course of an observation"
+    "In this case study we will see how to produce that with prose. One thing we will focus on is how well images are aligned and what's the shape of the PSF over the course of an observation"
    ]
   },
   {
