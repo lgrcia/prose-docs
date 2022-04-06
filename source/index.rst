@@ -43,7 +43,7 @@
    :caption: References
    :maxdepth: 1
 
-   installation
+   installation.md
    notebooks/quickstart.ipynb
    core
    blocks
@@ -61,6 +61,12 @@
    notebooks/modeling.ipynb
    notebooks/reports.ipynb
    notebooks/neb.ipynb
+
+.. toctree::
+   :caption: Case studies 🔭
+   :maxdepth: 1
+
+   notebooks/case_studies/diagnostic_video.ipynb
    
 .. toctree::
    :caption: Notes

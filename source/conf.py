@@ -24,12 +24,16 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx_copybutton', 
     'nbsphinx',
-    'jupyter_sphinx'
+    'jupyter_sphinx',
+    'myst_parser'
     ]
 
 master_doc = 'index'
 exclude_patterns = ['_build', '**.ipynb_checkpoints']
-source_suffix = {'.rst': 'restructuredtext'}
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 
 # -- Options for HTML output -------------------------------------------------
 

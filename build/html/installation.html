@@ -214,6 +214,10 @@
 <li class="toctree-l1"><a class="reference internal" href="notebooks/reports.html">Reports</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/neb.html">Near Eclipsing Binary diagnostic</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/case_studies/diagnostic_video.html">Diagnostic video</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/phot.html">Data products: <code class="docutils literal notranslate"><span class="pre">.phot</span></code></a></li>
@@ -251,56 +255,32 @@
         </div>
         <article role="main">
           <section id="installation">
-<span id="getting-started"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h1>
-<p><em>prose</em> runs more safely in its own <a class="reference external" href="https://docs.python.org/3/tutorial/venv.html">virtual environment</a> and is tested on Python 3.6.</p>
-<section id="osx">
-<h2>OSX<a class="headerlink" href="#osx" title="Permalink to this headline">#</a></h2>
-<p>create your <a class="reference external" href="https://docs.python.org/3/tutorial/venv.htmlandactivateit">virtualenv</a></p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python3.6 -m venv prose_env
-<span class="nb">source</span> prose_env/bin/activate.bin
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h1>
+<section id="pip">
+<h2>pip<a class="headerlink" href="#pip" title="Permalink to this headline">#</a></h2>
+<p>prose is written for python 3 and can be installed from pypi with:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install prose
 </pre></div>
 </div>
-<p>Then to locally install <em>prose</em></p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/lgrcia/prose.git
+<p>To install it through conda, once in your newly created environment, go with:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda install numpy scipy tensorflow netcdf4 numba
 
-<span class="nb">cd</span> prose_env
-python3.6 -m pip install -e ../prose
+<span class="c1"># then </span>
+
+pip install prose
 </pre></div>
 </div>
 </section>
-<section id="linux">
-<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">#</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Linux users will need <cite>sudo apt-get install python-virtualenv</cite></p>
-</div>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>virtualenv -p python3.6 prose_env
-<span class="nb">source</span> prose_env/bin/activate
+<section id="from-source">
+<h2>from source<a class="headerlink" href="#from-source" title="Permalink to this headline">#</a></h2>
+<p>To install prose from source <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> prose repository with</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/lgrcia/prose.git
 </pre></div>
 </div>
-<p>Then to locally install <em>prose</em></p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/lgrcia/prose.git
-
-<span class="nb">cd</span> prose_env
-python3.6 -m pip install -e ../prose
+<p>then locally install the package with</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install -e prose
 </pre></div>
 </div>
-</section>
-<section id="upgrading">
-<h2>Upgrading<a class="headerlink" href="#upgrading" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>In <em>prose</em> source code folder:</p></li>
-</ul>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git pull
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>In your <strong>activated</strong> virtualenv:</p></li>
-</ul>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install --upgrade -e ../prose
-</pre></div>
-</div>
-<p>And <em>prose</em> should be up-to-date with the main branch</p>
 </section>
 </section>
 
@@ -362,9 +342,8 @@ python3.6 -m pip install -e ../prose
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Installation</a><ul>
-<li><a class="reference internal" href="#osx">OSX</a></li>
-<li><a class="reference internal" href="#linux">Linux</a></li>
-<li><a class="reference internal" href="#upgrading">Upgrading</a></li>
+<li><a class="reference internal" href="#pip">pip</a></li>
+<li><a class="reference internal" href="#from-source">from source</a></li>
 </ul>
 </li>
 </ul>
