@@ -56,7 +56,6 @@
 
    notebooks/fits_manager.ipynb
    notebooks/reduction.ipynb
-   notebooks/manual_reduction.ipynb
    notebooks/custom_pipeline.ipynb
    notebooks/modeling.ipynb
    notebooks/reports.ipynb
