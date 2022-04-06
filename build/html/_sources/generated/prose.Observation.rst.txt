@@ -14,6 +14,7 @@
         :toctree: generated/
    
       ~Observation.__init__
+      ~Observation.assert_stack
       ~Observation.best_polynomial
       ~Observation.binn
       ~Observation.broeg2005
@@ -75,6 +76,7 @@
       ~Observation.diff_flux
       ~Observation.gaia_from_toi
       ~Observation.has_diff
+      ~Observation.has_stack
       ~Observation.label
       ~Observation.meridian_flip
       ~Observation.night_date

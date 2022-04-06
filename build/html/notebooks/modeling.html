@@ -208,7 +208,6 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="fits_manager.html">Fits manager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reduction.html">Photometric reduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="manual_reduction.html">Manual reduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom_pipeline.html">Custom pipeline</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Modeling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a></li>
@@ -506,6 +505,9 @@ div.rendered_html tbody tr:hover {
 <h1>Modeling<a class="headerlink" href="#Modeling" title="Permalink to this headline">#</a></h1>
 <p><em>prose</em> does not implement a modeling framework, many options are currently available in python. However, it features some tools to aid in selecting the right model, mainly linear ones.</p>
 <p>In this tutorial we will review some of these tools and show how the prose products can conveniently be used within <code class="docutils literal notranslate"><span class="pre">exoplanet</span></code>, itself using the <code class="docutils literal notranslate"><span class="pre">pymc3</span></code> inference framework.</p>
+<div class="admonition note">
+<p>Tutorial requirements: - exoplanet - pymc3_ext - corner</p>
+</div>
 <section id="Making-up-some-data">
 <h2>Making up some data<a class="headerlink" href="#Making-up-some-data" title="Permalink to this headline">#</a></h2>
 <p>As usual we will work on synthetic data. Here we propose to analyse a planetary transit light curve in which we added some instrumental signals:</p>
@@ -529,14 +531,6 @@ div.rendered_html tbody tr:hover {
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
-WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: No module named 'mkl'
-</pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 <span class="ansi-blue-intense-fg">INFO</span> Could not convert time to BJD TDB
@@ -546,7 +540,7 @@ WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: N
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/notebooks_modeling_2_2.png" src="../_images/notebooks_modeling_2_2.png"/>
+<img alt="../_images/notebooks_modeling_3_1.png" src="../_images/notebooks_modeling_3_1.png"/>
 </div>
 </div>
 <div class="admonition note">
@@ -599,7 +593,7 @@ wX\end{split}\]</div></div>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/notebooks_modeling_9_0.png" src="../_images/notebooks_modeling_9_0.png"/>
+<img alt="../_images/notebooks_modeling_10_0.png" src="../_images/notebooks_modeling_10_0.png"/>
 </div>
 </div>
 <p>Although it’s not very good, the model is certainly not complete. Let’s make it better.</p>
@@ -640,7 +634,7 @@ wX\end{split}\]</div></div>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/notebooks_modeling_13_0.png" src="../_images/notebooks_modeling_13_0.png"/>
+<img alt="../_images/notebooks_modeling_14_0.png" src="../_images/notebooks_modeling_14_0.png"/>
 </div>
 </div>
 </section>
@@ -696,17 +690,17 @@ best orders: {'sky': 1, 'dy': 5}
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/notebooks_modeling_17_1.png" src="../_images/notebooks_modeling_17_1.png"/>
+<img alt="../_images/notebooks_modeling_18_1.png" src="../_images/notebooks_modeling_18_1.png"/>
 </div>
 </div>
-<p>This was just for fun and shows that adding <code class="docutils literal notranslate"><span class="pre">dy</span></code> order 3 favors the fit while keeping the model simple. We notice that this estimate naturraly depends on how complete the model is (here not complete due to the transit missing).</p>
+<p>This was just for fun and shows that adding <code class="docutils literal notranslate"><span class="pre">dy</span></code> order 5 favors the fit while keeping the model simple. We notice that this estimate naturraly depends on how complete the model is (here not complete due to the transit missing).</p>
 </section>
 </section>
 <section id="Bayesian-modeling">
 <h2>Bayesian modeling<a class="headerlink" href="#Bayesian-modeling" title="Permalink to this headline">#</a></h2>
 <p>We will now use <a class="reference external" href="https://docs.exoplanet.codes/en/stable/">exoplanet</a> to infer of our transit parameters. For this part of the tutorial you will need <a class="reference external" href="https://docs.exoplanet.codes/en/stable/">exoplanet</a> and <a class="reference external" href="https://corner.readthedocs.io/en/latest/">corner</a> to be installed. Right now, we can instantiate the previously defined linear model for our systematics. This is done through <code class="docutils literal notranslate"><span class="pre">models.LinearModel</span></code> which nicely interfaces with <code class="docutils literal notranslate"><span class="pre">pymc3</span></code>:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we use the best order combination found in the previous section</span>
@@ -717,10 +711,10 @@ best orders: {'sky': 1, 'dy': 5}
 </div>
 <p>The basic principle of <code class="docutils literal notranslate"><span class="pre">pymc3</span></code> is to let you define free parameters distributions and specify the models which depend on them before doing any computation. Doing so, a pre-optimized graph is built <strong>once</strong> making any later execution much faster. This comes handy for inference since a lot of samples need to be drawn from your posterior distribution. Let’s build our <code class="docutils literal notranslate"><span class="pre">pymc3</span></code> model with <code class="docutils literal notranslate"><span class="pre">exoplanet</span></code> (lot more details <a class="reference external" href="https://docs.exoplanet.codes/en/stable/tutorials/transit/">here</a>):</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># here we use exoplanet 0.0.5</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># here we use exoplanet 0.5.2</span>
 
 <span class="kn">import</span> <span class="nn">pymc3</span> <span class="k">as</span> <span class="nn">pm</span>
 <span class="kn">import</span> <span class="nn">pymc3_ext</span> <span class="k">as</span> <span class="nn">pmx</span>
@@ -733,7 +727,7 @@ best orders: {'sky': 1, 'dy': 5}
     <span class="c1"># ------------------</span>
     <span class="n">period</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Uniform</span><span class="p">(</span><span class="s2">"period"</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Uniform</span><span class="p">(</span><span class="s2">"r"</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span><span class="o">*</span><span class="n">earth2sun</span>
-    <span class="n">w</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Flat</span><span class="p">(</span><span class="s2">"s"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">))</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Flat</span><span class="p">(</span><span class="s2">"s"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">),</span> <span class="n">testval</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">lstsq</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">obs</span><span class="o">.</span><span class="n">diff_flux</span><span class="p">,</span> <span class="n">rcond</span><span class="o">=</span><span class="kc">None</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
 
     <span class="c1"># Keplerian orbit</span>
     <span class="c1"># ---------------</span>
@@ -762,6 +756,7 @@ best orders: {'sky': 1, 'dy': 5}
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
+WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: No module named 'mkl'
 optimizing logp for variables: [s, r, period]
 </pre></div></div>
 </div>
@@ -769,21 +764,26 @@ optimizing logp for variables: [s, r, period]
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<div>
 <style>
-        /* Turns off some styling */
-        progress {
-            /* gets rid of default border in Firefox and Opera. */
-            border: none;
-            /* Needs to be in here for Safari polyfill so background images work as expected. */
-            background-size: auto;
-        }
-        .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-            background: #F44336;
-        }
-    </style>
-<progress class="" max="110" style="width:300px; height:20px; vertical-align: middle;" value="110"></progress>
-  100.00% [110/110 00:00&lt;00:00 logp = 1.448e+03]
+    /* Turns off some styling */
+    progress {
+        /* gets rid of default border in Firefox and Opera. */
+        border: none;
+        /* Needs to be in here for Safari polyfill so background images work as expected. */
+        background-size: auto;
+    }
+    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
+        background: #F44336;
+    }
+</style></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<progress class="" max="31" style="width:300px; height:20px; vertical-align: middle;" value="31"></progress>
+  100.00% [31/31 00:00&lt;00:00 logp = 1.448e+03]
 </div></div>
 </div>
 <div class="nboutput docutils container">
@@ -799,13 +799,13 @@ optimizing logp for variables: [s, r, period]
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-message: Desired error not necessarily achieved due to precision loss.
-logp: -37473109.152190864 -&gt; 1448.2841596009976
+message: Optimization terminated successfully.
+logp: 1380.7241856821806 -&gt; 1448.2841596009973
 </pre></div></div>
 </div>
 <p>We can plot the maximum a posteriori which will be the starting point of our sampling algorithm</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
@@ -821,12 +821,12 @@ logp: -37473109.152190864 -&gt; 1448.2841596009976
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/notebooks_modeling_24_0.png" src="../_images/notebooks_modeling_24_0.png"/>
+<img alt="../_images/notebooks_modeling_25_0.png" src="../_images/notebooks_modeling_25_0.png"/>
 </div>
 </div>
 <p>Not bad. Let’s sample the posterior likelihood</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
@@ -835,7 +835,7 @@ logp: -37473109.152190864 -&gt; 1448.2841596009976
     <span class="n">trace</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span>
         <span class="n">tune</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span>
         <span class="n">draws</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span>
-        <span class="n">start</span><span class="o">=</span><span class="n">opt</span><span class="p">,</span>
+        <span class="n">initvals</span><span class="o">=</span><span class="n">opt</span><span class="p">,</span>
         <span class="n">cores</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
         <span class="n">chains</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
         <span class="n">init</span><span class="o">=</span><span class="s2">"adapt_full"</span><span class="p">,</span>
@@ -852,7 +852,7 @@ logp: -37473109.152190864 -&gt; 1448.2841596009976
 <div class="highlight"><pre>
 Auto-assigning NUTS sampler...
 Initializing NUTS using adapt_full...
-/opt/homebrew/Caskroom/miniforge/base/envs/modelling-2/lib/python3.9/site-packages/pymc3/step_methods/hmc/quadpotential.py:514: UserWarning: QuadPotentialFullAdapt is an experimental feature
+/opt/homebrew/Caskroom/miniforge/base/envs/prose/lib/python3.9/site-packages/pymc3/step_methods/hmc/quadpotential.py:510: UserWarning: QuadPotentialFullAdapt is an experimental feature
   warnings.warn("QuadPotentialFullAdapt is an experimental feature")
 Multiprocess sampling (2 chains in 2 jobs)
 NUTS: [s, r, period]
@@ -862,19 +862,24 @@ NUTS: [s, r, period]
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area rendered_html docutils container">
-<div>
 <style>
-        /* Turns off some styling */
-        progress {
-            /* gets rid of default border in Firefox and Opera. */
-            border: none;
-            /* Needs to be in here for Safari polyfill so background images work as expected. */
-            background-size: auto;
-        }
-        .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-            background: #F44336;
-        }
-    </style>
+    /* Turns off some styling */
+    progress {
+        /* gets rid of default border in Firefox and Opera. */
+        border: none;
+        /* Needs to be in here for Safari polyfill so background images work as expected. */
+        background-size: auto;
+    }
+    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
+        background: #F44336;
+    }
+</style></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
 <progress class="" max="8000" style="width:300px; height:20px; vertical-align: middle;" value="8000"></progress>
   100.00% [8000/8000 00:09&lt;00:00 Sampling 2 chains, 0 divergences]
 </div></div>
@@ -884,16 +889,16 @@ NUTS: [s, r, period]
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/opt/homebrew/Caskroom/miniforge/base/envs/modelling-2/lib/python3.9/site-packages/scipy/stats/_continuous_distns.py:624: RuntimeWarning: overflow encountered in _beta_ppf
+/opt/homebrew/Caskroom/miniforge/base/envs/prose/lib/python3.9/site-packages/scipy/stats/_continuous_distns.py:624: RuntimeWarning: overflow encountered in _beta_ppf
   return _boost._beta_ppf(q, a, b)
-/opt/homebrew/Caskroom/miniforge/base/envs/modelling-2/lib/python3.9/site-packages/scipy/stats/_continuous_distns.py:624: RuntimeWarning: overflow encountered in _beta_ppf
+/opt/homebrew/Caskroom/miniforge/base/envs/prose/lib/python3.9/site-packages/scipy/stats/_continuous_distns.py:624: RuntimeWarning: overflow encountered in _beta_ppf
   return _boost._beta_ppf(q, a, b)
-Sampling 2 chains for 2_000 tune and 2_000 draw iterations (4_000 + 4_000 draws total) took 13 seconds.
+Sampling 2 chains for 2_000 tune and 2_000 draw iterations (4_000 + 4_000 draws total) took 14 seconds.
 </pre></div></div>
 </div>
 <p>We can now make a corner plot of the parameters of interest. We marked in blue the true values used to generate our synthetic data.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">corner</span>
@@ -915,14 +920,14 @@ WARNING:root:Pandas support in corner is deprecated; use ArviZ directly
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/notebooks_modeling_28_1.png" src="../_images/notebooks_modeling_28_1.png"/>
+<img alt="../_images/notebooks_modeling_29_1.png" src="../_images/notebooks_modeling_29_1.png"/>
 </div>
 </div>
 <p>Quite close! Again, our priors are not realistic and inferring the parameters of a real unknown transit will require some adjustments.</p>
 </section>
 <section id="Recomendations">
 <h2>Recomendations<a class="headerlink" href="#Recomendations" title="Permalink to this headline">#</a></h2>
-<p>We highly recomand the use of the excellent <code class="docutils literal notranslate"><span class="pre">exoplanet</span></code> (and <code class="docutils literal notranslate"><span class="pre">starry</span></code> for more speific needs) packages and documentations. To see if they fit your needs, the <a class="reference external" href="https://gallery.exoplanet.codes/en/latest/">case studies pages</a> of <code class="docutils literal notranslate"><span class="pre">exoplanet</span></code> is a good place to start.</p>
+<p>We highly recomand the use of the excellent <code class="docutils literal notranslate"><span class="pre">exoplanet</span></code> (and <code class="docutils literal notranslate"><span class="pre">starry</span></code> for more speific needs) packages and documentations. To see if they fit your needs, the <a class="reference external" href="https://gallery.exoplanet.codes/">case studies pages</a> of <code class="docutils literal notranslate"><span class="pre">exoplanet</span></code> is a good place to start.</p>
 </section>
 </section>
 
