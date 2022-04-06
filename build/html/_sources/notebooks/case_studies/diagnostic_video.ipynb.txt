@@ -342,7 +342,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 10,
+   "execution_count": 7,
    "id": "5466fd47-5be8-4e8b-bb07-ec07d2d1d004",
    "metadata": {},
    "outputs": [
@@ -359,8 +359,7 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "\u001b[94mRUN\u001b[39m 100%|\u001b[94m█████████████████████████████████\u001b[39m| 232/232 [01:37<00:00,  2.38images/s]\u001b[0m\n",
-      "IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (720, 360) to (720, 368) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).\n"
+      "\u001b[94mRUN\u001b[39m 100%|\u001b[94m███████████████████████████████████\u001b[39m| 10/10 [00:59<00:00,  5.97s/images]\u001b[0m\n"
      ]
     }
    ],
@@ -388,10 +387,10 @@
     "    blocks.Cutouts(size=41),                          # extracting stars cutouts\n",
     "    blocks.MedianPSF(),                               # combining into a median PSF\n",
     "    blocks.Moffat2D(),                                # PSF model\n",
-    "    blocks.vizualisation.PlotVideo(plot, \"test.mp4\")  # Video block\n",
+    "    blocks.vizualisation.PlotVideo(plot, \"test.gif\")  # Video block (here a gif to display in the notebook)\n",
     "])\n",
     "\n",
-    "main_sequence.run(fm.images)"
+    "main_sequence.run(fm.images[50:60]) # just 10 for example"
    ]
   },
   {
@@ -401,7 +400,7 @@
     "tags": []
    },
    "source": [
-    "<video alt=\"test\" loop play autoplay src=\"test.mp4\" type=\"video/mp4\"></video>"
+    "![test.gif](test.gif)"
    ]
   }
  ],

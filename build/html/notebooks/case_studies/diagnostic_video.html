@@ -759,7 +759,7 @@ IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=
 <h2>A concise code<a class="headerlink" href="#A-concise-code" title="Permalink to this headline">#</a></h2>
 <p>We have seen all the steps and details on how to use a plotting function within a sequence. For reference and clarity here is the final code containing the reference and main sequences:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">blocks</span>
@@ -785,10 +785,10 @@ IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=
     <span class="n">blocks</span><span class="o">.</span><span class="n">Cutouts</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">41</span><span class="p">),</span>                          <span class="c1"># extracting stars cutouts</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">MedianPSF</span><span class="p">(),</span>                               <span class="c1"># combining into a median PSF</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">Moffat2D</span><span class="p">(),</span>                                <span class="c1"># PSF model</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">vizualisation</span><span class="o">.</span><span class="n">PlotVideo</span><span class="p">(</span><span class="n">plot</span><span class="p">,</span> <span class="s2">"test.mp4"</span><span class="p">)</span>  <span class="c1"># Video block</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">vizualisation</span><span class="o">.</span><span class="n">PlotVideo</span><span class="p">(</span><span class="n">plot</span><span class="p">,</span> <span class="s2">"test.gif"</span><span class="p">)</span>  <span class="c1"># Video block (here a gif to display in the notebook)</span>
 <span class="p">])</span>
 
-<span class="n">main_sequence</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">images</span><span class="p">)</span>
+<span class="n">main_sequence</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">50</span><span class="p">:</span><span class="mi">60</span><span class="p">])</span> <span class="c1"># just 10 for example</span>
 </pre></div>
 </div>
 </div>
@@ -807,11 +807,11 @@ IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">█████████████████████████████████</span>| 232/232 [01:37&lt;00:00,  2.38images/s]
-IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (720, 360) to (720, 368) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">███████████████████████████████████</span>| 10/10 [00:59&lt;00:00,  5.97s/images]
 </pre></div></div>
 </div>
-<video alt="test" autoplay="" loop="" play="" src="test.mp4" type="video/mp4"></video></section>
+<img alt="test.gif" src="../../_images/test.gif"/>
+</section>
 </section>
 
         </article>
