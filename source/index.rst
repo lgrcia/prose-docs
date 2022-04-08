@@ -66,6 +66,7 @@
    :maxdepth: 1
 
    notebooks/case_studies/diagnostic_video.ipynb
+   notebooks/case_studies/gaia_photometry.ipynb
    
 .. toctree::
    :caption: Notes

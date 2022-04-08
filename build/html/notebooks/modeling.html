@@ -216,6 +216,7 @@
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="case_studies/diagnostic_video.html">Diagnostic video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case_studies/gaia_photometry.html">Photometry from gaia coordinates</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
@@ -506,8 +507,11 @@ div.rendered_html tbody tr:hover {
 <p><em>prose</em> does not implement a modeling framework, many options are currently available in python. However, it features some tools to aid in selecting the right model, mainly linear ones.</p>
 <p>In this tutorial we will review some of these tools and show how the prose products can conveniently be used within <code class="docutils literal notranslate"><span class="pre">exoplanet</span></code>, itself using the <code class="docutils literal notranslate"><span class="pre">pymc3</span></code> inference framework.</p>
 <div class="admonition note">
-<p>Tutorial requirements: - exoplanet - pymc3_ext - corner</p>
-</div>
+<p class="admonition-title">Tutorial requirements:</p>
+<ul><li><p>exoplanet</p>
+</li><li><p>pymc3_ext</p>
+</li><li><p>corner</p>
+</li></ul></div>
 <section id="Making-up-some-data">
 <h2>Making up some data<a class="headerlink" href="#Making-up-some-data" title="Permalink to this headline">#</a></h2>
 <p>As usual we will work on synthetic data. Here we propose to analyse a planetary transit light curve in which we added some instrumental signals:</p>
@@ -928,6 +932,14 @@ WARNING:root:Pandas support in corner is deprecated; use ArviZ directly
 <section id="Recomendations">
 <h2>Recomendations<a class="headerlink" href="#Recomendations" title="Permalink to this headline">#</a></h2>
 <p>We highly recomand the use of the excellent <code class="docutils literal notranslate"><span class="pre">exoplanet</span></code> (and <code class="docutils literal notranslate"><span class="pre">starry</span></code> for more speific needs) packages and documentations. To see if they fit your needs, the <a class="reference external" href="https://gallery.exoplanet.codes/">case studies pages</a> of <code class="docutils literal notranslate"><span class="pre">exoplanet</span></code> is a good place to start.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </section>
 </section>
 
