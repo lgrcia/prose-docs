@@ -9,14 +9,12 @@
 
    
 .. image:: prose_illustration.png
-   :width: 500
+   :width: 350
    :align: center
    
 .. raw:: html
 
    <p align="center">
-   <br>  
-   <br>
    A python framework to build FITS images pipelines.
    <br>
    <p align="center">
@@ -74,3 +72,8 @@
 
    notebooks/phot.ipynb
    notebooks/extra.ipynb
+
+
+.. image:: lookatit.png
+   :width: 150
+   :align: center

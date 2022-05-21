@@ -7,7 +7,7 @@
     "tags": []
    },
    "source": [
-    "# Photometry from gaia coordinates\n",
+    "# Photometry from gaia\n",
     "\n",
     "> only with `prose >= 2.0.1`\n",
     "\n",
@@ -109,6 +109,8 @@
    "metadata": {},
    "source": [
     "<div class=\"alert alert-info\">\n",
+    "    \n",
+    "Note\n",
     "\n",
     "While it is for applications in difference imaging, I noticed [this paper](https://ui.adsabs.harvard.edu/abs/2021MNRAS.507.1836W/abstract) about reference selection\n",
     "</div>"
@@ -183,6 +185,8 @@
    "metadata": {},
    "source": [
     "<div class=\"alert alert-info\">\n",
+    "Note\n",
+    "    \n",
     "Since our telescope is set, trimming dimensions don't need to be specified. Which is why the `Trim` block has no kwargs\n",
     "</div>"
    ]
@@ -418,14 +422,6 @@
     "obs.plot()\n",
     "\n",
     "plt.ylim(0.98, 1.02)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "5b536cd7-58f1-4a69-8f23-8f3b6cd60dea",
-   "metadata": {},
-   "source": [
-    "🌌"
    ]
   }
  ],

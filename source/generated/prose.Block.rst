@@ -16,6 +16,7 @@
       ~Block.__init__
       ~Block.citations
       ~Block.concat
+      ~Block.concatenate
       ~Block.run
       ~Block.terminate
    

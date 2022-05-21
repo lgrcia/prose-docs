@@ -216,7 +216,7 @@
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/case_studies/diagnostic_video.html">Diagnostic video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/case_studies/gaia_photometry.html">Photometry from gaia coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/case_studies/gaia_photometry.html">Photometry from gaia</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
@@ -258,7 +258,7 @@
 <h1>prose.blocks.PhotutilsAperturePhotometry<a class="headerlink" href="#prose-blocks-photutilsaperturephotometry" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="prose.blocks.PhotutilsAperturePhotometry">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">prose.blocks.</span></span><span class="sig-name descname"><span class="pre">PhotutilsAperturePhotometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">apertures</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fwhm_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigclip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_once</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.blocks.PhotutilsAperturePhotometry" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">prose.blocks.</span></span><span class="sig-name descname"><span class="pre">PhotutilsAperturePhotometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">apertures</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigclip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.blocks.PhotutilsAperturePhotometry" title="Permalink to this definition">#</a></dt>
 <dd><p>Aperture photometry using the <code class="code docutils literal notranslate"><span class="pre">CircularAperture</span></code> and <code class="code docutils literal notranslate"><span class="pre">CircularAnnulus</span></code> of <a class="reference external" href="https://photutils.readthedocs.io/en/stable/">photutils</a> with a wide range of apertures. By default annulus goes from 5 fwhm to 8 fwhm and apertures from 0.1 to 10 times the fwhm with 0.25 steps (leading to 40 apertures).</p>
 <p>The error (e.g. in ADU) is then computed following:</p>
 <div class="math-wrapper"><div class="math notranslate nohighlight">
@@ -286,9 +286,13 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>apertures</strong> (<em>ndarray</em><em> or </em><em>list</em><em>, </em><em>optional</em>) – apertures in fraction of fwhm, by default None, i.e. np.arange(0.1, 10, 0.25)</p></li>
+<li><p><strong>apertures</strong> (<em>ndarray</em><em> or </em><em>list</em><em>, </em><em>optional</em>) – apertures in fraction of fwhm, by default None, i.e. np.arange(0.1, 8, 0.25)</p></li>
 <li><p><strong>r_in</strong> (<em>int</em><em>, </em><em>optional</em>) – radius of the inner annulus in fraction of fwhm, by default 5</p></li>
 <li><p><strong>r_out</strong> (<em>int</em><em>, </em><em>optional</em>) – radius of the outer annulus in fraction of fwhm, by default 8</p></li>
+<li><p><strong>scale</strong> (<em>bool</em><em> or </em><em>float:</em>) – Multiplication factor applied to <cite>apertures</cite>.
+- if True: <cite>apertures</cite> multiplied by image.fwhm, varying for each image
+- if False: <cite>apertures</cite> not multiplied
+- if float: <cite>apertures</cite> multiplied <cite>scale</cite> and held fixed for all images</p></li>
 </ul>
 </dd>
 </dl>

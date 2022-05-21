@@ -15,6 +15,7 @@
    
       ~FitsManager.__init__
       ~FitsManager.files
+      ~FitsManager.get_files
       ~FitsManager.label
       ~FitsManager.observation_files
       ~FitsManager.observations

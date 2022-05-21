@@ -216,7 +216,7 @@
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/case_studies/diagnostic_video.html">Diagnostic video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/case_studies/gaia_photometry.html">Photometry from gaia coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/case_studies/gaia_photometry.html">Photometry from gaia</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
@@ -264,7 +264,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>folder</strong> (<em>str</em>) – path of the folder to parse</p></li>
+<li><p><strong>folder</strong> (<em>str</em>) – path of the folder to parse (or list of folders as of prose 2.0.1)</p></li>
 <li><p><strong>depth</strong> (<em>int</em><em>, </em><em>optional</em>) – maxiumum depth of the sub-folders to explore, by default 0</p></li>
 <li><p><strong>hdu</strong> (<em>int</em><em>, </em><em>optional</em>) – by default 0</p></li>
 <li><p><strong>extension</strong> (<em>str</em><em>, </em><em>optional</em>) – by default “.f*ts*”</p></li>
@@ -285,26 +285,29 @@
 <col style="width: 90%"/>
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.FitsManager.__init__.html#prose.FitsManager.__init__" title="prose.FitsManager.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([folders, depth, hdu, extension, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.FitsManager.__init__.html#prose.FitsManager.__init__" title="prose.FitsManager.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([folders, files, depth, hdu, ...])</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/prose.FitsManager.files.html#prose.FitsManager.files" title="prose.FitsManager.files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">files</span></code></a>([telescope, target, date, afilter, ...])</p></td>
 <td><p>Returns files given criteria</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.FitsManager.label.html#prose.FitsManager.label" title="prose.FitsManager.label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">label</span></code></a>([i])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.FitsManager.get_files.html#prose.FitsManager.get_files" title="prose.FitsManager.get_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_files</span></code></a>(folders, extension[, scan, depth])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.FitsManager.label.html#prose.FitsManager.label" title="prose.FitsManager.label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">label</span></code></a>([i])</p></td>
 <td><p>Return '{telescope}_{date}_{target}_{filter}' string</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.FitsManager.observation_files.html#prose.FitsManager.observation_files" title="prose.FitsManager.observation_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">observation_files</span></code></a>(i[, min_days, max_days, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.FitsManager.observation_files.html#prose.FitsManager.observation_files" title="prose.FitsManager.observation_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">observation_files</span></code></a>(i[, min_days, max_days, ...])</p></td>
 <td><p>Return a dictionary of all the files (including calibration ones) corresponding to a given observation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.FitsManager.observations.html#prose.FitsManager.observations" title="prose.FitsManager.observations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">observations</span></code></a>([telescope, target, date, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.FitsManager.observations.html#prose.FitsManager.observations" title="prose.FitsManager.observations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">observations</span></code></a>([telescope, target, date, ...])</p></td>
 <td><p>Print of return current observations</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.FitsManager.print.html#prose.FitsManager.print" title="prose.FitsManager.print"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print</span></code></a>([calib, repr, exposure])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.FitsManager.print.html#prose.FitsManager.print" title="prose.FitsManager.print"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print</span></code></a>([calib, repr, exposure])</p></td>
 <td><p>Print database observations, calibrations and other files in nice table</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.FitsManager.scan_files.html#prose.FitsManager.scan_files" title="prose.FitsManager.scan_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scan_files</span></code></a>(folders, extension[, batch_size, ...])</p></td>
-<td><p>Scan a folder and add data to database</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.FitsManager.scan_files.html#prose.FitsManager.scan_files" title="prose.FitsManager.scan_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scan_files</span></code></a>(files[, batch_size, verbose, hdu])</p></td>
+<td><p>Scan files and add data to database</p></td>
 </tr>
 </tbody>
 </table></div>

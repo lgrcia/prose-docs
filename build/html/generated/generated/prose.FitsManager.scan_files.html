@@ -216,7 +216,7 @@
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks/case_studies/diagnostic_video.html">Diagnostic video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/case_studies/gaia_photometry.html">Photometry from gaia coordinates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/case_studies/gaia_photometry.html">Photometry from gaia</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
@@ -258,13 +258,12 @@
 <h1>prose.FitsManager.scan_files<a class="headerlink" href="#prose-fitsmanager-scan-files" title="Permalink to this headline">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="prose.FitsManager.scan_files">
-<span class="sig-prename descclassname"><span class="pre">FitsManager.</span></span><span class="sig-name descname"><span class="pre">scan_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folders</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.FitsManager.scan_files" title="Permalink to this definition">#</a></dt>
-<dd><p>Scan a folder and add data to database</p>
+<span class="sig-prename descclassname"><span class="pre">FitsManager.</span></span><span class="sig-name descname"><span class="pre">scan_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.FitsManager.scan_files" title="Permalink to this definition">#</a></dt>
+<dd><p>Scan files and add data to database</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>folder</strong> (<em>str ot Path</em>) – path of folder (or list of folders as of prose 2.0.1)</p></li>
-<li><p><strong>extension</strong> (<em>str</em><em>, </em><em>optional</em>) – by default “.f*ts*”</p></li>
+<li><p><strong>files</strong> (<em>list of str</em><em> or </em><em>Path</em>) – paths of files</p></li>
 <li><p><strong>batch_size</strong> (<em>bool</em><em> or </em><em>int</em><em>, </em><em>optional</em>) – <ul>
 <li><p>if False: update database after all FITS files are parsed</p></li>
 <li><p>if int: update database every time <code class="docutils literal notranslate"><span class="pre">batch_size</span></code> FITS files are parse</p></li>
@@ -272,7 +271,7 @@
 <p>by default False</p>
 </p></li>
 <li><p><strong>verbose</strong> (<em>bool</em><em>, </em><em>optional</em>) – whether to show progress bar during parsing, by default True</p></li>
-<li><p><strong>depth</strong> (<em>int</em><em>, </em><em>optional</em>) – maxiumum depth of the sub-folders to explore, by default 0</p></li>
+<li><p><strong>hdu</strong> (<em>int</em>) – FITS data unit extension where header will be parsed</p></li>
 </ul>
 </dd>
 </dl>
