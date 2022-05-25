@@ -15,9 +15,11 @@
    
       ~Image.__init__
       ~Image.copy
+      ~Image.gaia_stars
       ~Image.get
       ~Image.plot_aperture
       ~Image.plot_catalog
+      ~Image.plot_marks
       ~Image.show
       ~Image.show_cutout
       ~Image.writeto

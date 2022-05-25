@@ -58,6 +58,7 @@
    notebooks/modeling.ipynb
    notebooks/reports.ipynb
    notebooks/neb.ipynb
+   notebooks/archival.ipynb
 
 .. toctree::
    :caption: Case studies 🔭

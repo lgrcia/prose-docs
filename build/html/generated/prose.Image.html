@@ -212,6 +212,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/modeling.html">Modeling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/reports.html">Reports</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/neb.html">Near Eclipsing Binary diagnostic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/archival.html">Archival images 🌌</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
@@ -285,10 +286,7 @@
 <div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[94mINFO[39m Querying https://archive.stsci.edu/cgi-bin/dss_form
 </pre></div>
 </div>
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[94mINFO[39m telescope Palomar Schmidt not found - using default
-</pre></div>
-</div>
-<img alt="../_images/prose.Image_0_2.png" src="../_images/prose.Image_0_2.png"/>
+<img alt="../_images/prose.Image_0_1.png" src="../_images/prose.Image_0_1.png"/>
 </div>
 </div>
 <div class="jupyter_cell jupyter_container docutils container">
@@ -304,7 +302,7 @@ NAXIS   =                    2 /FITS: 2-D Image Data
 NAXIS1  =                  713 /FITS: X Dimension                               
 NAXIS2  =                  714 /FITS: Y Dimension                               
 EXTEND  =                    T /FITS: File can contain extensions               
-DATE    = '2022-05-21        '  /FITS: Creation Date                            
+DATE    = '2022-05-25        '  /FITS: Creation Date                            
 ORIGIN  = 'STScI/MAST'         /GSSS: STScI Digitized Sky Survey                
 SURVEY  = 'POSSI-O '           /GSSS: Sky Survey                                
 REGION  = 'XO538   '           /GSSS: Region Name                               
@@ -336,20 +334,26 @@ night: 1955-11-22
 <col style="width: 90%"/>
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.Image.__init__.html#prose.Image.__init__" title="prose.Image.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([fitspath, data, header])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.Image.__init__.html#prose.Image.__init__" title="prose.Image.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([fitspath, data, header, verbose])</p></td>
 <td><p>Image instanciation</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="prose.Image.copy.html#prose.Image.copy" title="prose.Image.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>([data])</p></td>
 <td><p>Copy of image object</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Image.get.html#prose.Image.get" title="prose.Image.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(key[, default])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.Image.gaia_stars.html#prose.Image.gaia_stars" title="prose.Image.gaia_stars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gaia_stars</span></code></a>([world, inplace])</p></td>
+<td><p>Query gaia stars in the image  (only in &gt;= 2.0.3)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Image.get.html#prose.Image.get" title="prose.Image.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(key[, default])</p></td>
 <td><p>Return corresponding value from header, similar to <code class="docutils literal notranslate"><span class="pre">dict.get</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.Image.plot_aperture.html#prose.Image.plot_aperture" title="prose.Image.plot_aperture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_aperture</span></code></a>(center[, arcmin])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.Image.plot_aperture.html#prose.Image.plot_aperture" title="prose.Image.plot_aperture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_aperture</span></code></a>(center[, arcmin])</p></td>
 <td><p>Plot an aperture with radius defined in arcmin</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Image.plot_catalog.html#prose.Image.plot_catalog" title="prose.Image.plot_catalog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_catalog</span></code></a>(name[, color, label, n])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Image.plot_catalog.html#prose.Image.plot_catalog" title="prose.Image.plot_catalog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_catalog</span></code></a>(name[, color, label, n])</p></td>
 <td><p>Plot catalog stars</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.Image.plot_marks.html#prose.Image.plot_marks" title="prose.Image.plot_marks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_marks</span></code></a>(coordinates[, label, ax])</p></td>
+<td><p>Plot circular marks given world coordinates (only in &gt;= 2.0.3)</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="prose.Image.show.html#prose.Image.show" title="prose.Image.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>([cmap, ax, figsize, stars, ...])</p></td>
 <td><p>Show image data</p></td>
