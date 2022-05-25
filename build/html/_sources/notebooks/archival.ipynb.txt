@@ -8,7 +8,7 @@
     "# Archival images 🌌\n",
     "    only in prose >= 2.0.3\n",
     "    \n",
-    "Sometimes, wether to plan an observation or for comparison, it is useful to visialize some archival images of a field. For that purpose, prose feature the `archive` module presented in this tutorial"
+    "Sometimes, wether to plan an observation or for comparison, it is useful to visialize some archival images of a field. For that purpose, prose features the `archive` module presented in this tutorial"
    ]
   },
   {
@@ -156,7 +156,7 @@
    "source": [
     "## Overplotting world coordinates\n",
     "\n",
-    "As we may see from the previous plots, the star has an high proper-motion. Let's download a series of archival image from different date and vizualize it"
+    "As we may see from the previous plots, the star has an high proper-motion. Let's download a series of archival image from different dates and vizualize them"
    ]
   },
   {
@@ -194,7 +194,7 @@
    "id": "67223ce0-3a21-43ad-a18c-820f85a6accd",
    "metadata": {},
    "source": [
-    "Since this archival images are plate-solved, we can now overplot the current coordinate of the star over them"
+    "Since these archival images are plate-solved, we can now overplot the current coordinates of the star over them"
    ]
   },
   {
