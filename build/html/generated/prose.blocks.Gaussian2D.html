@@ -176,6 +176,10 @@
 <li class="toctree-l2"><a class="reference internal" href="prose.blocks.AffineTransform.html">prose.blocks.AffineTransform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prose.blocks.Cutout2D.html">prose.blocks.Cutout2D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prose.blocks.AstroAlignShift.html">prose.blocks.AstroAlignShift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.centroids.COM.html">prose.blocks.centroids.COM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.centroids.Quadratic.html">prose.blocks.centroids.Quadratic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.centroids.Gaussian2D.html">prose.blocks.centroids.Gaussian2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.centroids.BalletCentroid.html">prose.blocks.centroids.BalletCentroid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prose.blocks.PhotutilsAperturePhotometry.html">prose.blocks.PhotutilsAperturePhotometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prose.blocks.PhotutilsPSFPhotometry.html">prose.blocks.PhotutilsPSFPhotometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prose.blocks.SEAperturePhotometry.html">prose.blocks.SEAperturePhotometry</a></li>
@@ -206,18 +210,16 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/fits_manager.html">Fits manager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/reduction.html">Photometric reduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/custom_pipeline.html">Custom pipeline</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/modeling.html">Modeling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/reports.html">Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/neb.html">Near Eclipsing Binary diagnostic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/archival.html">Archival images 🌌</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/fits_manager.html">Fits manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/photometry.html">Photometry ✨</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/custom_block.html">Custom block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/modeling.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/archival.html">Archival images 🌌</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/case_studies/diagnostic_video.html">Diagnostic video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/case_studies/gaia_photometry.html">Photometry from gaia</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
@@ -260,106 +262,17 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="prose.blocks.Gaussian2D">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">prose.blocks.</span></span><span class="sig-name descname"><span class="pre">Gaussian2D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.blocks.Gaussian2D" title="Permalink to this definition">#</a></dt>
-<dd><p>Fit an elliptical 2D Gaussian model to an image effective PSF</p>
-<p>To be used after a PSF building block</p>
-<p><span class="blockread">reads</span> <code class="docutils literal notranslate"><span class="pre">Image.psf</span></code></p>
-<p><span class="blockwrite">writes</span></p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Image.psf_models_params</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Image.psf_model</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Image.fwhmx</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Image.fwhm</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Image.psf_model_block</span></code></p></li>
+<dd><p>Centroiding using <code class="docutils literal notranslate"><span class="pre">photutils.centroids.centroid_2dg</span></code></p>
+<p><span class="blockread">reads</span> <code class="docutils literal notranslate"><span class="pre">Image.stars_coords</span></code></p>
+<p><span class="blockwrite">writes</span> <code class="docutils literal notranslate"><span class="pre">Image.stars_coords</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – maximum deviation from initial coordinate, by default <cite>cutout/2</cite></p></li>
+<li><p><strong>cutout</strong> (<em>int</em><em>, </em><em>optional</em>) – size of the cutout to be used for centroiding, by default 21</p></li>
 </ul>
-<p>PSF model is</p>
-<div class="math-wrapper"><div class="math notranslate nohighlight">
-\[f(x, y|A, x_0, y_0, \sigma_x, \sigma_y, \theta, b) = - A \exp\left(\frac{(x'-x'_0)^2}{2\sigma_x^2} \frac{(y'-y'_0)^2}{2\sigma_y^2}\right) + b\]</div></div>
-<div class="math-wrapper"><div class="math notranslate nohighlight">
-\[\begin{split}\text{with}\quad \begin{gather*}
-x' = xcos(\theta) + ysin(\theta) \\
-y' = -xsin(\theta) + ycos(\theta)
-\end{gather*}\end{split}\]</div></div>
-<p>is fitted from an effective psf. <code class="code docutils literal notranslate"><span class="pre">scipy.optimize.minimize</span></code> is used to minimize <span class="math notranslate nohighlight">\(\chi ^2\)</span> from data. Initial parameters are found using the moments of the <a class="reference external" href="https://photutils.readthedocs.io/en/stable/epsf.html">effective psf</a>. This method is 4 times faster than <code class="code docutils literal notranslate"><span class="pre">photutils.centroids.fit_2dgaussian</span></code> and lead to similar results.</p>
-<p class="rubric">Example</p>
-<p>We start by loading an example image and buidling its median psf</p>
-<div class="jupyter_cell jupyter_container docutils container">
-<div class="cell_input code_cell docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">blocks</span><span class="p">,</span> <span class="n">Sequence</span>
-<span class="kn">from</span> <span class="nn">prose.tutorials</span> <span class="kn">import</span> <span class="n">example_image</span>
-
-<span class="c1"># our example image</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">example_image</span><span class="p">()</span>
-
-<span class="c1"># Sequence to build image PSF</span>
-<span class="n">sequence</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">([</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">SegmentedPeaks</span><span class="p">(),</span>  <span class="c1"># stars detection</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">Cutouts</span><span class="p">(),</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">MedianPSF</span><span class="p">(),</span>       <span class="c1"># building PSF</span>
-<span class="p">])</span>
-
-<span class="n">sequence</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">image</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[94mINFO[39m telescope A not found - using default
-[94mINFO[39m telescope A not found - using default
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can now apply the Gaussian2D block to the image in order to model its PSF</p>
-<div class="jupyter_cell jupyter_container docutils container">
-<div class="cell_input code_cell docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="n">block</span> <span class="o">=</span> <span class="n">blocks</span><span class="o">.</span><span class="n">Gaussian2D</span><span class="p">()</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">block</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[94mINFO[39m telescope A not found - using default
-</pre></div>
-</div>
-</div>
-</div>
-<p>and vizualise the result</p>
-<div class="jupyter_cell jupyter_container docutils container">
-<div class="cell_input code_cell docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">viz</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"model: </span><span class="si">{</span><span class="n">image</span><span class="o">.</span><span class="n">psf_model_block</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"fwhmx, fwhmy, theta: "</span> <span class="o">+</span> <span class="s2">", "</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">block</span><span class="o">.</span><span class="n">fwhm</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">psf_models_params</span><span class="p">)]))</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">131</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">psf</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"PSF"</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">132</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">psf_model</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">"PSF model (</span><span class="si">{</span><span class="n">image</span><span class="o">.</span><span class="n">psf_model_block</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">133</span><span class="p">)</span>
-<span class="n">residuals</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">psf</span> <span class="o">-</span> <span class="n">image</span><span class="o">.</span><span class="n">psf_model</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">residuals</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"residuals"</span><span class="p">)</span>
-<span class="n">viz</span><span class="o">.</span><span class="n">add_colorbar</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>model: Gaussian2D
-fwhmx, fwhmy, theta: 3.58, 3.42, 0.00
-</pre></div>
-</div>
-<img alt="../_images/prose.blocks.Gaussian2D_2_1.png" src="../_images/prose.blocks.Gaussian2D_2_1.png"/>
-</div>
-</div>
+</dd>
+</dl>
 </dd></dl>
 </section>
 
@@ -425,7 +338,5 @@ fwhmx, fwhmy, theta: 3.58, 3.42, 0.00
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>
 </html>

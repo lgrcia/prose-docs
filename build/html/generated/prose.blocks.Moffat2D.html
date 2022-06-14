@@ -176,6 +176,10 @@
 <li class="toctree-l2"><a class="reference internal" href="prose.blocks.AffineTransform.html">prose.blocks.AffineTransform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prose.blocks.Cutout2D.html">prose.blocks.Cutout2D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prose.blocks.AstroAlignShift.html">prose.blocks.AstroAlignShift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.centroids.COM.html">prose.blocks.centroids.COM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.centroids.Quadratic.html">prose.blocks.centroids.Quadratic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.centroids.Gaussian2D.html">prose.blocks.centroids.Gaussian2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.centroids.BalletCentroid.html">prose.blocks.centroids.BalletCentroid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prose.blocks.PhotutilsAperturePhotometry.html">prose.blocks.PhotutilsAperturePhotometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prose.blocks.PhotutilsPSFPhotometry.html">prose.blocks.PhotutilsPSFPhotometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prose.blocks.SEAperturePhotometry.html">prose.blocks.SEAperturePhotometry</a></li>
@@ -206,18 +210,16 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/fits_manager.html">Fits manager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/reduction.html">Photometric reduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/custom_pipeline.html">Custom pipeline</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/modeling.html">Modeling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/reports.html">Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/neb.html">Near Eclipsing Binary diagnostic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/archival.html">Archival images 🌌</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/fits_manager.html">Fits manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/photometry.html">Photometry ✨</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/custom_block.html">Custom block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/modeling.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/archival.html">Archival images 🌌</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/case_studies/diagnostic_video.html">Diagnostic video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/case_studies/gaia_photometry.html">Photometry from gaia</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
@@ -302,10 +304,6 @@ y' = -xsin(\theta) + ycos(\theta)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[94mINFO[39m telescope A not found - using default
-[94mINFO[39m telescope A not found - using default
-</pre></div>
-</div>
 </div>
 </div>
 <p>We can now apply the Moffat2D block to the image in order to model its PSF</p>
@@ -319,9 +317,6 @@ y' = -xsin(\theta) + ycos(\theta)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[94mINFO[39m telescope A not found - using default
-</pre></div>
-</div>
 </div>
 </div>
 <p>and vizualise the result</p>

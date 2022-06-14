@@ -176,6 +176,10 @@
 <li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.AffineTransform.html">prose.blocks.AffineTransform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.Cutout2D.html">prose.blocks.Cutout2D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.AstroAlignShift.html">prose.blocks.AstroAlignShift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.centroids.COM.html">prose.blocks.centroids.COM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.centroids.Quadratic.html">prose.blocks.centroids.Quadratic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.centroids.Gaussian2D.html">prose.blocks.centroids.Gaussian2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.centroids.BalletCentroid.html">prose.blocks.centroids.BalletCentroid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.PhotutilsAperturePhotometry.html">prose.blocks.PhotutilsAperturePhotometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.PhotutilsPSFPhotometry.html">prose.blocks.PhotutilsPSFPhotometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.SEAperturePhotometry.html">prose.blocks.SEAperturePhotometry</a></li>
@@ -206,18 +210,16 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/fits_manager.html">Fits manager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/reduction.html">Photometric reduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/custom_pipeline.html">Custom pipeline</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/modeling.html">Modeling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/reports.html">Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/neb.html">Near Eclipsing Binary diagnostic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/archival.html">Archival images 🌌</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/fits_manager.html">Fits manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/photometry.html">Photometry ✨</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/custom_block.html">Custom block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/modeling.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/archival.html">Archival images 🌌</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/case_studies/diagnostic_video.html">Diagnostic video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/case_studies/gaia_photometry.html">Photometry from gaia</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
@@ -303,7 +305,7 @@
 <td><p>Fast empirical FWHM</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/prose.blocks.Gaussian2D.html#prose.blocks.Gaussian2D" title="prose.blocks.Gaussian2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gaussian2D</span></code></a></p></td>
-<td><p>Fit an elliptical 2D Gaussian model to an image effective PSF</p></td>
+<td><p>Centroiding using <code class="docutils literal notranslate"><span class="pre">photutils.centroids.centroid_2dg</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.blocks.Moffat2D.html#prose.blocks.Moffat2D" title="prose.blocks.Moffat2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Moffat2D</span></code></a></p></td>
 <td><p>Fit an elliptical 2D Moffat model to an image effective PSF</p></td>
@@ -337,6 +339,26 @@
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.blocks.AstroAlignShift.html#prose.blocks.AstroAlignShift" title="prose.blocks.AstroAlignShift"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AstroAlignShift</span></code></a></p></td>
 <td><p>Compute the linear shift between point clouds using <code class="code docutils literal notranslate"><span class="pre">astroalign</span></code></p></td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrapper"><table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.blocks.centroids.COM.html#prose.blocks.centroids.COM" title="prose.blocks.centroids.COM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">COM</span></code></a></p></td>
+<td><p>Centroiding using <code class="docutils literal notranslate"><span class="pre">photutils.centroids.centroid_com</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.blocks.centroids.Quadratic.html#prose.blocks.centroids.Quadratic" title="prose.blocks.centroids.Quadratic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quadratic</span></code></a></p></td>
+<td><p>Centroiding using <code class="docutils literal notranslate"><span class="pre">photutils.centroids.centroid_quadratic</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.blocks.centroids.Gaussian2D.html#prose.blocks.centroids.Gaussian2D" title="prose.blocks.centroids.Gaussian2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gaussian2D</span></code></a></p></td>
+<td><p>Centroiding using <code class="docutils literal notranslate"><span class="pre">photutils.centroids.centroid_2dg</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.blocks.centroids.BalletCentroid.html#prose.blocks.centroids.BalletCentroid" title="prose.blocks.centroids.BalletCentroid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BalletCentroid</span></code></a></p></td>
+<td><p>Centroiding with  <a class="reference external" href="https://github.com/lgrcia/ballet">ballet</a>.</p></td>
 </tr>
 </tbody>
 </table></div>
@@ -466,7 +488,9 @@
 <li><a class="reference internal" href="#">Blocks</a><ul>
 <li><a class="reference internal" href="#detection">Detection</a></li>
 <li><a class="reference internal" href="#psf">PSF</a></li>
-<li><a class="reference internal" href="#alignment-centroiding">Alignment, Centroiding</a></li>
+<li><a class="reference internal" href="#alignment-centroiding">Alignment, Centroiding</a><ul>
+</ul>
+</li>
 <li><a class="reference internal" href="#photometry">Photometry</a></li>
 <li><a class="reference internal" href="#utils">Utils</a></li>
 </ul>

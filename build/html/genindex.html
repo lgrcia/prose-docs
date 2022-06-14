@@ -174,6 +174,10 @@
 <li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.AffineTransform.html">prose.blocks.AffineTransform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.Cutout2D.html">prose.blocks.Cutout2D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.AstroAlignShift.html">prose.blocks.AstroAlignShift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.centroids.COM.html">prose.blocks.centroids.COM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.centroids.Quadratic.html">prose.blocks.centroids.Quadratic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.centroids.Gaussian2D.html">prose.blocks.centroids.Gaussian2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.centroids.BalletCentroid.html">prose.blocks.centroids.BalletCentroid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.PhotutilsAperturePhotometry.html">prose.blocks.PhotutilsAperturePhotometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.PhotutilsPSFPhotometry.html">prose.blocks.PhotutilsPSFPhotometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/prose.blocks.SEAperturePhotometry.html">prose.blocks.SEAperturePhotometry</a></li>
@@ -204,18 +208,16 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/fits_manager.html">Fits manager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/reduction.html">Photometric reduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/custom_pipeline.html">Custom pipeline</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/modeling.html">Modeling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/reports.html">Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/neb.html">Near Eclipsing Binary diagnostic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/archival.html">Archival images 🌌</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/fits_manager.html">Fits manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/photometry.html">Photometry ✨</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/custom_block.html">Custom block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/modeling.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/archival.html">Archival images 🌌</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/case_studies/diagnostic_video.html">Diagnostic video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/case_studies/gaia_photometry.html">Photometry from gaia</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
@@ -320,6 +322,8 @@
   <h2>B</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="generated/prose.blocks.centroids.BalletCentroid.html#prose.blocks.centroids.BalletCentroid">BalletCentroid (class in prose.blocks.centroids)</a>
+</li>
         <li><a href="generated/generated/prose.fluxes.ApertureFluxes.best_polynomial.html#prose.fluxes.ApertureFluxes.best_polynomial">best_polynomial() (prose.fluxes.ApertureFluxes method)</a>
 
         <ul>
@@ -366,6 +370,8 @@
           <li><a href="generated/generated/prose.Sequence.citations.html#prose.Sequence.citations">(prose.Sequence method)</a>, <a href="generated/prose.Sequence.citations.html#prose.Sequence.citations">[1]</a>
 </li>
         </ul></li>
+        <li><a href="generated/prose.blocks.centroids.COM.html#prose.blocks.centroids.COM">COM (class in prose.blocks.centroids)</a>
+</li>
         <li><a href="generated/prose.Observation.comparison_raw_fluxes.html#prose.Observation.comparison_raw_fluxes">comparison_raw_fluxes (prose.Observation property)</a>
 </li>
         <li><a href="generated/generated/prose.Observation.compute_bjd.html#prose.Observation.compute_bjd">compute_bjd() (prose.Observation method)</a>, <a href="generated/prose.Observation.compute_bjd.html#prose.Observation.compute_bjd">[1]</a>
@@ -498,10 +504,14 @@
 </li>
         <li><a href="generated/generated/prose.Image.gaia_stars.html#prose.Image.gaia_stars">gaia_stars() (prose.Image method)</a>
 </li>
+        <li><a href="generated/prose.blocks.Gaussian2D.html#prose.blocks.Gaussian2D">Gaussian2D (class in prose.blocks)</a>
+
+        <ul>
+          <li><a href="generated/prose.blocks.centroids.Gaussian2D.html#prose.blocks.centroids.Gaussian2D">(class in prose.blocks.centroids)</a>
+</li>
+        </ul></li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="generated/prose.blocks.Gaussian2D.html#prose.blocks.Gaussian2D">Gaussian2D (class in prose.blocks)</a>
-</li>
         <li><a href="generated/generated/prose.Image.get.html#prose.Image.get">get() (prose.Image method)</a>, <a href="generated/prose.Image.get.html#prose.Image.get">[1]</a>
 </li>
         <li><a href="generated/generated/prose.FitsManager.get_files.html#prose.FitsManager.get_files">get_files() (prose.FitsManager method)</a>
@@ -750,10 +760,12 @@
   <h2>Q</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="generated/generated/prose.Observation.query_catalog.html#prose.Observation.query_catalog">query_catalog() (prose.Observation method)</a>, <a href="generated/prose.Observation.query_catalog.html#prose.Observation.query_catalog">[1]</a>
+        <li><a href="generated/prose.blocks.centroids.Quadratic.html#prose.blocks.centroids.Quadratic">Quadratic (class in prose.blocks.centroids)</a>
 </li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="generated/generated/prose.Observation.query_catalog.html#prose.Observation.query_catalog">query_catalog() (prose.Observation method)</a>, <a href="generated/prose.Observation.query_catalog.html#prose.Observation.query_catalog">[1]</a>
+</li>
         <li><a href="generated/generated/prose.Observation.query_tic.html#prose.Observation.query_tic">query_tic() (prose.Observation method)</a>, <a href="generated/prose.Observation.query_tic.html#prose.Observation.query_tic">[1]</a>
 </li>
     </ul></td>

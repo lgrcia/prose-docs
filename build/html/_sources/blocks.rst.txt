@@ -65,8 +65,22 @@ Alignment, Centroiding
    Cutout2D
    AstroAlignShift
 
+.. currentmodule:: prose.blocks.centroids
+
+.. autosummary::
+   :toctree: generated
+   :template: autosum.rst
+   :nosignatures:
+
+   COM
+   Quadratic
+   Gaussian2D
+   BalletCentroid
+
 Photometry
 ----------
+
+.. currentmodule:: prose.blocks
 
 .. image:: _static/photometry.png
    :align: center

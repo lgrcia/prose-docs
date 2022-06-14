@@ -176,6 +176,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../prose.blocks.AffineTransform.html">prose.blocks.AffineTransform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prose.blocks.Cutout2D.html">prose.blocks.Cutout2D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prose.blocks.AstroAlignShift.html">prose.blocks.AstroAlignShift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prose.blocks.centroids.COM.html">prose.blocks.centroids.COM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prose.blocks.centroids.Quadratic.html">prose.blocks.centroids.Quadratic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prose.blocks.centroids.Gaussian2D.html">prose.blocks.centroids.Gaussian2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../prose.blocks.centroids.BalletCentroid.html">prose.blocks.centroids.BalletCentroid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prose.blocks.PhotutilsAperturePhotometry.html">prose.blocks.PhotutilsAperturePhotometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prose.blocks.PhotutilsPSFPhotometry.html">prose.blocks.PhotutilsPSFPhotometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prose.blocks.SEAperturePhotometry.html">prose.blocks.SEAperturePhotometry</a></li>
@@ -206,18 +210,16 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/fits_manager.html">Fits manager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/reduction.html">Photometric reduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/custom_pipeline.html">Custom pipeline</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/modeling.html">Modeling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/reports.html">Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/neb.html">Near Eclipsing Binary diagnostic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/archival.html">Archival images 🌌</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/fits_manager.html">Fits manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/photometry.html">Photometry ✨</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/custom_block.html">Custom block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/modeling.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/archival.html">Archival images 🌌</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks/case_studies/diagnostic_video.html">Diagnostic video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/case_studies/gaia_photometry.html">Photometry from gaia</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
@@ -259,7 +261,7 @@
 <h1>prose.Image.show<a class="headerlink" href="#prose-image-show" title="Permalink to this headline">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="prose.Image.show">
-<span class="sig-prename descclassname"><span class="pre">Image.</span></span><span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Greys_r'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">10)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stars_labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contrast</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.Image.show" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Image.</span></span><span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Greys_r'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">10)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stars_labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contrast</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.Image.show" title="Permalink to this definition">#</a></dt>
 <dd><p>Show image data</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -272,6 +274,8 @@
 <li><p><strong>zscale</strong> (<em>bool</em><em>, </em><em>optional</em>) – whether to apply a z scale to plotted image data, by default False</p></li>
 <li><p><strong>frame</strong> (<em>bool</em><em>, </em><em>optional</em>) – whether to show astronomical coordinates axes, by default False</p></li>
 <li><p><strong>contrast</strong> (<em>float</em><em>, </em><em>optional</em>) – image contrast used in image scaling, by default 0.1</p></li>
+<li><p><strong>ms</strong> (<em>int</em>) – stars markers size</p></li>
+<li><p><strong>ft</strong> (<em>int</em>) – stars label font size</p></li>
 </ul>
 </dd>
 </dl>

@@ -52,20 +52,20 @@
    :caption: Tutorials
    :maxdepth: 1
 
-   notebooks/fits_manager.ipynb
-   notebooks/reduction.ipynb
-   notebooks/custom_pipeline.ipynb
-   notebooks/modeling.ipynb
-   notebooks/reports.ipynb
-   notebooks/neb.ipynb
-   notebooks/archival.ipynb
+   notebooks/tutorials/fits_manager.ipynb
+   notebooks/tutorials/photometry.ipynb
+   notebooks/tutorials/reports.ipynb
+   notebooks/tutorials/custom_block.ipynb
+   notebooks/tutorials/modeling.ipynb
+   .. notebooks/neb.ipynb
+   notebooks/tutorials/archival.ipynb
 
 .. toctree::
    :caption: Case studies 🔭
    :maxdepth: 1
 
    notebooks/case_studies/diagnostic_video.ipynb
-   notebooks/case_studies/gaia_photometry.ipynb
+   .. notebooks/case_studies/gaia_photometry.ipynb
    
 .. toctree::
    :caption: Notes

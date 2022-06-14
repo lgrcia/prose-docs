@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Photometry from gaia" href="gaia_photometry.html" /><link rel="prev" title="Archival images 🌌" href="../archival.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Data products: .phot" href="../phot.html" /><link rel="prev" title="Archival images 🌌" href="../tutorials/archival.html" />
 
     <meta name="generator" content="sphinx-4.4.0, furo 2022.03.04"/>
         <title>Diagnostic video - prose</title>
@@ -176,6 +176,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../generated/prose.blocks.AffineTransform.html">prose.blocks.AffineTransform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../generated/prose.blocks.Cutout2D.html">prose.blocks.Cutout2D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../generated/prose.blocks.AstroAlignShift.html">prose.blocks.AstroAlignShift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/prose.blocks.centroids.COM.html">prose.blocks.centroids.COM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/prose.blocks.centroids.Quadratic.html">prose.blocks.centroids.Quadratic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/prose.blocks.centroids.Gaussian2D.html">prose.blocks.centroids.Gaussian2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generated/prose.blocks.centroids.BalletCentroid.html">prose.blocks.centroids.BalletCentroid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../generated/prose.blocks.PhotutilsAperturePhotometry.html">prose.blocks.PhotutilsAperturePhotometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../generated/prose.blocks.PhotutilsPSFPhotometry.html">prose.blocks.PhotutilsPSFPhotometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../generated/prose.blocks.SEAperturePhotometry.html">prose.blocks.SEAperturePhotometry</a></li>
@@ -206,18 +210,16 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../fits_manager.html">Fits manager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reduction.html">Photometric reduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../custom_pipeline.html">Custom pipeline</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modeling.html">Modeling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reports.html">Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../neb.html">Near Eclipsing Binary diagnostic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../archival.html">Archival images 🌌</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/fits_manager.html">Fits manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/photometry.html">Photometry ✨</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/custom_block.html">Custom block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/modeling.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/archival.html">Archival images 🌌</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Diagnostic video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gaia_photometry.html">Photometry from gaia</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
@@ -506,7 +508,7 @@ div.rendered_html tbody tr:hover {
 <section id="Diagnostic-video">
 <h1>Diagnostic video<a class="headerlink" href="#Diagnostic-video" title="Permalink to this headline">#</a></h1>
 <p>When doing an observation to commission a new instrument, or simply to know what’s going on with a certain night, it is sometimes usefull to fully visualize the reduction process of raw images 🧐</p>
-<p>In this case study we will see how to produce that with prose. One thing we will focus on is how well images are aligned and what’s the shape of the PSF over the course of an observation</p>
+<p>In this case study we will see how to produce that with prose. One thing we want to monitor in the following observation is how well images are aligned and the quality of the PSF</p>
 <section id="Retrieving-the-images">
 <h2>Retrieving the images<a class="headerlink" href="#Retrieving-the-images" title="Permalink to this headline">#</a></h2>
 <p>As usual, we parse our images folder with a <code class="docutils literal notranslate"><span class="pre">FitsManager</span></code> instance</p>
@@ -526,7 +528,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|██████████████████████████████████████████████████████████████████████████████| 255/255 [00:00&lt;00:00, 1134.63it/s]
+<span class="ansi-blue-intense-fg">RUN</span> Parsing FITS: 100%|<span class="ansi-blue-intense-fg">█████████████████</span>| 255/255 [00:00&lt;00:00, 1103.93images/s]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -534,46 +536,27 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Observations:
-╒═════════╤════════════╤═════════════╤═════════════╤══════════╤════════════╤════════╤════════════╕
-│   index │ date       │ telescope   │ target      │ filter   │   exposure │ type   │   quantity │
-╞═════════╪════════════╪═════════════╪═════════════╪══════════╪════════════╪════════╪════════════╡
-│       0 │ 2021-09-26 │ Callisto    │ Sp2315-0627 │ I+z      │         12 │ light  │        232 │
-╘═════════╧════════════╧═════════════╧═════════════╧══════════╧════════════╧════════╧════════════╛
+╒═════════╤════════════╤═════════════╤═════════════╤══════════╤════════╤════════════╕
+│   index │ date       │ telescope   │ target      │ filter   │ type   │   quantity │
+╞═════════╪════════════╪═════════════╪═════════════╪══════════╪════════╪════════════╡
+│       0 │ 2021-09-26 │ Callisto    │ Sp2315-0627 │ I+z      │ light  │        232 │
+╘═════════╧════════════╧═════════════╧═════════════╧══════════╧════════╧════════════╛
 Calibrations:
-╒════════════╤═════════════╤══════════╤══════════╤════════════╤════════╤════════════╕
-│ date       │ telescope   │ target   │ filter   │   exposure │ type   │   quantity │
-╞════════════╪═════════════╪══════════╪══════════╪════════════╪════════╪════════════╡
-│ 2021-09-26 │ Callisto    │          │          │       0    │ bias   │          2 │
-├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
-│ 2021-09-26 │ Callisto    │          │          │      15    │ dark   │          1 │
-├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
-│ 2021-09-26 │ Callisto    │          │          │      30    │ dark   │          3 │
-├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
-│ 2021-09-26 │ Callisto    │          │          │      60    │ dark   │          3 │
-├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
-│ 2021-09-26 │ Callisto    │          │          │     120    │ dark   │          1 │
-├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
-│ 2021-09-26 │ Callisto    │          │ I+z      │       6    │ flat   │          2 │
-├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
-│ 2021-09-26 │ Callisto    │          │ I+z      │       6.13 │ flat   │          1 │
-├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
-│ 2021-09-26 │ Callisto    │          │ I+z      │       6.81 │ flat   │          1 │
-├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
-│ 2021-09-26 │ Callisto    │          │ I+z      │       7.61 │ flat   │          1 │
-├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
-│ 2021-09-26 │ Callisto    │          │ I+z      │       8.51 │ flat   │          1 │
-├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
-│ 2021-09-26 │ Callisto    │          │ I+z      │       9.26 │ flat   │          1 │
-├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
-│ 2021-09-26 │ Callisto    │          │ I+z      │      10.57 │ flat   │          1 │
-├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
-│ 2021-09-26 │ Callisto    │          │ I+z      │      12.11 │ flat   │          1 │
-├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
-│ 2021-09-26 │ Callisto    │          │ I+z      │      13.92 │ flat   │          1 │
-├────────────┼─────────────┼──────────┼──────────┼────────────┼────────┼────────────┤
-│ 2021-09-26 │ Callisto    │          │ I+z      │      15    │ flat   │          3 │
-╘════════════╧═════════════╧══════════╧══════════╧════════════╧════════╧════════════╛
+╒════════════╤═════════════╤══════════╤══════════╤════════╤════════════╕
+│ date       │ telescope   │ target   │ filter   │ type   │   quantity │
+╞════════════╪═════════════╪══════════╪══════════╪════════╪════════════╡
+│ 2021-09-26 │ Callisto    │          │          │ bias   │          2 │
+├────────────┼─────────────┼──────────┼──────────┼────────┼────────────┤
+│ 2021-09-26 │ Callisto    │          │          │ dark   │          8 │
+├────────────┼─────────────┼──────────┼──────────┼────────┼────────────┤
+│ 2021-09-26 │ Callisto    │          │ I+z      │ flat   │         13 │
+╘════════════╧═════════════╧══════════╧══════════╧════════╧════════════╛
+Others:
+╒════════════╤═════════════╤═════════════╤══════════╤════════╤════════════╕
+│ date       │ telescope   │ target      │ filter   │ type   │   quantity │
+╞════════════╪═════════════╪═════════════╪══════════╪════════╪════════════╡
+│ 2021-09-26 │ Callisto    │ Sp2315-0627 │ I+z      │ light  │        232 │
+╘════════════╧═════════════╧═════════════╧══════════╧════════╧════════════╛
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -633,7 +616,7 @@ Calibrations:
 <h2>The rest of the sequence<a class="headerlink" href="#The-rest-of-the-sequence" title="Permalink to this headline">#</a></h2>
 <p>Let’s now build the sequence to take the measurements and align images</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Just running it on a test image</span>
@@ -641,7 +624,7 @@ Calibrations:
 
 <span class="n">main_sequence</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">([</span>
     <span class="o">*</span><span class="n">reference_sequence</span><span class="p">,</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">XYShift</span><span class="p">(</span><span class="n">reference</span><span class="o">.</span><span class="n">stars_coords</span><span class="p">),</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">XYShift</span><span class="p">(</span><span class="n">reference</span><span class="p">),</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">Cutouts</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">41</span><span class="p">),</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">MedianPSF</span><span class="p">(),</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">Moffat2D</span><span class="p">()</span>
@@ -656,7 +639,7 @@ Calibrations:
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">█████████████████████████████████████</span>| 1/1 [00:00&lt;00:00,  6.88images/s]
+<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">█████████████████████████████████████</span>| 1/1 [00:00&lt;00:00,  6.59images/s]
 </pre></div></div>
 </div>
 </section>
@@ -664,7 +647,7 @@ Calibrations:
 <h2>The <code class="docutils literal notranslate"><span class="pre">PlotVideo</span></code> block<a class="headerlink" href="#The-PlotVideo-block" title="Permalink to this headline">#</a></h2>
 <p>To build a video of the reduction process of all images, we will use the <code class="docutils literal notranslate"><span class="pre">PlotVideo</span></code> block which takes as input a plotting function applied to an image. Let’s write it</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -734,7 +717,7 @@ Calibrations:
 </div>
 <p>And use it within the full sequence</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">process</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">([</span>
@@ -751,16 +734,20 @@ Calibrations:
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">█████████████████████████████████</span>| 232/232 [01:36&lt;00:00,  2.39images/s]
+<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">█████████████████████████████████</span>| 232/232 [01:37&lt;00:00,  2.38images/s]
 IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (720, 360) to (720, 368) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
 </pre></div></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To save an mp4 you will need the ffmpeg software and python package. Otherwise save as a gif</p>
 </div>
 </section>
 <section id="A-concise-code">
 <h2>A concise code<a class="headerlink" href="#A-concise-code" title="Permalink to this headline">#</a></h2>
 <p>We have seen all the steps and details on how to use a plotting function within a sequence. For reference and clarity here is the final code containing the reference and main sequences:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">blocks</span>
@@ -782,7 +769,7 @@ IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=
 <span class="c1"># -------------</span>
 <span class="n">main_sequence</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">([</span>
     <span class="o">*</span><span class="n">reference_sequence</span><span class="p">,</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">XYShift</span><span class="p">(</span><span class="n">reference</span><span class="o">.</span><span class="n">stars_coords</span><span class="p">),</span>           <span class="c1"># computing shift</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">XYShift</span><span class="p">(</span><span class="n">reference</span><span class="p">),</span>                        <span class="c1"># computing shift</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">Cutouts</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">41</span><span class="p">),</span>                          <span class="c1"># extracting stars cutouts</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">MedianPSF</span><span class="p">(),</span>                               <span class="c1"># combining into a median PSF</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">Moffat2D</span><span class="p">(),</span>                                <span class="c1"># PSF model</span>
@@ -808,7 +795,7 @@ IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">███████████████████████████████████</span>| 10/10 [00:59&lt;00:00,  5.97s/images]
+<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">███████████████████████████████████</span>| 10/10 [00:06&lt;00:00,  1.56images/s]
 </pre></div></div>
 </div>
 <img alt="test.gif" src="../../_images/test.gif"/>
@@ -820,16 +807,16 @@ IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="gaia_photometry.html">
+          <a class="next-page" href="../phot.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Photometry from gaia</div>
+                <div class="title">Data products: <code class="docutils literal notranslate"><span class="pre">.phot</span></code></div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../archival.html">
+          <a class="prev-page" href="../tutorials/archival.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
