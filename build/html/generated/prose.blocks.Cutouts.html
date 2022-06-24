@@ -261,12 +261,13 @@
 <h1>prose.blocks.Cutouts<a class="headerlink" href="#prose-blocks-cutouts" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="prose.blocks.Cutouts">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">prose.blocks.</span></span><span class="sig-name descname"><span class="pre">Cutouts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">21</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.blocks.Cutouts" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">prose.blocks.</span></span><span class="sig-name descname"><span class="pre">Cutouts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">21</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.blocks.Cutouts" title="Permalink to this definition">#</a></dt>
 <dd><p>Extract square image cutouts centered on <code class="docutils literal notranslate"><span class="pre">Image.stars_coords</span></code></p>
 <p><span class="blockread">reads</span> <code class="docutils literal notranslate"><span class="pre">Image.stars_coords</span></code></p>
 <p><span class="blockwrite">writes</span>
 - <code class="docutils literal notranslate"><span class="pre">Image.cutouts</span></code>: cutouts images
-- <code class="docutils literal notranslate"><span class="pre">Image.cutouts_idxs</span></code>: indexes of stars_coords corresponding to each cutout</p>
+- <code class="docutils literal notranslate"><span class="pre">Image.cutouts_idxs</span></code>: indexes of stars_coords corresponding to each cutout
+- <code class="docutils literal notranslate"><span class="pre">Image.stars_coords</span></code> if <code class="docutils literal notranslate"><span class="pre">clean</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
 <p>Cutouts are sometimes called “imagette” and represent small square portions of the image centered on specific points.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
