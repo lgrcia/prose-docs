@@ -210,12 +210,11 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/fits_manager.html">Fits manager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/photometry.html">Photometry ✨</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/photometry.nbconvert.html">Photometry ✨</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/reports.html">Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/custom_block.html">Custom block</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/modeling.html">Modeling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/archival.html">Archival images 🌌</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/custom_block.nbconvert.html">Custom block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/modeling.nbconvert.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/archival.nbconvert.html">Archival images 🌌</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
@@ -224,7 +223,7 @@
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/phot.html">Data products: <code class="docutils literal notranslate"><span class="pre">.phot</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/extra.html">Useful tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/extra.nbconvert.html">Useful tips</a></li>
 </ul>
 
 </div>
@@ -359,7 +358,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.plot_raw_diff.html#prose.Observation.plot_raw_diff" title="prose.Observation.plot_raw_diff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_raw_diff</span></code></a>()</p></td>
 <td><p>Plot raw target flux and differantial flux</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.plot_systematics.html#prose.Observation.plot_systematics" title="prose.Observation.plot_systematics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_systematics</span></code></a>([fields, ylim])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.plot_systematics.html#prose.Observation.plot_systematics" title="prose.Observation.plot_systematics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_systematics</span></code></a>([fields, ylim, ...])</p></td>
 <td><p>Plot systematics measurements along target light curve</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.plot_systematics_signal.html#prose.Observation.plot_systematics_signal" title="prose.Observation.plot_systematics_signal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_systematics_signal</span></code></a>(systematics[, ...])</p></td>
@@ -377,37 +376,34 @@
 <tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.query_catalog.html#prose.Observation.query_catalog" title="prose.Observation.query_catalog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">query_catalog</span></code></a>(name[, correct_pm])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.query_tic.html#prose.Observation.query_tic" title="prose.Observation.query_tic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">query_tic</span></code></a>([cone_radius])</p></td>
-<td><p>Query TIC catalog (through MAST) for stars in the field</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.save.html#prose.Observation.save" title="prose.Observation.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>([destination])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.save.html#prose.Observation.save" title="prose.Observation.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>([destination])</p></td>
 <td><p>Save current observation</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.set_attribute.html#prose.Observation.set_attribute" title="prose.Observation.set_attribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_attribute</span></code></a>(file, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.set_attribute.html#prose.Observation.set_attribute" title="prose.Observation.set_attribute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_attribute</span></code></a>(file, **kwargs)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.set_catalog_target.html#prose.Observation.set_catalog_target" title="prose.Observation.set_catalog_target"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_catalog_target</span></code></a>(catalog_name, designation)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.set_catalog_target.html#prose.Observation.set_catalog_target" title="prose.Observation.set_catalog_target"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_catalog_target</span></code></a>(catalog_name, designation)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.set_tic_target.html#prose.Observation.set_tic_target" title="prose.Observation.set_tic_target"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_tic_target</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.Observation.set_gaia_target.html#prose.Observation.set_gaia_target" title="prose.Observation.set_gaia_target"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_gaia_target</span></code></a>(gaia_id[, verbose, raise_far])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.show_stars.html#prose.Observation.show_stars" title="prose.Observation.show_stars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_stars</span></code></a>([size, view, n, flip, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.show_stars.html#prose.Observation.show_stars" title="prose.Observation.show_stars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_stars</span></code></a>([size, view, n, flip, ...])</p></td>
 <td><p>Show detected stars over stack image</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.sigma_clip.html#prose.Observation.sigma_clip" title="prose.Observation.sigma_clip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sigma_clip</span></code></a>([sigma, star])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.sigma_clip.html#prose.Observation.sigma_clip" title="prose.Observation.sigma_clip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sigma_clip</span></code></a>([sigma, star])</p></td>
 <td><p>Sigma clipping</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.step.html#prose.Observation.step" title="prose.Observation.step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">step</span></code></a>([t0])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.step.html#prose.Observation.step" title="prose.Observation.step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">step</span></code></a>([t0])</p></td>
 <td><p>Two parameter step model model.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.to_csv.html#prose.Observation.to_csv" title="prose.Observation.to_csv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_csv</span></code></a>(destination[, sep])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.to_csv.html#prose.Observation.to_csv" title="prose.Observation.to_csv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_csv</span></code></a>(destination[, sep])</p></td>
 <td><p>Export a typical csv of the observation's data</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.transit.html#prose.Observation.transit" title="prose.Observation.transit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transit</span></code></a>(t0, duration[, depth])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.transit.html#prose.Observation.transit" title="prose.Observation.transit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transit</span></code></a>(t0, duration[, depth])</p></td>
 <td><p>A simple transit model</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.where.html#prose.Observation.where" title="prose.Observation.where"><code class="xref py py-obj docutils literal notranslate"><span class="pre">where</span></code></a>(condition)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.where.html#prose.Observation.where" title="prose.Observation.where"><code class="xref py py-obj docutils literal notranslate"><span class="pre">where</span></code></a>(condition)</p></td>
 <td><p>return filtered observation given a boolean mask of time</p></td>
 </tr>
 </tbody>
@@ -440,58 +436,49 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.diff_flux.html#prose.Observation.diff_flux" title="prose.Observation.diff_flux"><code class="xref py py-obj docutils literal notranslate"><span class="pre">diff_flux</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.gaia_from_toi.html#prose.Observation.gaia_from_toi" title="prose.Observation.gaia_from_toi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gaia_from_toi</span></code></a></p></td>
-<td><p>Gaia id from TOI id if TOI is in target name</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.has_diff.html#prose.Observation.has_diff" title="prose.Observation.has_diff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_diff</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.has_diff.html#prose.Observation.has_diff" title="prose.Observation.has_diff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_diff</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_stack</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_stack</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.label.html#prose.Observation.label" title="prose.Observation.label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">label</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.label.html#prose.Observation.label" title="prose.Observation.label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">label</span></code></a></p></td>
 <td><p>{telescope}_{date}_{name}_{filter}</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.meridian_flip.html#prose.Observation.meridian_flip" title="prose.Observation.meridian_flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meridian_flip</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.meridian_flip.html#prose.Observation.meridian_flip" title="prose.Observation.meridian_flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meridian_flip</span></code></a></p></td>
 <td><p>Meridian flip time.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.night_date.html#prose.Observation.night_date" title="prose.Observation.night_date"><code class="xref py py-obj docutils literal notranslate"><span class="pre">night_date</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.night_date.html#prose.Observation.night_date" title="prose.Observation.night_date"><code class="xref py py-obj docutils literal notranslate"><span class="pre">night_date</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.raw_error.html#prose.Observation.raw_error" title="prose.Observation.raw_error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">raw_error</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.raw_error.html#prose.Observation.raw_error" title="prose.Observation.raw_error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">raw_error</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.raw_flux.html#prose.Observation.raw_flux" title="prose.Observation.raw_flux"><code class="xref py py-obj docutils literal notranslate"><span class="pre">raw_flux</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.raw_flux.html#prose.Observation.raw_flux" title="prose.Observation.raw_flux"><code class="xref py py-obj docutils literal notranslate"><span class="pre">raw_flux</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.simbad.html#prose.Observation.simbad" title="prose.Observation.simbad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simbad</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.simbad.html#prose.Observation.simbad" title="prose.Observation.simbad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simbad</span></code></a></p></td>
 <td><p>simbad query url for specified target</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.simbad_url.html#prose.Observation.simbad_url" title="prose.Observation.simbad_url"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simbad_url</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.simbad_url.html#prose.Observation.simbad_url" title="prose.Observation.simbad_url"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simbad_url</span></code></a></p></td>
 <td><p>[notebook feature] clickable simbad query url for specified target</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">stack</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">stack</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.target.html#prose.Observation.target" title="prose.Observation.target"><code class="xref py py-obj docutils literal notranslate"><span class="pre">target</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.target.html#prose.Observation.target" title="prose.Observation.target"><code class="xref py py-obj docutils literal notranslate"><span class="pre">target</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.tfop_prefix.html#prose.Observation.tfop_prefix" title="prose.Observation.tfop_prefix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tfop_prefix</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.trend.html#prose.Observation.trend" title="prose.Observation.trend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trend</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.tic_id.html#prose.Observation.tic_id" title="prose.Observation.tic_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tic_id</span></code></a></p></td>
-<td><p>TIC id from digits found in target name</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.trend.html#prose.Observation.trend" title="prose.Observation.trend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trend</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.wcs.html#prose.Observation.wcs" title="prose.Observation.wcs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wcs</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.wcs.html#prose.Observation.wcs" title="prose.Observation.wcs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wcs</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.X.html#prose.Observation.x" title="prose.Observation.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.X.html#prose.Observation.x" title="prose.Observation.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Observation.xlabel.html#prose.Observation.xlabel" title="prose.Observation.xlabel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xlabel</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Observation.xlabel.html#prose.Observation.xlabel" title="prose.Observation.xlabel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xlabel</span></code></a></p></td>
 <td><p>Plot xlabel (time) according to its units</p></td>
 </tr>
 </tbody>

@@ -210,12 +210,11 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/fits_manager.html">Fits manager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/photometry.html">Photometry ✨</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/photometry.nbconvert.html">Photometry ✨</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/reports.html">Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/custom_block.html">Custom block</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/modeling.html">Modeling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/archival.html">Archival images 🌌</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/custom_block.nbconvert.html">Custom block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/modeling.nbconvert.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/archival.nbconvert.html">Archival images 🌌</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
@@ -224,7 +223,7 @@
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/phot.html">Data products: <code class="docutils literal notranslate"><span class="pre">.phot</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/extra.html">Useful tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/extra.nbconvert.html">Useful tips</a></li>
 </ul>
 
 </div>
@@ -291,26 +290,29 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.FitsManager.__init__.html#prose.FitsManager.__init__" title="prose.FitsManager.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([folders, files, depth, hdu, ...])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.FitsManager.files.html#prose.FitsManager.files" title="prose.FitsManager.files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">files</span></code></a>([telescope, target, date, afilter, ...])</p></td>
-<td><p>Returns files given criteria</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.FitsManager.get_files.html#prose.FitsManager.get_files" title="prose.FitsManager.get_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_files</span></code></a>(folders, extension[, scan, depth])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.FitsManager.calibrations.html#prose.FitsManager.calibrations" title="prose.FitsManager.calibrations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calibrations</span></code></a>(**kwargs)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.FitsManager.label.html#prose.FitsManager.label" title="prose.FitsManager.label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">label</span></code></a>([i])</p></td>
-<td><p>Return '{telescope}_{date}_{target}_{filter}' string</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.FitsManager.files.html#prose.FitsManager.files" title="prose.FitsManager.files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">files</span></code></a>([id, path, exposure, tolerance])</p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.FitsManager.observation_files.html#prose.FitsManager.observation_files" title="prose.FitsManager.observation_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">observation_files</span></code></a>(i[, min_days, max_days, ...])</p></td>
-<td><p>Return a dictionary of all the files (including calibration ones) corresponding to a given observation.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.FitsManager.get_files.html#prose.FitsManager.get_files" title="prose.FitsManager.get_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_files</span></code></a>(folders, extension[, scan, depth])</p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.FitsManager.observations.html#prose.FitsManager.observations" title="prose.FitsManager.observations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">observations</span></code></a>([telescope, target, date, ...])</p></td>
-<td><p>Print of return current observations</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.FitsManager.label.html#prose.FitsManager.label" title="prose.FitsManager.label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">label</span></code></a>(i)</p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.FitsManager.print.html#prose.FitsManager.print" title="prose.FitsManager.print"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print</span></code></a>([calib, repr, exposure])</p></td>
-<td><p>Print database observations, calibrations and other files in nice table</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.FitsManager.observation_files.html#prose.FitsManager.observation_files" title="prose.FitsManager.observation_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">observation_files</span></code></a>(i[, past, future, ...])</p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.FitsManager.scan_files.html#prose.FitsManager.scan_files" title="prose.FitsManager.scan_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scan_files</span></code></a>(files[, batch_size, verbose, hdu])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.FitsManager.observations.html#prose.FitsManager.observations" title="prose.FitsManager.observations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">observations</span></code></a>([hide_exposure])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.FitsManager.scan_files.html#prose.FitsManager.scan_files" title="prose.FitsManager.scan_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scan_files</span></code></a>(files[, batch_size, verbose, ...])</p></td>
 <td><p>Scan files and add data to database</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.FitsManager.to_pandas.html#prose.FitsManager.to_pandas" title="prose.FitsManager.to_pandas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_pandas</span></code></a>(query)</p></td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table></div>

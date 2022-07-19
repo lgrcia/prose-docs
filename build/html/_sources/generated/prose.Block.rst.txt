@@ -15,13 +15,18 @@
    
       ~Block.__init__
       ~Block.citations
-      ~Block.concat
-      ~Block.concatenate
+      ~Block.from_args
       ~Block.run
       ~Block.terminate
    
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Block.args
    
    

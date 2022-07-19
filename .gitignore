@@ -1,4 +1,4 @@
 **/.ipynb_checkpoints
-**.*.fits
+**/*.fits
 **/*prose_a*
 source/notebooks/tutorial_dataset/*.fits

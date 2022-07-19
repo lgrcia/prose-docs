@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="prev" title="Data products: .phot" href="phot.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" />
 
     <meta name="generator" content="sphinx-4.4.0, furo 2022.03.04"/>
         <title>Useful tips - prose</title>
@@ -210,21 +210,20 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/fits_manager.html">Fits manager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/photometry.html">Photometry ✨</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/photometry.nbconvert.html">Photometry ✨</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/reports.html">Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/custom_block.html">Custom block</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/modeling.html">Modeling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/archival.html">Archival images 🌌</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/custom_block.nbconvert.html">Custom block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/modeling.nbconvert.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/archival.nbconvert.html">Archival images 🌌</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="case_studies/diagnostic_video.html">Diagnostic video</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="phot.html">Data products: <code class="docutils literal notranslate"><span class="pre">.phot</span></code></a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Useful tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extra.nbconvert.html">Useful tips</a></li>
 </ul>
 
 </div>
@@ -515,7 +514,7 @@ div.rendered_html tbody tr:hover {
 <li><p><a class="reference external" href="#Custom-apertures">Custom apertures</a></p></li>
 </ul>
 <p>In what follows we will make examples from a random set of images</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
@@ -526,14 +525,6 @@ div.rendered_html tbody tr:hover {
 <span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="n">Image</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
-WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: No module named 'mkl'
-</pre></div></div>
 </div>
 <section id="Accessing-blocks">
 <h2>Accessing blocks<a class="headerlink" href="#Accessing-blocks" title="Permalink to this headline">#</a></h2>
@@ -567,9 +558,9 @@ WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: N
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&lt;prose.blocks.imutils.Pass at 0x16585fc10&gt;,
- &lt;prose.blocks.imutils.Set at 0x16585fc40&gt;,
- &lt;prose.blocks.detection.SegmentedPeaks at 0x10915f6d0&gt;]
+[&lt;prose.blocks.utils.Pass at 0x117a26100&gt;,
+ &lt;prose.blocks.utils.Set at 0x29ce0be20&gt;,
+ &lt;prose.blocks.detection.SegmentedPeaks at 0x29ce297c0&gt;]
 </pre></div></div>
 </div>
 <p>but specific blocks can also be accessed by name (if they have one)</p>
@@ -587,7 +578,7 @@ WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: N
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;prose.blocks.imutils.Pass at 0x16585fc10&gt;
+&lt;prose.blocks.utils.Pass at 0x117a26100&gt;
 </pre></div></div>
 </div>
 </section>
@@ -635,10 +626,10 @@ WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: N
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose.blocks</span> <span class="kn">import</span> <span class="n">Plot</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose.blocks.vizualisation</span> <span class="kn">import</span> <span class="n">PlotVideo</span>
 
 <span class="c1"># we define our block</span>
-<span class="n">plot_block</span> <span class="o">=</span> <span class="n">Plot</span><span class="p">(</span><span class="n">show</span><span class="p">,</span> <span class="s2">"plots.gif"</span><span class="p">)</span>
+<span class="n">plot_block</span> <span class="o">=</span> <span class="n">PlotVideo</span><span class="p">(</span><span class="n">show</span><span class="p">,</span> <span class="s2">"plots.gif"</span><span class="p">)</span>
 
 <span class="c1"># adding to the sequence and running</span>
 <span class="n">sequence</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">([</span><span class="n">plot_block</span><span class="p">])</span>
@@ -651,7 +642,7 @@ WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: N
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-blue-intense-fg">RUN</span> default: 100%|<span class="ansi-blue-intense-fg">████████████████████████████</span>| 5/5 [00:00&lt;00:00, 10.83images/s]
+<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">█████████████████████████████████████</span>| 5/5 [00:00&lt;00:00, 10.13images/s]
 </pre></div></div>
 </div>
 <img alt="../_images/plots.gif" src="../_images/plots.gif"/>
@@ -660,46 +651,31 @@ WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: N
 <h2>Checking catalogs<a class="headerlink" href="#Checking-catalogs" title="Permalink to this headline">#</a></h2>
 <p>From your <code class="docutils literal notranslate"><span class="pre">Observation</span></code> it is often required to match your detected stars with a catalog. Let’s load an observation and see how to do that.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">load</span>
 
-<span class="n">obs</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="s2">"..."</span><span class="p">)</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="s2">"/Users/lgrcia/data/artemis_20220616_TOI-3884.01_r.phot"</span><span class="p">)</span>
 <span class="n">obs</span><span class="o">.</span><span class="n">show_stars</span><span class="p">(</span><span class="n">view</span><span class="o">=</span><span class="s2">"all"</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-blue-intense-fg">INFO</span> Could not convert time to BJD TDB
-</pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&lt;Figure size 432x288 with 0 Axes&gt;
-</pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/notebooks_extra_15_2.png" src="../_images/notebooks_extra_15_2.png"/>
+<img alt="../_images/notebooks_extra_15_0.png" src="../_images/notebooks_extra_15_0.png"/>
 </div>
 </div>
 <p>The catalog can be overlaid with <code class="docutils literal notranslate"><span class="pre">obs.show_{catalog</span> <span class="pre">name}</span></code> on stack image or a cutout, the syntax being the same</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs</span><span class="o">.</span><span class="n">show_cutout</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
-<span class="n">obs</span><span class="o">.</span><span class="n">show_gaia</span><span class="p">(</span><span class="n">align</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">show_cutout</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+<span class="n">obs</span><span class="o">.</span><span class="n">query_catalog</span><span class="p">(</span><span class="s2">"gaia"</span><span class="p">)</span>
+<span class="n">obs</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">plot_catalog</span><span class="p">(</span><span class="s2">"gaia"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -716,37 +692,29 @@ WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: N
 <h2>Custom apertures<a class="headerlink" href="#Custom-apertures" title="Permalink to this headline">#</a></h2>
 <p>After the <code class="docutils literal notranslate"><span class="pre">Calibration</span></code> is completed, you may want to check the stack image and choose yourself some stars to extract photometry on with pre-defined aperture sizes. Let’s start by loading the phot originated from the <code class="docutils literal notranslate"><span class="pre">Calibration</span></code> and detect som stars on it</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">load</span><span class="p">,</span> <span class="n">blocks</span>
 
-<span class="n">obs</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="s2">"..."</span><span class="p">)</span>
+<span class="n">obs</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="s2">"/Users/lgrcia/data/artemis_20220616_TOI-3884.01_r.phot"</span><span class="p">)</span>
 
 <span class="c1"># detecting some stars</span>
-<span class="n">stars</span> <span class="o">=</span> <span class="n">blocks</span><span class="o">.</span><span class="n">SegmentedPeaks</span><span class="p">(</span><span class="n">n_stars</span><span class="o">=</span><span class="mi">10</span><span class="p">)(</span><span class="n">obs</span><span class="o">.</span><span class="n">stack</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">obs</span><span class="o">.</span><span class="n">show_stars</span><span class="p">(</span><span class="n">stars</span><span class="o">=</span><span class="n">stars</span><span class="p">)</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">blocks</span><span class="o">.</span><span class="n">SegmentedPeaks</span><span class="p">(</span><span class="n">n_stars</span><span class="o">=</span><span class="mi">10</span><span class="p">)(</span><span class="n">obs</span><span class="o">.</span><span class="n">stack</span><span class="p">)</span>
+<span class="n">im</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&lt;Figure size 432x288 with 0 Axes&gt;
-</pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/notebooks_extra_21_1.png" src="../_images/notebooks_extra_21_1.png"/>
+<img alt="../_images/notebooks_extra_21_0.png" src="../_images/notebooks_extra_21_0.png"/>
 </div>
 </div>
 <p>Target is 8, we plot its PSF and define some adapted aperture(s)</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -756,7 +724,7 @@ WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: N
 <span class="n">rout</span> <span class="o">=</span> <span class="mi">15</span>
 <span class="n">apertures</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">rin</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1"># multiple apertures</span>
 
-<span class="n">obs</span><span class="o">.</span><span class="n">plot_psf</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">aperture</span><span class="o">=</span><span class="n">apertures</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rin</span><span class="o">=</span><span class="n">rin</span><span class="p">,</span> <span class="n">rout</span><span class="o">=</span><span class="n">rout</span><span class="p">)</span>
+<span class="n">obs</span><span class="o">.</span><span class="n">plot_radial_psf</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">aperture</span><span class="o">=</span><span class="n">apertures</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rin</span><span class="o">=</span><span class="n">rin</span><span class="p">,</span> <span class="n">rout</span><span class="o">=</span><span class="n">rout</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -768,17 +736,9 @@ WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: N
 </div>
 </div>
 <p>This looks reasonable enough to launch <code class="docutils literal notranslate"><span class="pre">AperturePhotometry</span></code> with it.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">pipeline</span>
+from prose import pipeline
 
-<span class="n">photometry</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">AperturePhotometry</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">r_in</span><span class="o">=</span><span class="n">rin</span><span class="p">,</span> <span class="n">r_out</span><span class="o">=</span><span class="n">rout</span><span class="p">,</span> <span class="n">apertures</span><span class="o">=</span><span class="n">apertures</span><span class="p">,</span> <span class="n">fwhm_scale</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<p>More details on the <code class="docutils literal notranslate"><span class="pre">AperturePhotometry</span></code> documentation</p>
+photometry = pipeline.AperturePhotometry(..., r_in=rin, r_out=rout, apertures=apertures, fwhm_scale=False)<p>More details on the <code class="docutils literal notranslate"><span class="pre">AperturePhotometry</span></code> documentation</p>
 </section>
 </section>
 
@@ -788,17 +748,7 @@ WARNING (theano.link.c.cmodule): install mkl with `conda install mkl-service`: N
         
         <div class="related-pages">
           
-          <a class="prev-page" href="phot.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Data products: <code class="docutils literal notranslate"><span class="pre">.phot</span></code></div>
-                
-              </div>
-            </a>
+          
         </div>
         <div class="bottom-of-page">
           <div class="left-details">

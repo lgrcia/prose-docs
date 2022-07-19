@@ -14,10 +14,12 @@
         :toctree: generated/
    
       ~Sequence.__init__
+      ~Sequence.add_discard
       ~Sequence.citations
-      ~Sequence.from_dicts
+      ~Sequence.from_args
       ~Sequence.insert_before
       ~Sequence.run
+      ~Sequence.terminate
    
    
 
@@ -27,8 +29,9 @@
 
    .. autosummary::
    
-      ~Sequence.as_dicts
+      ~Sequence.args
       ~Sequence.blocks
+      ~Sequence.params_str
       ~Sequence.processing_time
    
    

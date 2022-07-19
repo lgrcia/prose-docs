@@ -210,12 +210,11 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/fits_manager.html">Fits manager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/photometry.html">Photometry ✨</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/photometry.nbconvert.html">Photometry ✨</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/reports.html">Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/custom_block.html">Custom block</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/modeling.html">Modeling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/archival.html">Archival images 🌌</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/custom_block.nbconvert.html">Custom block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/modeling.nbconvert.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/archival.nbconvert.html">Archival images 🌌</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
@@ -224,7 +223,7 @@
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks/phot.html">Data products: <code class="docutils literal notranslate"><span class="pre">.phot</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/extra.html">Useful tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/extra.nbconvert.html">Useful tips</a></li>
 </ul>
 
 </div>
@@ -261,22 +260,8 @@
 <h1>prose.FitsManager.files<a class="headerlink" href="#prose-fitsmanager-files" title="Permalink to this headline">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="prose.FitsManager.files">
-<span class="sig-prename descclassname"><span class="pre">FitsManager.</span></span><span class="sig-name descname"><span class="pre">files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">telescope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">afilter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exposure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exposure_tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000000000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.FitsManager.files" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns files given criteria</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>telescope</strong> (<em>str</em><em>, </em><em>optional</em>) – </p></li>
-<li><p><strong>target</strong> (<em>str</em><em>, </em><em>optional</em>) – </p></li>
-<li><p><strong>date</strong> (<em>str</em><em>, </em><em>optional</em>) – </p></li>
-<li><p><strong>afilter</strong> (<em>str</em><em>, </em><em>optional</em>) – </p></li>
-<li><p><strong>imtype</strong> (<em>str</em><em>, </em><em>optional</em>) – </p></li>
-<li><p><strong>exposure</strong> (<em>float</em><em>, </em><em>optional</em>) – exposure of the files to retrieve, as specified in their headers, defaut is 0 (see next kwarg)</p></li>
-<li><p><strong>exposure_tolerance</strong> (<em>float</em><em>, </em><em>optional</em>) – tolerance of the exposure. Files with exposure - exposure_tolerance &lt; exposure &lt; exposure + exposure_tolerance will be retrieve, default 10000000000, which account with potentially all exposures</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-prename descclassname"><span class="pre">FitsManager.</span></span><span class="sig-name descname"><span class="pre">files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exposure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.FitsManager.files" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
 </section>
 
         </article>

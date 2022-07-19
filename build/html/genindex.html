@@ -208,12 +208,11 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/fits_manager.html">Fits manager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/photometry.html">Photometry ✨</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/photometry.nbconvert.html">Photometry ✨</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/reports.html">Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/custom_block.html">Custom block</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/modeling.html">Modeling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/archival.html">Archival images 🌌</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/custom_block.nbconvert.html">Custom block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/modeling.nbconvert.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/tutorials/archival.nbconvert.html">Archival images 🌌</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
@@ -222,7 +221,7 @@
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/phot.html">Data products: <code class="docutils literal notranslate"><span class="pre">.phot</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/extra.html">Useful tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/extra.nbconvert.html">Useful tips</a></li>
 </ul>
 
 </div>
@@ -296,19 +295,19 @@
   <h2>A</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="generated/generated/prose.Sequence.add_discard.html#prose.Sequence.add_discard">add_discard() (prose.Sequence method)</a>
+</li>
         <li><a href="generated/prose.blocks.AffineTransform.html#prose.blocks.AffineTransform">AffineTransform (class in prose.blocks)</a>
 </li>
         <li><a href="generated/prose.Image.airmass.html#prose.Image.airmass">airmass (prose.Image property)</a>
 </li>
         <li><a href="generated/prose.Observation.aperture.html#prose.Observation.aperture">aperture (prose.Observation property)</a>
 </li>
-        <li><a href="generated/prose.fluxes.ApertureFluxes.html#prose.fluxes.ApertureFluxes">ApertureFluxes (class in prose.fluxes)</a>
-</li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="generated/prose.pipeline.AperturePhotometry.html#prose.pipeline.AperturePhotometry">AperturePhotometry (class in prose.pipeline)</a>
+        <li><a href="generated/prose.fluxes.ApertureFluxes.html#prose.fluxes.ApertureFluxes">ApertureFluxes (class in prose.fluxes)</a>
 </li>
-        <li><a href="generated/prose.Sequence.as_dicts.html#prose.Sequence.as_dicts">as_dicts (prose.Sequence property)</a>
+        <li><a href="generated/prose.pipeline.AperturePhotometry.html#prose.pipeline.AperturePhotometry">AperturePhotometry (class in prose.pipeline)</a>
 </li>
         <li><a href="generated/generated/prose.Observation.assert_stack.html#prose.Observation.assert_stack">assert_stack() (prose.Observation method)</a>
 </li>
@@ -364,6 +363,8 @@
           <li><a href="generated/prose.pipeline.Calibration.html#prose.pipeline.Calibration">(class in prose.pipeline)</a>
 </li>
         </ul></li>
+        <li><a href="generated/generated/prose.FitsManager.calibrations.html#prose.FitsManager.calibrations">calibrations() (prose.FitsManager method)</a>
+</li>
         <li><a href="generated/generated/prose.Block.citations.html#prose.Block.citations">citations() (prose.Block static method)</a>, <a href="generated/prose.Block.citations.html#prose.Block.citations">[1]</a>
 
         <ul>
@@ -372,15 +373,11 @@
         </ul></li>
         <li><a href="generated/prose.blocks.centroids.COM.html#prose.blocks.centroids.COM">COM (class in prose.blocks.centroids)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="generated/prose.Observation.comparison_raw_fluxes.html#prose.Observation.comparison_raw_fluxes">comparison_raw_fluxes (prose.Observation property)</a>
 </li>
         <li><a href="generated/generated/prose.Observation.compute_bjd.html#prose.Observation.compute_bjd">compute_bjd() (prose.Observation method)</a>, <a href="generated/prose.Observation.compute_bjd.html#prose.Observation.compute_bjd">[1]</a>
-</li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="generated/generated/prose.Block.concat.html#prose.Block.concat">concat() (prose.Block method)</a>, <a href="generated/prose.Block.concat.html#prose.Block.concat">[1]</a>
-</li>
-        <li><a href="generated/generated/prose.Block.concatenate.html#prose.Block.concatenate">concatenate() (prose.Block static method)</a>
 </li>
         <li><a href="generated/generated/prose.fluxes.ApertureFluxes.copy.html#prose.fluxes.ApertureFluxes.copy">copy() (prose.fluxes.ApertureFluxes method)</a>
 
@@ -476,16 +473,20 @@
 </li>
         <li><a href="generated/prose.Image.flip.html#prose.Image.flip">flip (prose.Image property)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="generated/generated/prose.Observation.flip_correction.html#prose.Observation.flip_correction">flip_correction() (prose.Observation method)</a>, <a href="generated/prose.Observation.flip_correction.html#prose.Observation.flip_correction">[1]</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="generated/generated/prose.Observation.folder_to_phot.html#prose.Observation.folder_to_phot">folder_to_phot() (prose.Observation method)</a>, <a href="generated/prose.Observation.folder_to_phot.html#prose.Observation.folder_to_phot">[1]</a>
 </li>
         <li><a href="generated/prose.Image.fov.html#prose.Image.fov">fov (prose.Image property)</a>
 </li>
-        <li><a href="generated/generated/prose.Sequence.from_dicts.html#prose.Sequence.from_dicts">from_dicts() (prose.Sequence static method)</a>, <a href="generated/prose.Sequence.from_dicts.html#prose.Sequence.from_dicts">[1]</a>
+        <li><a href="generated/generated/prose.Block.from_args.html#prose.Block.from_args">from_args() (prose.Block class method)</a>
+
+        <ul>
+          <li><a href="generated/generated/prose.Sequence.from_args.html#prose.Sequence.from_args">(prose.Sequence class method)</a>
 </li>
+        </ul></li>
         <li><a href="generated/generated/prose.Telescope.from_name.html#prose.Telescope.from_name">from_name() (prose.Telescope static method)</a>, <a href="generated/prose.Telescope.from_name.html#prose.Telescope.from_name">[1]</a>
 </li>
         <li><a href="generated/generated/prose.Telescope.from_names.html#prose.Telescope.from_names">from_names() (prose.Telescope static method)</a>, <a href="generated/prose.Telescope.from_names.html#prose.Telescope.from_names">[1]</a>
@@ -500,8 +501,6 @@
   <h2>G</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="generated/prose.Observation.gaia_from_toi.html#prose.Observation.gaia_from_toi">gaia_from_toi (prose.Observation property)</a>
-</li>
         <li><a href="generated/generated/prose.Image.gaia_stars.html#prose.Image.gaia_stars">gaia_stars() (prose.Image method)</a>
 </li>
         <li><a href="generated/prose.blocks.Gaussian2D.html#prose.blocks.Gaussian2D">Gaussian2D (class in prose.blocks)</a>
@@ -744,8 +743,6 @@
           <li><a href="generated/generated/prose.Observation.pont2006.html#prose.Observation.pont2006">(prose.Observation method)</a>, <a href="generated/prose.Observation.pont2006.html#prose.Observation.pont2006">[1]</a>
 </li>
         </ul></li>
-        <li><a href="generated/generated/prose.FitsManager.print.html#prose.FitsManager.print">print() (prose.FitsManager method)</a>
-</li>
         <li><a href="generated/prose.pipeline.Calibration.processing_time.html#prose.pipeline.Calibration.processing_time">processing_time (prose.pipeline.Calibration property)</a>
 
         <ul>
@@ -765,8 +762,6 @@
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="generated/generated/prose.Observation.query_catalog.html#prose.Observation.query_catalog">query_catalog() (prose.Observation method)</a>, <a href="generated/prose.Observation.query_catalog.html#prose.Observation.query_catalog">[1]</a>
-</li>
-        <li><a href="generated/generated/prose.Observation.query_tic.html#prose.Observation.query_tic">query_tic() (prose.Observation method)</a>, <a href="generated/prose.Observation.query_tic.html#prose.Observation.query_tic">[1]</a>
 </li>
     </ul></td>
   </tr></table>
@@ -838,7 +833,7 @@
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="generated/generated/prose.Observation.set_catalog_target.html#prose.Observation.set_catalog_target">set_catalog_target() (prose.Observation method)</a>, <a href="generated/prose.Observation.set_catalog_target.html#prose.Observation.set_catalog_target">[1]</a>
 </li>
-        <li><a href="generated/generated/prose.Observation.set_tic_target.html#prose.Observation.set_tic_target">set_tic_target() (prose.Observation method)</a>, <a href="generated/prose.Observation.set_tic_target.html#prose.Observation.set_tic_target">[1]</a>
+        <li><a href="generated/generated/prose.Observation.set_gaia_target.html#prose.Observation.set_gaia_target">set_gaia_target() (prose.Observation method)</a>
 </li>
         <li><a href="generated/prose.Image.shape.html#prose.Image.shape">shape (prose.Image property)</a>
 </li>
@@ -883,14 +878,16 @@
         <li><a href="generated/prose.Telescope.html#prose.Telescope">Telescope (class in prose)</a>
 </li>
         <li><a href="generated/generated/prose.Block.terminate.html#prose.Block.terminate">terminate() (prose.Block method)</a>, <a href="generated/prose.Block.terminate.html#prose.Block.terminate">[1]</a>
+
+        <ul>
+          <li><a href="generated/generated/prose.Sequence.terminate.html#prose.Sequence.terminate">(prose.Sequence method)</a>
 </li>
-        <li><a href="generated/prose.Observation.tfop_prefix.html#prose.Observation.tfop_prefix">tfop_prefix (prose.Observation property)</a>
-</li>
-        <li><a href="generated/prose.Observation.tic_id.html#prose.Observation.tic_id">tic_id (prose.Observation property)</a>
+        </ul></li>
+        <li><a href="generated/generated/prose.Observation.to_csv.html#prose.Observation.to_csv">to_csv() (prose.Observation method)</a>, <a href="generated/prose.Observation.to_csv.html#prose.Observation.to_csv">[1]</a>
 </li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="generated/generated/prose.Observation.to_csv.html#prose.Observation.to_csv">to_csv() (prose.Observation method)</a>, <a href="generated/prose.Observation.to_csv.html#prose.Observation.to_csv">[1]</a>
+        <li><a href="generated/generated/prose.FitsManager.to_pandas.html#prose.FitsManager.to_pandas">to_pandas() (prose.FitsManager method)</a>
 </li>
         <li><a href="generated/generated/prose.fluxes.ApertureFluxes.transit.html#prose.fluxes.ApertureFluxes.transit">transit() (prose.fluxes.ApertureFluxes method)</a>
 

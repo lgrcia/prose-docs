@@ -14,13 +14,14 @@
         :toctree: generated/
    
       ~FitsManager.__init__
+      ~FitsManager.calibrations
       ~FitsManager.files
       ~FitsManager.get_files
       ~FitsManager.label
       ~FitsManager.observation_files
       ~FitsManager.observations
-      ~FitsManager.print
       ~FitsManager.scan_files
+      ~FitsManager.to_pandas
    
    
 

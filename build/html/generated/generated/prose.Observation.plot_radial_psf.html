@@ -210,12 +210,11 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/fits_manager.html">Fits manager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/photometry.html">Photometry ✨</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/photometry.nbconvert.html">Photometry ✨</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/reports.html">Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/custom_block.html">Custom block</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/modeling.html">Modeling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/archival.html">Archival images 🌌</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/custom_block.nbconvert.html">Custom block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/modeling.nbconvert.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/tutorials/archival.nbconvert.html">Archival images 🌌</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
@@ -224,7 +223,7 @@
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../notebooks/phot.html">Data products: <code class="docutils literal notranslate"><span class="pre">.phot</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../notebooks/extra.html">Useful tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/extra.nbconvert.html">Useful tips</a></li>
 </ul>
 
 </div>
@@ -269,7 +268,9 @@
 <li><p><strong>star</strong> (<em>int</em><em> or </em><em>list like</em><em>, </em><em>optional</em>) – if int: star to plot cutout on, if list like (tuple, np.ndarray) of size 2: coords of cutout, by default None</p></li>
 <li><p><strong>n</strong> (<em>int</em><em>, </em><em>optional</em>) – cutout width and height, by default 40</p></li>
 <li><p><strong>zscale</strong> (<em>bool</em><em>, </em><em>optional</em>) – whether to apply a zscale to cutout image, by default False</p></li>
-<li><p><strong>aperture</strong> (<em>float</em><em>, </em><em>optional</em>) – radius of aperture to display, by default None corresponds to best target aperture</p></li>
+<li><p><strong>aperture</strong> (<em>float</em><em> or </em><em>int optional</em>) – radius of aperture to display, by default None corresponds to best target aperture
+if int, corresponds to the number of the aperture in the xarray
+if float, corresponds to the aperture in pixels</p></li>
 <li><p><strong>rin</strong> (<em>[</em><em>type</em><em>]</em><em>, </em><em>optional</em>) – radius of inner annulus to display, by default None corresponds to inner radius saved</p></li>
 <li><p><strong>rout</strong> (<em>[</em><em>type</em><em>]</em><em>, </em><em>optional</em>) – radius of outer annulus to display, by default None corresponds to outer radius saved</p></li>
 </ul>

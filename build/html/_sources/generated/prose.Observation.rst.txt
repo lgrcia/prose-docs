@@ -47,11 +47,10 @@
       ~Observation.polynomial_trend
       ~Observation.pont2006
       ~Observation.query_catalog
-      ~Observation.query_tic
       ~Observation.save
       ~Observation.set_attribute
       ~Observation.set_catalog_target
-      ~Observation.set_tic_target
+      ~Observation.set_gaia_target
       ~Observation.show_stars
       ~Observation.sigma_clip
       ~Observation.step
@@ -74,7 +73,6 @@
       ~Observation.detrended_diff_flux
       ~Observation.diff_error
       ~Observation.diff_flux
-      ~Observation.gaia_from_toi
       ~Observation.has_diff
       ~Observation.has_stack
       ~Observation.label
@@ -86,8 +84,6 @@
       ~Observation.simbad_url
       ~Observation.stack
       ~Observation.target
-      ~Observation.tfop_prefix
-      ~Observation.tic_id
       ~Observation.trend
       ~Observation.wcs
       ~Observation.x

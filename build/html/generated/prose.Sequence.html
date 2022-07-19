@@ -210,12 +210,11 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/fits_manager.html">Fits manager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/photometry.html">Photometry ✨</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/photometry.nbconvert.html">Photometry ✨</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/reports.html">Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/custom_block.html">Custom block</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/modeling.html">Modeling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/archival.html">Archival images 🌌</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/custom_block.nbconvert.html">Custom block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/modeling.nbconvert.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/archival.nbconvert.html">Archival images 🌌</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
@@ -224,7 +223,7 @@
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/phot.html">Data products: <code class="docutils literal notranslate"><span class="pre">.phot</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/extra.html">Useful tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/extra.nbconvert.html">Useful tips</a></li>
 </ul>
 
 </div>
@@ -272,16 +271,22 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.Sequence.__init__.html#prose.Sequence.__init__" title="prose.Sequence.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(blocks[, name, loader])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Sequence.citations.html#prose.Sequence.citations" title="prose.Sequence.citations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">citations</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.Sequence.add_discard.html#prose.Sequence.add_discard" title="prose.Sequence.add_discard"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_discard</span></code></a>(discard_block, i)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Sequence.from_dicts.html#prose.Sequence.from_dicts" title="prose.Sequence.from_dicts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_dicts</span></code></a>(blocks_dicts)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Sequence.citations.html#prose.Sequence.citations" title="prose.Sequence.citations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">citations</span></code></a>()</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.Sequence.insert_before.html#prose.Sequence.insert_before" title="prose.Sequence.insert_before"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insert_before</span></code></a>(before, block)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/prose.Sequence.from_args.html#prose.Sequence.from_args" title="prose.Sequence.from_args"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_args</span></code></a>(args)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Sequence.run.html#prose.Sequence.run" title="prose.Sequence.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(images[, show_progress, live_discard, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.Sequence.insert_before.html#prose.Sequence.insert_before" title="prose.Sequence.insert_before"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insert_before</span></code></a>(before, block)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Sequence.run.html#prose.Sequence.run" title="prose.Sequence.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(images[, telescope, terminate, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.Sequence.terminate.html#prose.Sequence.terminate" title="prose.Sequence.terminate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">terminate</span></code></a>()</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -293,13 +298,16 @@
 <col style="width: 90%"/>
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Sequence.as_dicts.html#prose.Sequence.as_dicts" title="prose.Sequence.as_dicts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">as_dicts</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">args</span></code></p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="prose.Sequence.blocks.html#prose.Sequence.blocks" title="prose.Sequence.blocks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">blocks</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.Sequence.processing_time.html#prose.Sequence.processing_time" title="prose.Sequence.processing_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">processing_time</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">params_str</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="prose.Sequence.processing_time.html#prose.Sequence.processing_time" title="prose.Sequence.processing_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">processing_time</span></code></a></p></td>
 <td><p></p></td>
 </tr>
 </tbody>

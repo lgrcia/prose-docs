@@ -52,13 +52,13 @@
    :caption: Tutorials
    :maxdepth: 1
 
-   notebooks/tutorials/fits_manager.ipynb
-   notebooks/tutorials/photometry.ipynb
+   notebooks/tutorials/fits_manager.nbconvert.ipynb
+   notebooks/tutorials/photometry.nbconvert.ipynb
    notebooks/tutorials/reports.ipynb
-   notebooks/tutorials/custom_block.ipynb
-   notebooks/tutorials/modeling.ipynb
+   notebooks/tutorials/custom_block.nbconvert.ipynb
+   notebooks/tutorials/modeling.nbconvert.ipynb
    .. notebooks/neb.ipynb
-   notebooks/tutorials/archival.ipynb
+   notebooks/tutorials/archival.nbconvert.ipynb
 
 .. toctree::
    :caption: Case studies 🔭
@@ -72,7 +72,7 @@
    :maxdepth: 1
 
    notebooks/phot.ipynb
-   notebooks/extra.ipynb
+   notebooks/extra.nbconvert.ipynb
 
 
 .. image:: lookatit.png
