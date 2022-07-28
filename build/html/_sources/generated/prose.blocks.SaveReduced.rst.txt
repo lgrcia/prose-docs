@@ -1,5 +1,5 @@
-﻿prose.blocks.SaveReduced
-========================
+﻿SaveReduced
+===========
 
 .. currentmodule:: prose.blocks
 

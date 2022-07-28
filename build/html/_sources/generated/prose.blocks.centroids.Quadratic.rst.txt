@@ -1,5 +1,5 @@
-﻿prose.blocks.centroids.Quadratic
-================================
+﻿Quadratic
+=========
 
 .. currentmodule:: prose.blocks.centroids
 

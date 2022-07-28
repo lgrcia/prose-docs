@@ -1,4 +1,4 @@
-{{ fullname | escape | underline}}
+{{ name | escape | underline}}
 
 .. currentmodule:: {{ module }}
 
@@ -10,7 +10,7 @@
    .. rubric:: {{ _('Methods') }}
 
    .. autosummary::
-        :toctree: generated/
+        :toctree:
    {% for item in methods %}
       ~{{ name }}.{{ item }}
    {%- endfor %}

@@ -1,5 +1,5 @@
-﻿prose.Telescope
-===============
+﻿Telescope
+=========
 
 .. currentmodule:: prose
 
@@ -11,7 +11,7 @@
    .. rubric:: Methods
 
    .. autosummary::
-        :toctree: generated/
+        :toctree:
    
       ~Telescope.__init__
       ~Telescope.date

@@ -1,5 +1,5 @@
-﻿prose.Observation
-=================
+﻿Observation
+===========
 
 .. currentmodule:: prose
 
@@ -11,7 +11,7 @@
    .. rubric:: Methods
 
    .. autosummary::
-        :toctree: generated/
+        :toctree:
    
       ~Observation.__init__
       ~Observation.assert_stack
@@ -41,6 +41,7 @@
       ~Observation.plot_psf_model
       ~Observation.plot_radial_psf
       ~Observation.plot_raw_diff
+      ~Observation.plot_summary
       ~Observation.plot_systematics
       ~Observation.plot_systematics_signal
       ~Observation.polynomial
@@ -76,8 +77,11 @@
       ~Observation.has_diff
       ~Observation.has_stack
       ~Observation.label
+      ~Observation.mean_epsf
+      ~Observation.mean_target_psf
       ~Observation.meridian_flip
       ~Observation.night_date
+      ~Observation.optimal_aperture
       ~Observation.raw_error
       ~Observation.raw_flux
       ~Observation.simbad

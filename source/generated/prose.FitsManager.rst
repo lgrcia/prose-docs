@@ -1,5 +1,5 @@
-﻿prose.FitsManager
-=================
+﻿FitsManager
+===========
 
 .. currentmodule:: prose
 
@@ -11,12 +11,16 @@
    .. rubric:: Methods
 
    .. autosummary::
-        :toctree: generated/
+        :toctree:
    
       ~FitsManager.__init__
+      ~FitsManager.bias
       ~FitsManager.calibrations
+      ~FitsManager.darks
       ~FitsManager.files
+      ~FitsManager.flats
       ~FitsManager.get_files
+      ~FitsManager.images
       ~FitsManager.label
       ~FitsManager.observation_files
       ~FitsManager.observations
@@ -31,10 +35,10 @@
 
    .. autosummary::
    
-      ~FitsManager.bias
-      ~FitsManager.darks
-      ~FitsManager.flats
-      ~FitsManager.images
+      ~FitsManager.all_bias
+      ~FitsManager.all_darks
+      ~FitsManager.all_flats
+      ~FitsManager.all_images
       ~FitsManager.obs_name
       ~FitsManager.reduced
       ~FitsManager.stack

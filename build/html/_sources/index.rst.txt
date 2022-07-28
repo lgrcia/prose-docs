@@ -39,7 +39,7 @@
 
 .. toctree::
    :caption: References
-   :maxdepth: 1
+   :maxdepth: 2
 
    installation.md
    notebooks/quickstart.ipynb
@@ -52,27 +52,27 @@
    :caption: Tutorials
    :maxdepth: 1
 
-   notebooks/tutorials/fits_manager.nbconvert.ipynb
-   notebooks/tutorials/photometry.nbconvert.ipynb
+   notebooks/tutorials/fits_manager.ipynb
+   notebooks/tutorials/photometry.ipynb
    notebooks/tutorials/reports.ipynb
-   notebooks/tutorials/custom_block.nbconvert.ipynb
-   notebooks/tutorials/modeling.nbconvert.ipynb
-   .. notebooks/neb.ipynb
-   notebooks/tutorials/archival.nbconvert.ipynb
+   notebooks/tutorials/custom_block.ipynb
+   notebooks/tutorials/modeling.ipynb
+   notebooks/tutorials/archival.ipynb
+   notebooks/tutorials/catalogs.ipynb
 
 .. toctree::
    :caption: Case studies 🔭
    :maxdepth: 1
 
    notebooks/case_studies/diagnostic_video.ipynb
-   .. notebooks/case_studies/gaia_photometry.ipynb
+   notebooks/case_studies/hiaka_occultation.ipynb
    
 .. toctree::
    :caption: Notes
    :maxdepth: 1
 
    notebooks/phot.ipynb
-   notebooks/extra.nbconvert.ipynb
+   notebooks/extra.ipynb
 
 
 .. image:: lookatit.png

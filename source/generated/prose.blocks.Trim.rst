@@ -1,5 +1,5 @@
-﻿prose.blocks.Trim
-=================
+﻿Trim
+====
 
 .. currentmodule:: prose.blocks
 

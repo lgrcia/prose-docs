@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="prose.pipeline.AperturePhotometry" href="prose.pipeline.AperturePhotometry.html" /><link rel="prev" title="prose.Observation" href="prose.Observation.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="AperturePhotometry" href="prose.pipeline.AperturePhotometry.html" /><link rel="prev" title="Observation" href="prose.Observation.html" />
 
     <meta name="generator" content="sphinx-4.4.0, furo 2022.03.04"/>
-        <title>prose.pipeline.Calibration - prose</title>
+        <title>Calibration - prose</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -162,68 +162,70 @@
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/quickstart.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../core.html">What is a pipeline?</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../blocks.html">Blocks</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.SegmentedPeaks.html">prose.blocks.SegmentedPeaks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.SEDetection.html">prose.blocks.SEDetection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.DAOFindStars.html">prose.blocks.DAOFindStars</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Cutouts.html">prose.blocks.Cutouts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.MedianPSF.html">prose.blocks.MedianPSF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.FWHM.html">prose.blocks.FWHM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Gaussian2D.html">prose.blocks.Gaussian2D</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Moffat2D.html">prose.blocks.Moffat2D</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.FastGaussian.html">prose.blocks.FastGaussian</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.XYShift.html">prose.blocks.XYShift</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Twirl.html">prose.blocks.Twirl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.AffineTransform.html">prose.blocks.AffineTransform</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Cutout2D.html">prose.blocks.Cutout2D</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.AstroAlignShift.html">prose.blocks.AstroAlignShift</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.centroids.COM.html">prose.blocks.centroids.COM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.centroids.Quadratic.html">prose.blocks.centroids.Quadratic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.centroids.Gaussian2D.html">prose.blocks.centroids.Gaussian2D</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.centroids.BalletCentroid.html">prose.blocks.centroids.BalletCentroid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.PhotutilsAperturePhotometry.html">prose.blocks.PhotutilsAperturePhotometry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.PhotutilsPSFPhotometry.html">prose.blocks.PhotutilsPSFPhotometry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.SEAperturePhotometry.html">prose.blocks.SEAperturePhotometry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Calibration.html">prose.blocks.Calibration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Cutouts.html">prose.blocks.Cutouts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Flip.html">prose.blocks.Flip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.ImageBuffer.html">prose.blocks.ImageBuffer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Pass.html">prose.blocks.Pass</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.SaveReduced.html">prose.blocks.SaveReduced</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Set.html">prose.blocks.Set</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Stack.html">prose.blocks.Stack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Trim.html">prose.blocks.Trim</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.blocks.XArray.html">prose.blocks.XArray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.detection.SegmentedPeaks.html">SegmentedPeaks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.detection.SEDetection.html">SEDetection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.detection.DAOFindStars.html">DAOFindStars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.psf.Cutouts.html">Cutouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.psf.MedianPSF.html">MedianPSF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.psf.FWHM.html">FWHM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.psf.Gaussian2D.html">Gaussian2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.psf.Moffat2D.html">Moffat2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.psf.FastGaussian.html">FastGaussian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.XYShift.html">XYShift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Twirl.html">Twirl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.AffineTransform.html">AffineTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Cutout2D.html">Cutout2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.centroids.COM.html">COM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.centroids.Quadratic.html">Quadratic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.centroids.Gaussian2D.html">Gaussian2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.centroids.BalletCentroid.html">BalletCentroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.PhotutilsAperturePhotometry.html">PhotutilsAperturePhotometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.PhotutilsPSFPhotometry.html">PhotutilsPSFPhotometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.SEAperturePhotometry.html">SEAperturePhotometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Calibration.html">Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Cutouts.html">Cutouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Flip.html">Flip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.ImageBuffer.html">ImageBuffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Pass.html">Pass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.SaveReduced.html">SaveReduced</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Set.html">Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Stack.html">Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.Trim.html">Trim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.blocks.XArray.html">XArray</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../api.html">API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="prose.Image.html">prose.Image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.Block.html">prose.Block</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.Sequence.html">prose.Sequence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.Telescope.html">prose.Telescope</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.FitsManager.html">prose.FitsManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.Observation.html">prose.Observation</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">prose.pipeline.Calibration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.pipeline.AperturePhotometry.html">prose.pipeline.AperturePhotometry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prose.fluxes.ApertureFluxes.html">prose.fluxes.ApertureFluxes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.Image.html">Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.Block.html">Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.Sequence.html">Sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.Telescope.html">Telescope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.FitsManager.html">FitsManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.Observation.html">Observation</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.pipeline.AperturePhotometry.html">AperturePhotometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prose.fluxes.ApertureFluxes.html">ApertureFluxes</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/photometry.nbconvert.html">Photometry ✨</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/fits_manager.html">Fits manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/photometry.html">Photometry ✨</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/reports.html">Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/custom_block.nbconvert.html">Custom block</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/modeling.nbconvert.html">Modeling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/archival.nbconvert.html">Archival images 🌌</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/custom_block.html">Custom block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/modeling.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/archival.html">Archival images 🌌</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/tutorials/catalogs.html">Catalogs &amp; Plate solving</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/case_studies/diagnostic_video.html">Diagnostic video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/case_studies/hiaka_occultation.html">Hi’iaka occultation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks/phot.html">Data products: <code class="docutils literal notranslate"><span class="pre">.phot</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/extra.nbconvert.html">Useful tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/extra.html">Useful tips</a></li>
 </ul>
 
 </div>
@@ -256,8 +258,8 @@
           </label>
         </div>
         <article role="main">
-          <section id="prose-pipeline-calibration">
-<h1>prose.pipeline.Calibration<a class="headerlink" href="#prose-pipeline-calibration" title="Permalink to this headline">#</a></h1>
+          <section id="calibration">
+<h1>Calibration<a class="headerlink" href="#calibration" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="prose.pipeline.Calibration">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">prose.pipeline.</span></span><span class="sig-name descname"><span class="pre">Calibration</span></span><a class="headerlink" href="#prose.pipeline.Calibration" title="Permalink to this definition">#</a></dt>
@@ -288,7 +290,7 @@ TODO</p>
 <col style="width: 90%"/>
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/prose.pipeline.Calibration.__init__.html#prose.pipeline.Calibration.__init__" title="prose.pipeline.Calibration.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([overwrite, flats, bias, darks, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="prose.pipeline.Calibration.__init__.html#prose.pipeline.Calibration.__init__" title="prose.pipeline.Calibration.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([overwrite, flats, bias, darks, ...])</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="prose.pipeline.Calibration.run.html#prose.pipeline.Calibration.run" title="prose.pipeline.Calibration.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(images[, destination, reference, movie])</p></td>
@@ -306,16 +308,16 @@ TODO</p>
 <col style="width: 90%"/>
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.pipeline.Calibration.images.html#prose.pipeline.Calibration.images" title="prose.pipeline.Calibration.images"><code class="xref py py-obj docutils literal notranslate"><span class="pre">images</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">images</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.pipeline.Calibration.phot.html#prose.pipeline.Calibration.phot" title="prose.pipeline.Calibration.phot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">phot</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">phot</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="prose.pipeline.Calibration.processing_time.html#prose.pipeline.Calibration.processing_time" title="prose.pipeline.Calibration.processing_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">processing_time</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">processing_time</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="prose.pipeline.Calibration.stack_path.html#prose.pipeline.Calibration.stack_path" title="prose.pipeline.Calibration.stack_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stack_path</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">stack_path</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -333,7 +335,7 @@ TODO</p>
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">prose.pipeline.AperturePhotometry</div>
+                <div class="title">AperturePhotometry</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -344,7 +346,7 @@ TODO</p>
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">prose.Observation</div>
+                <div class="title">Observation</div>
                 
               </div>
             </a>

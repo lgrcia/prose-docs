@@ -1,5 +1,5 @@
-﻿prose.blocks.Cutouts
-====================
+﻿Cutouts
+=======
 
 .. currentmodule:: prose.blocks
 

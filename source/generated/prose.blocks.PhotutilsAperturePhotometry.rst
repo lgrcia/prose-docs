@@ -1,5 +1,5 @@
-﻿prose.blocks.PhotutilsAperturePhotometry
-========================================
+﻿PhotutilsAperturePhotometry
+===========================
 
 .. currentmodule:: prose.blocks
 

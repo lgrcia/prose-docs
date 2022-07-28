@@ -1,5 +1,5 @@
-﻿prose.blocks.centroids.Gaussian2D
-=================================
+﻿Gaussian2D
+==========
 
 .. currentmodule:: prose.blocks.centroids
 

@@ -1,5 +1,5 @@
-﻿prose.blocks.Flip
-=================
+﻿Flip
+====
 
 .. currentmodule:: prose.blocks
 

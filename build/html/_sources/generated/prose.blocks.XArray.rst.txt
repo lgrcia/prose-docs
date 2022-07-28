@@ -1,5 +1,5 @@
-﻿prose.blocks.XArray
-===================
+﻿XArray
+======
 
 .. currentmodule:: prose.blocks
 

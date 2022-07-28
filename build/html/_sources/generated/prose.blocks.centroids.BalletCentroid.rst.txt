@@ -1,5 +1,5 @@
-﻿prose.blocks.centroids.BalletCentroid
-=====================================
+﻿BalletCentroid
+==============
 
 .. currentmodule:: prose.blocks.centroids
 

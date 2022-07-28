@@ -1,5 +1,5 @@
-﻿prose.fluxes.ApertureFluxes
-===========================
+﻿ApertureFluxes
+==============
 
 .. currentmodule:: prose.fluxes
 
@@ -11,7 +11,7 @@
    .. rubric:: Methods
 
    .. autosummary::
-        :toctree: generated/
+        :toctree:
    
       ~ApertureFluxes.__init__
       ~ApertureFluxes.best_polynomial

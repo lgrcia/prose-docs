@@ -1,5 +1,5 @@
-﻿prose.blocks.Pass
-=================
+﻿Pass
+====
 
 .. currentmodule:: prose.blocks
 

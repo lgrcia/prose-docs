@@ -1,5 +1,5 @@
-﻿prose.blocks.Set
-================
+﻿Set
+===
 
 .. currentmodule:: prose.blocks
 

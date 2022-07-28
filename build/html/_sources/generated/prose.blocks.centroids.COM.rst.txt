@@ -1,5 +1,5 @@
-﻿prose.blocks.centroids.COM
-==========================
+﻿COM
+===
 
 .. currentmodule:: prose.blocks.centroids
 

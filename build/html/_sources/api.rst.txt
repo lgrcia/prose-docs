@@ -9,7 +9,7 @@ Objects
 ---------
 
 .. autosummary::
-   :toctree: generated/
+   :toctree: generated
    :nosignatures:
    :template: class.rst
 
@@ -24,7 +24,7 @@ Pipelines
 ---------
 
 .. autosummary::
-   :toctree: generated/
+   :toctree: generated
    :nosignatures:
    :template: class.rst
 
@@ -35,7 +35,7 @@ Other
 ---------
 
 .. autosummary::
-   :toctree: generated/
+   :toctree: generated
    :nosignatures:
    :template: class.rst
 

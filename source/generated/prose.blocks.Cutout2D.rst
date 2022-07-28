@@ -1,5 +1,5 @@
-﻿prose.blocks.Cutout2D
-=====================
+﻿Cutout2D
+========
 
 .. currentmodule:: prose.blocks
 

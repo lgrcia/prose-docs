@@ -35,15 +35,16 @@ source_suffix = {
     '.md': 'markdown',
 }
 
+nbsphinx_allow_errors = True
+
 # -- Options for HTML output -------------------------------------------------
 
 html_title = "prose"
 html_theme = "furo"
 html_static_path = ['_static']
 templates_path = ["templates"]
-html_css_files = [
-    'custom.css',
-]
+html_css_files = ['custom.css']
+
 
 rst_prolog = """
 .. |prose| replace:: *prose*
@@ -60,3 +61,7 @@ rst_prolog = """
 .. |modify| replace:: :blockmodify:`modifies data`
 
 """
+
+import prose
+
+prose.CONFIG.update_builtins()

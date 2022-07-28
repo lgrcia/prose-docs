@@ -1,5 +1,5 @@
-﻿prose.blocks.SEAperturePhotometry
-=================================
+﻿SEAperturePhotometry
+====================
 
 .. currentmodule:: prose.blocks
 

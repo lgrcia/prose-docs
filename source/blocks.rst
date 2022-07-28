@@ -1,8 +1,6 @@
 Blocks
 ======
 
-.. currentmodule:: prose.blocks
-
 .. image:: _static/block.png
    :align: center
    :width: 200px
@@ -17,13 +15,15 @@ A ``Block`` is a single unit of processing acting on the ``Image`` object, readi
 Detection
 ---------
 
+.. currentmodule:: prose.blocks.detection
+
 .. image:: _static/detection.png
    :align: center
    :height: 230px
 
 .. autosummary::
    :toctree: generated
-   :template: autosum.rst
+   :template: blocksum.rst
    :nosignatures:
 
    SegmentedPeaks
@@ -34,9 +34,11 @@ Detection
 PSF
 ---
 
+.. currentmodule:: prose.blocks.psf
+
 .. autosummary::
    :toctree: generated
-   :template: autosum.rst
+   :template: blocksum.rst
    :nosignatures:
 
    Cutouts
@@ -49,6 +51,8 @@ PSF
 Alignment, Centroiding
 ---------------------------
 
+.. currentmodule:: prose.blocks
+
 .. image:: _static/matching.png
    :align: center
    :height: 220px
@@ -56,20 +60,19 @@ Alignment, Centroiding
 
 .. autosummary::
    :toctree: generated
-   :template: autosum.rst
+   :template: blocksum.rst
    :nosignatures:
 
    XYShift
    Twirl
    AffineTransform
    Cutout2D
-   AstroAlignShift
 
 .. currentmodule:: prose.blocks.centroids
 
 .. autosummary::
    :toctree: generated
-   :template: autosum.rst
+   :template: blocksum.rst
    :nosignatures:
 
    COM
@@ -89,7 +92,7 @@ Photometry
 
 .. autosummary::
    :toctree: generated
-   :template: autosum.rst
+   :template: blocksum.rst
    :nosignatures:
 
    PhotutilsAperturePhotometry
@@ -105,7 +108,7 @@ Utils
    
 .. autosummary::
    :toctree: generated
-   :template: autosum.rst
+   :template: blocksum.rst
    :nosignatures:
 
    Calibration

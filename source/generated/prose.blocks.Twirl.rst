@@ -1,5 +1,5 @@
-﻿prose.blocks.Twirl
-==================
+﻿Twirl
+=====
 
 .. currentmodule:: prose.blocks
 

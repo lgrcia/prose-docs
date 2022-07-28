@@ -1,5 +1,5 @@
-﻿prose.pipeline.AperturePhotometry
-=================================
+﻿AperturePhotometry
+==================
 
 .. currentmodule:: prose.pipeline
 
@@ -11,7 +11,7 @@
    .. rubric:: Methods
 
    .. autosummary::
-        :toctree: generated/
+        :toctree:
    
       ~AperturePhotometry.__init__
       ~AperturePhotometry.run

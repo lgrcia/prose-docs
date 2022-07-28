@@ -1,5 +1,5 @@
-﻿prose.Block
-===========
+﻿Block
+=====
 
 .. currentmodule:: prose
 
@@ -11,7 +11,7 @@
    .. rubric:: Methods
 
    .. autosummary::
-        :toctree: generated/
+        :toctree:
    
       ~Block.__init__
       ~Block.citations

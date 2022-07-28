@@ -1,5 +1,5 @@
-﻿prose.blocks.PhotutilsPSFPhotometry
-===================================
+﻿PhotutilsPSFPhotometry
+======================
 
 .. currentmodule:: prose.blocks
 

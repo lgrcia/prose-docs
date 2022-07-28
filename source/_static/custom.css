@@ -241,6 +241,8 @@ div.nboutput.container div.output_area {
     color: #6a737d !important
 }
 
+.highlight .sa,
+.highlight .sé,
 .highlight .s2 {
     color: #032f62 !important
 }
@@ -264,6 +266,27 @@ code,
 code span.pre {
     background: none;
     color: var(--color-brand-primary)
+}
+
+
+/* Copy button */
+
+.highlight button.copybtn,
+.highlight button.copybtn:hover,
+.highlight button.copybtn:active {
+    background: none !important;
+    border: 0px solid white !important;
+}
+
+.highlight button.copybtn::after {
+    display: none !important;
+}
+
+
+/* Dark mode */
+
+button.theme-toggle {
+    display: none !important;
 }
 
 

@@ -1,5 +1,5 @@
-﻿prose.blocks.Calibration
-========================
+﻿Calibration
+===========
 
 .. currentmodule:: prose.blocks
 

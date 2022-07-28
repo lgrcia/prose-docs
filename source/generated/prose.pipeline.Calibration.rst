@@ -1,5 +1,5 @@
-﻿prose.pipeline.Calibration
-==========================
+﻿Calibration
+===========
 
 .. currentmodule:: prose.pipeline
 
@@ -11,7 +11,7 @@
    .. rubric:: Methods
 
    .. autosummary::
-        :toctree: generated/
+        :toctree:
    
       ~Calibration.__init__
       ~Calibration.run

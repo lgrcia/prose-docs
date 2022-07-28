@@ -1,5 +1,5 @@
-﻿prose.blocks.XYShift
-====================
+﻿XYShift
+=======
 
 .. currentmodule:: prose.blocks
 

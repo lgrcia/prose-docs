@@ -1,5 +1,5 @@
-﻿prose.blocks.ImageBuffer
-========================
+﻿ImageBuffer
+===========
 
 .. currentmodule:: prose.blocks
 

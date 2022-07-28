@@ -1,5 +1,5 @@
-﻿prose.blocks.AffineTransform
-============================
+﻿AffineTransform
+===============
 
 .. currentmodule:: prose.blocks
 

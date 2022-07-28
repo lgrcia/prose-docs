@@ -1,5 +1,5 @@
-﻿prose.Sequence
-==============
+﻿Sequence
+========
 
 .. currentmodule:: prose
 
@@ -11,7 +11,7 @@
    .. rubric:: Methods
 
    .. autosummary::
-        :toctree: generated/
+        :toctree:
    
       ~Sequence.__init__
       ~Sequence.add_discard

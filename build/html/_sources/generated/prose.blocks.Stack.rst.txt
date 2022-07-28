@@ -1,5 +1,5 @@
-﻿prose.blocks.Stack
-==================
+﻿Stack
+=====
 
 .. currentmodule:: prose.blocks
 
