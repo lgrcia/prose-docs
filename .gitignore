@@ -2,3 +2,5 @@
 **/*.fits
 **/*prose_a*
 source/notebooks/tutorial_dataset/*.fits
+build/jupyter_execute
+source/generated
