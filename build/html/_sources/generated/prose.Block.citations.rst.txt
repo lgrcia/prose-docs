@@ -1,6 +1,6 @@
-prose.Block.citations
+﻿prose.Block.citations
 =====================
 
 .. currentmodule:: prose
 
-.. automethod:: Block.citations
+.. autoproperty:: Block.citations

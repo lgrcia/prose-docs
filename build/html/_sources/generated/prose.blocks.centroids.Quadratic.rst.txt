@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks.centroids
 
-.. autoclass:: Quadratic
+.. autoclass:: Quadratic(Quadratic)

@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks.centroids
 
-.. autoclass:: Gaussian2D
+.. autoclass:: Gaussian2D(Gaussian2D)

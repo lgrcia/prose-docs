@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks
 
-.. autoclass:: PhotutilsAperturePhotometry
+.. autoclass:: PhotutilsAperturePhotometry(PhotutilsAperturePhotometry)

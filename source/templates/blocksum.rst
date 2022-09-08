@@ -2,4 +2,4 @@
 
 .. currentmodule:: {{ module }}
 
-.. autoclass:: {{ objname }}
+.. autoclass:: {{ objname }}({{ objname }})

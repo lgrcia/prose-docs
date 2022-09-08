@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks
 
-.. autoclass:: SaveReduced
+.. autoclass:: SaveReduced(SaveReduced)

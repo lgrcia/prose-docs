@@ -206,6 +206,7 @@
 <li class="toctree-l2"><a class="reference internal" href="prose.fluxes.ApertureFluxes.html">ApertureFluxes</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/acknowledgment.html">Acknowledgement</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
@@ -262,13 +263,23 @@
 <h1>COM<a class="headerlink" href="#com" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="prose.blocks.centroids.COM">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">prose.blocks.centroids.</span></span><span class="sig-name descname"><span class="pre">COM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.blocks.centroids.COM" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">prose.blocks.centroids.</span></span><span class="sig-name descname"><span class="pre">COM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">COM</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.blocks.centroids.COM" title="Permalink to this definition">#</a></dt>
 <dd><p>Centroiding using <code class="docutils literal notranslate"><span class="pre">photutils.centroids.centroid_com</span></code></p>
 <p><span class="blockread">reads</span> <code class="docutils literal notranslate"><span class="pre">Image.stars_coords</span></code></p>
 <p><span class="blockwrite">writes</span> <code class="docutils literal notranslate"><span class="pre">Image.stars_coords</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – maximum deviation from initial coordinate, by default <cite>cutout/2</cite></p></li>
+<li><p><strong>cutout</strong> (<em>int</em><em>, </em><em>optional</em>) – size of the cutout to be used for centroiding, by default 21</p></li>
+</ul>
+</dd>
+</dl>
+<p>Photutils centroiding (only prose &gt;= 2.0.3)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>centroid_func</strong> (<em>function</em>) – photutils.centroids function</p></li>
 <li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – maximum deviation from initial coordinate, by default <cite>cutout/2</cite></p></li>
 <li><p><strong>cutout</strong> (<em>int</em><em>, </em><em>optional</em>) – size of the cutout to be used for centroiding, by default 21</p></li>
 </ul>

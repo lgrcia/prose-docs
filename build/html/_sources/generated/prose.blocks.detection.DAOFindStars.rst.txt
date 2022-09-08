@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks.detection
 
-.. autoclass:: DAOFindStars
+.. autoclass:: DAOFindStars(DAOFindStars)

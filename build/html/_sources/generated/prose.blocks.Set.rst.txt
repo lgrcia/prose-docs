@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks
 
-.. autoclass:: Set
+.. autoclass:: Set(Set)

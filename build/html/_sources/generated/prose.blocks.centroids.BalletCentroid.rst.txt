@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks.centroids
 
-.. autoclass:: BalletCentroid
+.. autoclass:: BalletCentroid(BalletCentroid)

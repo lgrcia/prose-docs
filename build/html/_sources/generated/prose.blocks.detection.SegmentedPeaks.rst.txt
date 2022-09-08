@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks.detection
 
-.. autoclass:: SegmentedPeaks
+.. autoclass:: SegmentedPeaks(SegmentedPeaks)

@@ -28,6 +28,9 @@ extensions = [
     'myst_parser'
     ]
 
+autodoc_typehints = 'signature'
+autoclass_content = 'both'
+
 master_doc = 'index'
 exclude_patterns = ['_build', '**.ipynb_checkpoints']
 source_suffix = {

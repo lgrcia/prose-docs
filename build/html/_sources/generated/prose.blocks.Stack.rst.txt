@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks
 
-.. autoclass:: Stack
+.. autoclass:: Stack(Stack)

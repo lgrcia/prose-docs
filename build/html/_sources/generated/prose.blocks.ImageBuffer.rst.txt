@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks
 
-.. autoclass:: ImageBuffer
+.. autoclass:: ImageBuffer(ImageBuffer)

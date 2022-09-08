@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks.psf
 
-.. autoclass:: FWHM
+.. autoclass:: FWHM(FWHM)

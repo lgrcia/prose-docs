@@ -206,6 +206,7 @@
 <li class="toctree-l2"><a class="reference internal" href="prose.fluxes.ApertureFluxes.html">ApertureFluxes</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/acknowledgment.html">Acknowledgement</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
@@ -262,7 +263,7 @@
 <h1>XYShift<a class="headerlink" href="#xyshift" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="prose.blocks.XYShift">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">prose.blocks.</span></span><span class="sig-name descname"><span class="pre">XYShift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.blocks.XYShift" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">prose.blocks.</span></span><span class="sig-name descname"><span class="pre">XYShift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">XYShift</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#prose.blocks.XYShift" title="Permalink to this definition">#</a></dt>
 <dd><p>Compute the linear shift between two point clouds. Star coordinates in the image are expected in image.stars_coords</p>
 <p><span class="blockwrite">writes</span> <code class="docutils literal notranslate"><span class="pre">Image.dx</span></code>, <code class="docutils literal notranslate"><span class="pre">Image.dy</span></code>, <code class="docutils literal notranslate"><span class="pre">Image.header</span></code></p>
 <dl class="field-list simple">
@@ -298,6 +299,7 @@ x^{ref}_N &amp; y^{ref}_N
 <p>Identifying stars in the sky, for example using their position with respect to constellations or by trying to match catalogs (as with astrometry.net) is possible with a single image, but is time-consuming when applied to a complete set of images. Unfortunately most of the time detected stars do not hold the same index <span class="math notranslate nohighlight">\(i\)</span> (index is attributed by the star detection algorithm) and their number might differ.</p>
 <p>The goal of <strong>xyshift</strong> is to check all the possible shifts from one star with respect to all the others, and to identify the most common shifts between stars of two different images.</p>
 <img alt="generated/images/xyshift_principle.png" src="generated/images/xyshift_principle.png"/>
+<p>Instanciation</p>
 </dd></dl>
 </section>
 

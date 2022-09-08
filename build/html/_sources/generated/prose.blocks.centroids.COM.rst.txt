@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks.centroids
 
-.. autoclass:: COM
+.. autoclass:: COM(COM)

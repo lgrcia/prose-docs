@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks
 
-.. autoclass:: Twirl
+.. autoclass:: Twirl(Twirl)

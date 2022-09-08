@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks.psf
 
-.. autoclass:: FastGaussian
+.. autoclass:: FastGaussian(FastGaussian)

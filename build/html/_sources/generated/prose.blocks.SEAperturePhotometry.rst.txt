@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks
 
-.. autoclass:: SEAperturePhotometry
+.. autoclass:: SEAperturePhotometry(SEAperturePhotometry)

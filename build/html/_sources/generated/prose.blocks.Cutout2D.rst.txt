@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks
 
-.. autoclass:: Cutout2D
+.. autoclass:: Cutout2D(Cutout2D)

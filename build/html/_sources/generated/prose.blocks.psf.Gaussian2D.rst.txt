@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks.psf
 
-.. autoclass:: Gaussian2D
+.. autoclass:: Gaussian2D(Gaussian2D)

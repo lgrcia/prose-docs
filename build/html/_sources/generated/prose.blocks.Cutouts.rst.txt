@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks
 
-.. autoclass:: Cutouts
+.. autoclass:: Cutouts(Cutouts)

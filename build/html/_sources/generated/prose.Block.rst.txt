@@ -14,7 +14,6 @@
         :toctree:
    
       ~Block.__init__
-      ~Block.citations
       ~Block.from_args
       ~Block.run
       ~Block.terminate
@@ -28,5 +27,6 @@
    .. autosummary::
    
       ~Block.args
+      ~Block.citations
    
    

@@ -46,6 +46,7 @@
    core
    blocks
    api
+   notebooks/acknowledgment.ipynb
    
 
 .. toctree::

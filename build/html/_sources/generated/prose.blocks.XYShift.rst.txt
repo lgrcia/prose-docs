@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks
 
-.. autoclass:: XYShift
+.. autoclass:: XYShift(XYShift)

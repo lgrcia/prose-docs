@@ -3,4 +3,4 @@
 
 .. currentmodule:: prose.blocks
 
-.. autoclass:: Calibration
+.. autoclass:: Calibration(Calibration)
