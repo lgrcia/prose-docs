@@ -1,0 +1,1644 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Useful tips" href="extra.html" /><link rel="prev" title="Hi’iaka occultation" href="hiaka_occultation.html" />
+
+    <meta name="generator" content="sphinx-4.4.0, furo 2022.03.04"/>
+        <title>Data products: .phot - prose</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">prose</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">prose</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/core.html">What is a pipeline?</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst/blocks.html">Blocks</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.detection.SegmentedPeaks.html">prose.blocks.detection.SegmentedPeaks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.detection.SEDetection.html">prose.blocks.detection.SEDetection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.detection.DAOFindStars.html">prose.blocks.detection.DAOFindStars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.XYShift.html">prose.blocks.XYShift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.Twirl.html">prose.blocks.Twirl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.AffineTransform.html">prose.blocks.AffineTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.Cutout2D.html">prose.blocks.Cutout2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.centroids.COM.html">prose.blocks.centroids.COM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.centroids.Quadratic.html">prose.blocks.centroids.Quadratic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.centroids.Gaussian2D.html">prose.blocks.centroids.Gaussian2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.centroids.BalletCentroid.html">prose.blocks.centroids.BalletCentroid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.PhotutilsAperturePhotometry.html">prose.blocks.PhotutilsAperturePhotometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.PhotutilsPSFPhotometry.html">prose.blocks.PhotutilsPSFPhotometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.SEAperturePhotometry.html">prose.blocks.SEAperturePhotometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.Calibration.html">prose.blocks.Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.Cutouts.html">prose.blocks.Cutouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.Flip.html">prose.blocks.Flip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.ImageBuffer.html">prose.blocks.ImageBuffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.Pass.html">prose.blocks.Pass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.SaveReduced.html">prose.blocks.SaveReduced</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.Set.html">prose.blocks.Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.Stack.html">prose.blocks.Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.Trim.html">prose.blocks.Trim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.blocks.XArray.html">prose.blocks.XArray</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.Image.html">prose.Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.Block.html">prose.Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.Sequence.html">prose.Sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.Telescope.html">prose.Telescope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.FitsManager.html">prose.FitsManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.Observation.html">prose.Observation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.pipeline.Calibration.html">prose.pipeline.Calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.pipeline.AperturePhotometry.html">prose.pipeline.AperturePhotometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/generated/prose.fluxes.ApertureFluxes.html">prose.fluxes.ApertureFluxes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgment.html">Acknowledgement</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fits_manager.html">Fits manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="photometry.html">Photometry ✨</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_block.html">Custom block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modeling.html">Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="archival.html">Archival images 🌌</a></li>
+<li class="toctree-l1"><a class="reference internal" href="catalogs.html">Catalogs &amp; Plate solving</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Case studies 🔭</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="diagnostic_video.html">Diagnostic video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hiaka_occultation.html">Hi’iaka occultation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Notes</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Data products: <code class="docutils literal notranslate"><span class="pre">.phot</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="extra.html">Useful tips</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt .copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+</style>
+<section id="Data-products:-.phot">
+<h1>Data products: <code class="docutils literal notranslate"><span class="pre">.phot</span></code><a class="headerlink" href="#Data-products:-.phot" title="Permalink to this headline">#</a></h1>
+<p><em>prose</em> stores and retrieves data products in <code class="docutils literal notranslate"><span class="pre">phot</span></code> files. These can be loaded in a <code class="docutils literal notranslate"><span class="pre">Observation</span></code> object like:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">Observation</span>
+
+<span class="n">obs</span> <span class="o">=</span> <span class="n">Observation</span><span class="p">(</span><span class="s2">"static/example.phot"</span><span class="p">)</span>
+<span class="n">obs</span> <span class="c1"># to show its content</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewbox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewbox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class="xr-text-repr-fallback">&lt;xarray.Dataset&gt;
+Dimensions:          (time: 100, apertures: 32, star: 15, w: 520, h: 520, n: 2,
+                      ncomps: 2)
+Coordinates:
+    stack            (w, h) float64 299.5 300.4 300.9 ... 300.8 301.6 300.2
+  * time             (time) float64 2.45e+06 2.45e+06 ... 2.45e+06 2.45e+06
+    stars            (star, n) float64 259.8 257.8 433.2 ... 44.97 289.2 69.88
+Dimensions without coordinates: apertures, star, w, h, n, ncomps
+Data variables: (12/25)
+    jd_utc           (time) float64 2.45e+06 2.45e+06 ... 2.45e+06 2.45e+06
+    bjd_tdb          (time) float64 2.45e+06 2.45e+06 ... 2.45e+06 2.45e+06
+    flip             (time) float64 nan nan nan nan nan ... nan nan nan nan nan
+    fwhm             (time) float64 3.568 3.568 3.568 ... 3.568 3.568 3.568
+    fwhmx            (time) float64 3.594 3.594 3.594 ... 3.594 3.594 3.594
+    fwhmy            (time) float64 3.542 3.542 3.542 ... 3.542 3.542 3.542
+    ...               ...
+    peaks            (star, time) float64 5.909e+04 5.646e+04 ... 484.1 482.1
+    diff_fluxes      (apertures, star, time) float64 0.9741 0.9391 ... 1.573
+    diff_errors      (apertures, star, time) float64 0.01026 0.01002 ... 0.4906
+    comps            (apertures, ncomps) int64 1 2 1 2 2 1 2 1 ... 1 2 1 2 1 2 1
+    weights          (apertures, ncomps) int64 1 1 1 1 1 1 1 1 ... 1 1 1 1 1 1 1
+    alc              (apertures, time) float64 0.9706 0.9378 ... 0.9806 0.9789
+Attributes: (12/39)
+    SIMPLE:       1
+    BITPIX:       -64
+    NAXIS:        2
+    NAXIS1:       600
+    NAXIS2:       600
+    TELESCOP:     A
+    ...           ...
+    date:         2022-07-15
+    time_format:  bjd_tdb
+    photometry:   ['Calibration', 'Trim', 'SegmentedPeaks', 'Cutouts', 'Media...
+    target:       0
+    method_diff:  broeg
+    aperture:     7</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input class="xr-section-summary-in" disabled="" id="section-246927eb-be42-4430-bcad-971791a4300d" type="checkbox"/><label class="xr-section-summary" for="section-246927eb-be42-4430-bcad-971791a4300d" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span class="xr-has-index">time</span>: 100</li><li><span>apertures</span>: 32</li><li><span>star</span>: 15</li><li><span>w</span>: 520</li><li><span>h</span>: 520</li><li><span>n</span>: 2</li><li><span>ncomps</span>: 2</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-0b2d4c03-8454-40b3-aaa4-331d90157f0e" type="checkbox"/><label class="xr-section-summary" for="section-0b2d4c03-8454-40b3-aaa4-331d90157f0e">Coordinates: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>stack</span></div><div class="xr-var-dims">(w, h)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">299.5 300.4 300.9 ... 301.6 300.2</div><input class="xr-var-attrs-in" disabled="" id="attrs-2197c4a6-ad1f-442f-b83a-14035d9c9844" type="checkbox"/><label for="attrs-2197c4a6-ad1f-442f-b83a-14035d9c9844" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-244fbeac-07c6-4364-b004-1fb2b62ace9e" type="checkbox"/><label for="data-244fbeac-07c6-4364-b004-1fb2b62ace9e" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[299.46430707, 300.40388823, 300.94224703, ..., 300.13599977,
+        300.94272794, 299.10576978],
+       [301.07328811, 301.54946832, 299.93063319, ..., 299.73577288,
+        300.29534274, 301.25105088],
+       [299.3426223 , 299.57137188, 299.37751048, ..., 300.0750006 ,
+        300.582178  , 299.30516453],
+       ...,
+       [300.21758381, 299.93519611, 301.00926172, ..., 299.76906085,
+        299.80391135, 300.8367378 ],
+       [300.8048257 , 300.55733708, 301.59486447, ..., 299.32114124,
+        300.234066  , 300.19699274],
+       [299.57241738, 301.14394452, 301.9055188 , ..., 300.80042664,
+        301.64133477, 300.20051761]])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">time</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">2.45e+06 2.45e+06 ... 2.45e+06</div><input class="xr-var-attrs-in" disabled="" id="attrs-0db2c238-2c42-4c07-8c9f-e22f2abff4cc" type="checkbox"/><label for="attrs-0db2c238-2c42-4c07-8c9f-e22f2abff4cc" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-7769d796-f06e-4688-b9e9-8d3f100de295" type="checkbox"/><label for="data-7769d796-f06e-4688-b9e9-8d3f100de295" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([2450000.005739, 2450000.007254, 2450000.00877 , 2450000.010285,
+       2450000.0118  , 2450000.013315, 2450000.01483 , 2450000.016345,
+       2450000.01786 , 2450000.019375, 2450000.020891, 2450000.022406,
+       2450000.023921, 2450000.025436, 2450000.026951, 2450000.028466,
+       2450000.029981, 2450000.031496, 2450000.033011, 2450000.034527,
+       2450000.036042, 2450000.037557, 2450000.039072, 2450000.040587,
+       2450000.042102, 2450000.043617, 2450000.045132, 2450000.046648,
+       2450000.048163, 2450000.049678, 2450000.051193, 2450000.052708,
+       2450000.054223, 2450000.055738, 2450000.057253, 2450000.058768,
+       2450000.060284, 2450000.061799, 2450000.063314, 2450000.064829,
+       2450000.066344, 2450000.067859, 2450000.069374, 2450000.070889,
+       2450000.072405, 2450000.07392 , 2450000.075435, 2450000.07695 ,
+       2450000.078465, 2450000.07998 , 2450000.081495, 2450000.08301 ,
+       2450000.084525, 2450000.086041, 2450000.087556, 2450000.089071,
+       2450000.090586, 2450000.092101, 2450000.093616, 2450000.095131,
+       2450000.096646, 2450000.098162, 2450000.099677, 2450000.101192,
+       2450000.102707, 2450000.104222, 2450000.105737, 2450000.107252,
+       2450000.108767, 2450000.110282, 2450000.111798, 2450000.113313,
+       2450000.114828, 2450000.116343, 2450000.117858, 2450000.119373,
+       2450000.120888, 2450000.122403, 2450000.123919, 2450000.125434,
+       2450000.126949, 2450000.128464, 2450000.129979, 2450000.131494,
+       2450000.133009, 2450000.134524, 2450000.136039, 2450000.137555,
+       2450000.13907 , 2450000.140585, 2450000.1421  , 2450000.143615,
+       2450000.14513 , 2450000.146645, 2450000.14816 , 2450000.149676,
+       2450000.151191, 2450000.152706, 2450000.154221, 2450000.155736])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>stars</span></div><div class="xr-var-dims">(star, n)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">259.8 257.8 433.2 ... 289.2 69.88</div><input class="xr-var-attrs-in" disabled="" id="attrs-41565f41-119c-4969-ba80-9808e0216c91" type="checkbox"/><label for="attrs-41565f41-119c-4969-ba80-9808e0216c91" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-284b1b15-c369-4293-b96d-76f1b7336c87" type="checkbox"/><label for="data-284b1b15-c369-4293-b96d-76f1b7336c87" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[259.78204161, 257.83835929],
+       [433.15954437, 129.93802894],
+       [230.13071826, 140.05660609],
+       [276.04743765, 331.67908988],
+       [425.44229939, 369.90494706],
+       [447.94434523, 383.229149  ],
+       [230.16267161,  28.74008223],
+       [461.14432645,  78.99719758],
+       [ 64.26567362, 227.30704569],
+       [459.68661212, 262.77520556],
+       [337.74635751, 458.90166972],
+       [228.01721841, 415.46139708],
+       [342.32926618, 175.21483415],
+       [150.95891601,  44.97199888],
+       [289.24188242,  69.88271686]])</pre></div></li></ul></div></li><li class="xr-section-item"><input class="xr-section-summary-in" id="section-d2ea7265-16d0-4f33-a81a-e679088204e9" type="checkbox"/><label class="xr-section-summary" for="section-d2ea7265-16d0-4f33-a81a-e679088204e9">Data variables: <span>(25)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>jd_utc</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">2.45e+06 2.45e+06 ... 2.45e+06</div><input class="xr-var-attrs-in" disabled="" id="attrs-725d582c-886e-4cec-8b85-52e8aa8a0e72" type="checkbox"/><label for="attrs-725d582c-886e-4cec-8b85-52e8aa8a0e72" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-b5d8540d-2766-4ac4-acf0-02d2e749afd9" type="checkbox"/><label for="data-b5d8540d-2766-4ac4-acf0-02d2e749afd9" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([2450000.        , 2450000.00151515, 2450000.0030303 ,
+       2450000.00454545, 2450000.00606061, 2450000.00757576,
+       2450000.00909091, 2450000.01060606, 2450000.01212121,
+       2450000.01363636, 2450000.01515152, 2450000.01666667,
+       2450000.01818182, 2450000.01969697, 2450000.02121212,
+       2450000.02272727, 2450000.02424242, 2450000.02575758,
+       2450000.02727273, 2450000.02878788, 2450000.03030303,
+       2450000.03181818, 2450000.03333333, 2450000.03484849,
+       2450000.03636364, 2450000.03787879, 2450000.03939394,
+       2450000.04090909, 2450000.04242424, 2450000.04393939,
+       2450000.04545454, 2450000.0469697 , 2450000.04848485,
+       2450000.05      , 2450000.05151515, 2450000.0530303 ,
+       2450000.05454546, 2450000.05606061, 2450000.05757576,
+       2450000.05909091, 2450000.06060606, 2450000.06212121,
+       2450000.06363636, 2450000.06515151, 2450000.06666667,
+       2450000.06818182, 2450000.06969697, 2450000.07121212,
+       2450000.07272727, 2450000.07424242, 2450000.07575758,
+       2450000.07727273, 2450000.07878788, 2450000.08030303,
+       2450000.08181818, 2450000.08333333, 2450000.08484848,
+       2450000.08636364, 2450000.08787879, 2450000.08939394,
+       2450000.09090909, 2450000.09242424, 2450000.09393939,
+       2450000.09545455, 2450000.0969697 , 2450000.09848485,
+       2450000.1       , 2450000.10151515, 2450000.1030303 ,
+       2450000.10454545, 2450000.10606061, 2450000.10757576,
+       2450000.10909091, 2450000.11060606, 2450000.11212121,
+       2450000.11363636, 2450000.11515152, 2450000.11666667,
+       2450000.11818182, 2450000.11969697, 2450000.12121212,
+       2450000.12272727, 2450000.12424242, 2450000.12575758,
+       2450000.12727273, 2450000.12878788, 2450000.13030303,
+       2450000.13181818, 2450000.13333333, 2450000.13484848,
+       2450000.13636364, 2450000.13787879, 2450000.13939394,
+       2450000.14090909, 2450000.14242424, 2450000.14393939,
+       2450000.14545455, 2450000.1469697 , 2450000.14848485,
+       2450000.15      ])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>bjd_tdb</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">2.45e+06 2.45e+06 ... 2.45e+06</div><input class="xr-var-attrs-in" disabled="" id="attrs-96789d38-acc1-44ae-8ed6-06a0e5c5f101" type="checkbox"/><label for="attrs-96789d38-acc1-44ae-8ed6-06a0e5c5f101" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-43c7f5c6-86a5-498c-889e-076966386fff" type="checkbox"/><label for="data-43c7f5c6-86a5-498c-889e-076966386fff" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([2450000.00573933, 2450000.00725444, 2450000.00876956,
+       2450000.01028468, 2450000.0117998 , 2450000.01331492,
+       2450000.01483003, 2450000.01634515, 2450000.01786027,
+       2450000.01937539, 2450000.0208905 , 2450000.02240562,
+       2450000.02392074, 2450000.02543586, 2450000.02695098,
+       2450000.02846609, 2450000.02998121, 2450000.03149633,
+       2450000.03301145, 2450000.03452657, 2450000.03604168,
+       2450000.0375568 , 2450000.03907192, 2450000.04058704,
+       2450000.04210215, 2450000.04361727, 2450000.04513239,
+       2450000.04664751, 2450000.04816263, 2450000.04967775,
+       2450000.05119286, 2450000.05270798, 2450000.0542231 ,
+       2450000.05573822, 2450000.05725334, 2450000.05876845,
+       2450000.06028357, 2450000.06179869, 2450000.06331381,
+       2450000.06482893, 2450000.06634405, 2450000.06785916,
+       2450000.06937428, 2450000.0708894 , 2450000.07240452,
+       2450000.07391964, 2450000.07543475, 2450000.07694987,
+       2450000.07846499, 2450000.07998011, 2450000.08149523,
+       2450000.08301035, 2450000.08452546, 2450000.08604058,
+       2450000.0875557 , 2450000.08907082, 2450000.09058594,
+       2450000.09210106, 2450000.09361617, 2450000.09513129,
+       2450000.09664641, 2450000.09816153, 2450000.09967665,
+       2450000.10119177, 2450000.10270688, 2450000.104222  ,
+       2450000.10573712, 2450000.10725224, 2450000.10876736,
+       2450000.11028248, 2450000.1117976 , 2450000.11331271,
+       2450000.11482783, 2450000.11634295, 2450000.11785807,
+       2450000.11937319, 2450000.12088831, 2450000.12240343,
+       2450000.12391854, 2450000.12543366, 2450000.12694878,
+       2450000.1284639 , 2450000.12997902, 2450000.13149414,
+       2450000.13300925, 2450000.13452437, 2450000.13603949,
+       2450000.13755461, 2450000.13906973, 2450000.14058485,
+       2450000.14209997, 2450000.14361509, 2450000.1451302 ,
+       2450000.14664532, 2450000.14816044, 2450000.14967556,
+       2450000.15119068, 2450000.1527058 , 2450000.15422092,
+       2450000.15573603])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>flip</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">nan nan nan nan ... nan nan nan nan</div><input class="xr-var-attrs-in" disabled="" id="attrs-ad7b06ef-67f6-4470-a0aa-57857d772b10" type="checkbox"/><label for="attrs-ad7b06ef-67f6-4470-a0aa-57857d772b10" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-9e65c956-98e8-4112-99a7-a458dcb8c782" type="checkbox"/><label for="data-9e65c956-98e8-4112-99a7-a458dcb8c782" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+       nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+       nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+       nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+       nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+       nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+       nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan,
+       nan, nan, nan, nan, nan, nan, nan, nan, nan])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>fwhm</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">3.568 3.568 3.568 ... 3.568 3.568</div><input class="xr-var-attrs-in" disabled="" id="attrs-fe1b6350-0c6c-491e-b696-f57fab45d942" type="checkbox"/><label for="attrs-fe1b6350-0c6c-491e-b696-f57fab45d942" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-7b4b3c36-df05-445a-b022-88cfc307a028" type="checkbox"/><label for="data-7b4b3c36-df05-445a-b022-88cfc307a028" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([3.56772046, 3.56771912, 3.56771868, 3.5677189 , 3.56772049,
+       3.56771894, 3.56772063, 3.56772053, 3.56772213, 3.56771909,
+       3.56772167, 3.56772022, 3.56771816, 3.56772045, 3.56771921,
+       3.56772071, 3.56771905, 3.56771994, 3.56772014, 3.56771971,
+       3.56771967, 3.56771925, 3.56771883, 3.56772041, 3.56772243,
+       3.56772153, 3.56771932, 3.56772016, 3.56771967, 3.56772044,
+       3.56772043, 3.56772025, 3.5677202 , 3.56771832, 3.56772212,
+       3.56772047, 3.56772324, 3.56772029, 3.56772222, 3.56771958,
+       3.56772033, 3.56771991, 3.5677215 , 3.56771956, 3.56772012,
+       3.56771928, 3.56772024, 3.5677215 , 3.56772013, 3.56772041,
+       3.56772204, 3.56771983, 3.56772215, 3.56772049, 3.56771978,
+       3.56771867, 3.56772039, 3.56771871, 3.56772032, 3.56772273,
+       3.56771777, 3.56772237, 3.5677197 , 3.56771952, 3.56772202,
+       3.5677215 , 3.56772004, 3.56772034, 3.56771966, 3.56771995,
+       3.5677199 , 3.56771895, 3.56772273, 3.56772233, 3.56771842,
+       3.56772011, 3.56771965, 3.56772014, 3.56771942, 3.56771939,
+       3.56771941, 3.56771891, 3.56772214, 3.56772152, 3.56772092,
+       3.56772251, 3.56772152, 3.56772046, 3.56771887, 3.56771966,
+       3.56772017, 3.5677188 , 3.56771959, 3.56772214, 3.5677208 ,
+       3.56771979, 3.56771719, 3.56772233, 3.56771806, 3.5677184 ])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>fwhmx</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">3.594 3.594 3.594 ... 3.594 3.594</div><input class="xr-var-attrs-in" disabled="" id="attrs-868eaa63-244e-4c32-b3dc-f7e80f6c8294" type="checkbox"/><label for="attrs-868eaa63-244e-4c32-b3dc-f7e80f6c8294" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-bc563df3-6aa4-44b8-9740-06e5f174cfb5" type="checkbox"/><label for="data-bc563df3-6aa4-44b8-9740-06e5f174cfb5" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([3.59392118, 3.59391968, 3.59391932, 3.59391921, 3.59392119,
+       3.59391936, 3.59392142, 3.59392124, 3.59392149, 3.59391979,
+       3.59392135, 3.59392098, 3.59391909, 3.59392169, 3.59391963,
+       3.59392142, 3.59392012, 3.593921  , 3.59392089, 3.59392028,
+       3.59391983, 3.59391969, 3.59391909, 3.59392112, 3.59392245,
+       3.5939215 , 3.59392028, 3.59392036, 3.59392003, 3.59391995,
+       3.59392114, 3.59392023, 3.59392112, 3.59391854, 3.59392322,
+       3.59391999, 3.59392319, 3.59392064, 3.5939222 , 3.59392028,
+       3.59392094, 3.59392024, 3.59392215, 3.59391986, 3.59392035,
+       3.59392002, 3.59392108, 3.59392183, 3.5939209 , 3.59392115,
+       3.59392308, 3.5939203 , 3.59392183, 3.59392122, 3.5939203 ,
+       3.59391892, 3.59392053, 3.59391935, 3.59392031, 3.59392393,
+       3.59391813, 3.59392356, 3.5939202 , 3.59392018, 3.59392291,
+       3.59392209, 3.5939207 , 3.59392061, 3.59392015, 3.59392023,
+       3.59391999, 3.5939196 , 3.59392303, 3.59392237, 3.59391872,
+       3.59392086, 3.59392006, 3.59392046, 3.59391984, 3.5939198 ,
+       3.59392009, 3.59391917, 3.59392188, 3.59392146, 3.5939216 ,
+       3.59392286, 3.59392226, 3.5939197 , 3.59391941, 3.59392018,
+       3.59391989, 3.59391931, 3.59392026, 3.59392212, 3.5939213 ,
+       3.59391947, 3.59391803, 3.59392236, 3.59391866, 3.59391905])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>fwhmy</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">3.542 3.542 3.542 ... 3.542 3.542</div><input class="xr-var-attrs-in" disabled="" id="attrs-dd345d9c-d237-4385-811f-90e10f65829b" type="checkbox"/><label for="attrs-dd345d9c-d237-4385-811f-90e10f65829b" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-a18da2fc-14af-4a7f-ae58-7b83dd5a312e" type="checkbox"/><label for="data-a18da2fc-14af-4a7f-ae58-7b83dd5a312e" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([3.54151975, 3.54151855, 3.54151804, 3.54151858, 3.54151979,
+       3.54151852, 3.54151985, 3.54151982, 3.54152278, 3.54151839,
+       3.54152199, 3.54151946, 3.54151722, 3.5415192 , 3.5415188 ,
+       3.54152   , 3.54151797, 3.54151888, 3.54151939, 3.54151914,
+       3.54151951, 3.54151881, 3.54151857, 3.5415197 , 3.54152242,
+       3.54152156, 3.54151837, 3.54151996, 3.54151932, 3.54152093,
+       3.54151972, 3.54152026, 3.54151928, 3.54151809, 3.54152102,
+       3.54152095, 3.54152329, 3.54151995, 3.54152224, 3.54151889,
+       3.54151972, 3.54151959, 3.54152085, 3.54151926, 3.54151989,
+       3.54151854, 3.54151941, 3.54152117, 3.54151936, 3.54151966,
+       3.541521  , 3.54151936, 3.54152247, 3.54151976, 3.54151926,
+       3.54151841, 3.54152026, 3.54151807, 3.54152034, 3.54152154,
+       3.5415174 , 3.54152117, 3.5415192 , 3.54151887, 3.54152112,
+       3.54152091, 3.54151939, 3.54152007, 3.54151916, 3.54151968,
+       3.54151982, 3.54151831, 3.54152242, 3.54152228, 3.54151811,
+       3.54151936, 3.54151923, 3.54151981, 3.54151901, 3.54151897,
+       3.54151872, 3.54151864, 3.54152241, 3.54152159, 3.54152024,
+       3.54152216, 3.54152077, 3.54152122, 3.54151832, 3.54151915,
+       3.54152044, 3.54151829, 3.54151891, 3.54152217, 3.54152031,
+       3.54152011, 3.54151635, 3.54152229, 3.54151745, 3.54151774])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>dx</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">0.0 -2.386 ... -0.1823 0.07831</div><input class="xr-var-attrs-in" disabled="" id="attrs-a8eb73e6-c8fb-43f0-84bb-11f820531f93" type="checkbox"/><label for="attrs-a8eb73e6-c8fb-43f0-84bb-11f820531f93" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-5bc85b1f-5cf1-4e4d-88ef-f79e151c6a8b" type="checkbox"/><label for="data-5bc85b1f-5cf1-4e4d-88ef-f79e151c6a8b" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([ 0.        , -2.38558808,  0.3064255 , -2.91026009,  1.08619139,
+        3.17410802,  0.35087248, -2.0890162 , -1.30898146,  0.81620014,
+       -0.71346504, -2.77511969, -1.08102872,  1.31966293,  3.14314004,
+        1.56424938, -1.04302203,  3.30989104,  2.5631694 ,  0.66361733,
+       -1.53790765, -2.09161638,  0.31977763,  2.8781642 ,  0.82081726,
+        0.20159908,  2.43148124, -2.40038696, -0.64163698, -0.52289538,
+        1.77868021,  2.87532869,  0.65623543, -1.712372  , -2.33688697,
+        0.88350129, -0.36622546,  1.51230271,  1.81816161, -1.91785362,
+       -1.37603313,  1.36183194, -1.87216385, -2.53213994,  1.47343361,
+        0.2390924 ,  2.39222943,  0.55251133,  2.76057677,  3.06880102,
+        2.72431174,  0.4304627 ,  3.26835837,  1.59996666, -2.88413624,
+       -0.61709001,  0.50567783,  2.58265925,  3.2242936 ,  0.61544919,
+        0.13559015,  2.43240216,  2.20030424, -1.67984651,  0.89825841,
+        3.01570144, -0.14385537, -1.34020406, -1.01949922,  0.14833796,
+        1.98691721,  1.82023176, -0.19467623,  0.7113714 ,  1.27141231,
+       -1.80372206, -1.86603446,  2.54578248,  0.21381292,  0.09051944,
+       -2.05186671, -0.70135674,  2.59764848,  1.71096465, -2.04560871,
+       -3.21132127,  2.92345469, -0.12624811,  0.35578747, -2.60849353,
+       -1.44337264,  1.15199268,  1.78686615,  0.74806903,  0.95161669,
+        2.48177208,  0.11783925,  1.75795729, -0.18230528,  0.07830818])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>dy</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">0.0 3.764 4.221 ... 3.019 2.686</div><input class="xr-var-attrs-in" disabled="" id="attrs-35b47e8a-451a-4f9c-bbb6-05ba854a62cd" type="checkbox"/><label for="attrs-35b47e8a-451a-4f9c-bbb6-05ba854a62cd" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-ae8519ec-8c0d-464c-9798-33f0a671ff6e" type="checkbox"/><label for="data-ae8519ec-8c0d-464c-9798-33f0a671ff6e" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([ 0.        ,  3.76353618,  4.22076686,  2.93172406,  1.42871256,
+        4.85737523,  0.34338094,  1.85355848,  1.52555359,  4.88702727,
+        0.78450173,  2.02225953,  4.44481422,  2.77160968,  1.13330442,
+        2.92547316,  4.88585861,  3.09111389,  2.07235415,  3.84063743,
+        4.86376332,  3.3361976 ,  3.49608834, -0.3044305 ,  1.23596737,
+        1.76868052,  3.56091893,  3.02861309,  3.65449058, -0.01705816,
+        1.65892566,  2.43955377,  3.6864293 ,  3.76482987,  1.82828283,
+        2.51440905,  1.15416022,  3.79094024,  2.31806979,  3.98965427,
+        3.24202005,  0.54293346,  2.05897268,  3.6645918 ,  2.86363338,
+        4.27972145,  1.25796307,  1.93362975,  5.14041144,  1.15124328,
+       -0.16113447,  4.68231803,  0.77440544,  1.557567  ,  3.32716641,
+        3.65270412,  2.84705271,  3.05706521,  2.7512327 ,  0.85563631,
+        4.26154191, -0.2315565 ,  5.31807321,  0.27455519, -0.23061754,
+        0.0830553 ,  5.10377225,  3.02001163,  3.21401366,  5.01091074,
+        4.85184459, -0.30479252,  0.15433446,  0.11303951, -0.22026598,
+        3.73782106,  3.89820728,  2.87123037,  3.27899754,  2.89060608,
+        1.78744932,  3.49690579,  0.13779698,  1.10721134,  1.97200169,
+        0.20482497, -0.19775617,  3.61788699,  2.48109334,  1.54513782,
+        4.53053223,  2.32970592,  5.12005811,  2.22722672,  0.83624742,
+        3.99594781,  3.88084079,  0.22375624,  3.01858646,  2.68558238])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>airmass</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">1 1 1 1 1 1 1 1 ... 1 1 1 1 1 1 1 1</div><input class="xr-var-attrs-in" disabled="" id="attrs-a4fb5ac5-3eff-40df-a210-8caf3eb3d394" type="checkbox"/><label for="attrs-a4fb5ac5-3eff-40df-a210-8caf3eb3d394" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-34eedd83-7205-4f5d-bd60-b45f058f9bdc" type="checkbox"/><label for="data-34eedd83-7205-4f5d-bd60-b45f058f9bdc" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>exposure</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">1.0 1.0 1.0 1.0 ... 1.0 1.0 1.0 1.0</div><input class="xr-var-attrs-in" disabled="" id="attrs-99228549-8616-425d-99d4-a5fd0cf8be60" type="checkbox"/><label for="attrs-99228549-8616-425d-99d4-a5fd0cf8be60" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-fd2c00c7-c55d-4886-91fb-f3e1209964d8" type="checkbox"/><label for="data-fd2c00c7-c55d-4886-91fb-f3e1209964d8" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,
+       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>path</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">object</div><div class="xr-var-preview xr-preview">'/Users/lgrcia/code/prose-docs/s...</div><input class="xr-var-attrs-in" disabled="" id="attrs-b5b31dcf-7efc-46c4-988b-e7e4b436c2d6" type="checkbox"/><label for="attrs-b5b31dcf-7efc-46c4-988b-e7e4b436c2d6" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-4833b6ee-2dea-4fac-ad40-80133a9d2878" type="checkbox"/><label for="data-4833b6ee-2dea-4fac-ad40-80133a9d2878" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array(['/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-0.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-1.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-2.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-3.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-4.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-5.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-6.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-7.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-8.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-9.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-10.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-11.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-12.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-13.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-14.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-15.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-16.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-17.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-18.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-19.fits',
+...
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-81.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-82.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-83.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-84.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-85.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-86.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-87.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-88.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-89.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-90.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-91.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-92.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-93.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-94.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-95.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-96.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-97.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-98.fits',
+       '/Users/lgrcia/code/prose-docs/source/notebooks/tutorials/tutorial_dataset/fake-im-99.fits'],
+      dtype=object)</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>sky</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">300.3 300.2 300.2 ... 299.9 300.1</div><input class="xr-var-attrs-in" disabled="" id="attrs-a7d480a5-699b-4a90-ae91-c8aeb8fafb48" type="checkbox"/><label for="attrs-a7d480a5-699b-4a90-ae91-c8aeb8fafb48" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-06522550-4f14-4e4a-96f2-2b8dd4174f65" type="checkbox"/><label for="data-06522550-4f14-4e4a-96f2-2b8dd4174f65" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([300.33358828, 300.24643694, 300.19026294, 300.10322184,
+       299.77850503, 300.15966624, 299.79727219, 299.93715704,
+       299.84975881, 300.26396151, 299.45741991, 299.89604983,
+       300.07863016, 300.28553046, 300.2225105 , 300.05819903,
+       300.20567016, 299.83406674, 299.77637339, 300.18553343,
+       300.06854887, 299.9474951 , 300.27830038, 300.32144013,
+       300.68644889, 300.26807479, 299.8861114 , 300.42111644,
+       299.94609841, 300.41862369, 300.06907006, 299.89584014,
+       300.69866164, 300.13074116, 299.94715364, 299.94873544,
+       299.92009911, 300.02695599, 300.13091072, 300.1762975 ,
+       300.0062598 , 300.48019558, 299.86701661, 300.52858756,
+       300.38999332, 300.05007048, 300.14188112, 299.8463647 ,
+       300.12078918, 300.12128479, 300.3143596 , 300.26257969,
+       299.90357354, 299.9196207 , 300.03872502, 299.69593592,
+       300.02555361, 300.31488537, 300.20301057, 299.87482889,
+       299.97546567, 300.11229394, 299.85396628, 299.87483113,
+       300.10637844, 300.37778246, 300.01221029, 300.23991531,
+       300.27827965, 300.17227458, 300.13408625, 299.91958713,
+       300.33719992, 299.42047305, 300.05153551, 299.92460677,
+       300.2440425 , 299.78642646, 299.91461697, 299.98963675,
+       300.3298671 , 299.95726486, 300.45127595, 300.22246753,
+       300.26723635, 300.35498517, 299.870513  , 300.15622227,
+       299.98594011, 299.9553161 , 299.97577512, 299.58635676,
+       300.12035274, 300.10844075, 299.97255876, 300.28431132,
+       299.56213455, 299.93435989, 299.91343177, 300.08946328])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>raw_fluxes</span></div><div class="xr-var-dims">(apertures, star, time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">2.337e+04 2.177e+04 ... 4.899e+03</div><input class="xr-var-attrs-in" disabled="" id="attrs-364df367-0448-4623-82ed-baf3ab71ee6c" type="checkbox"/><label for="attrs-364df367-0448-4623-82ed-baf3ab71ee6c" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-46634cc4-d855-406f-8368-25a12f6c4a49" type="checkbox"/><label for="data-46634cc4-d855-406f-8368-25a12f6c4a49" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[[2.33739636e+04, 2.17730928e+04, 2.43481570e+04, ...,
+         2.42877850e+04, 2.41507084e+04, 2.40905126e+04],
+        [1.67820166e+04, 1.61148450e+04, 1.58459150e+04, ...,
+         1.77877039e+04, 1.80949658e+04, 1.62683609e+04],
+        [1.24187486e+04, 1.20741388e+04, 1.15078150e+04, ...,
+         1.26830543e+04, 1.32031291e+04, 1.21805346e+04],
+        ...,
+        [1.08045331e+02, 9.37990889e+01, 9.23935627e+01, ...,
+         7.71223767e+01, 9.65926641e+01, 9.27015915e+01],
+        [6.41189242e+01, 6.26438463e+01, 9.82188920e+01, ...,
+         6.90569235e+01, 9.57379163e+01, 7.32852585e+01],
+        [7.39783518e+01, 6.82954118e+01, 4.87229948e+01, ...,
+         6.68211302e+01, 7.37610508e+01, 7.32022767e+01]],
+
+       [[2.37951689e+05, 2.42184779e+05, 2.37957315e+05, ...,
+         2.54753453e+05, 2.54584738e+05, 2.53469262e+05],
+        [1.65825398e+05, 1.68341758e+05, 1.69172496e+05, ...,
+         1.77160330e+05, 1.75801842e+05, 1.78591819e+05],
+        [1.22021314e+05, 1.24157519e+05, 1.25583906e+05, ...,
+         1.30445978e+05, 1.28223103e+05, 1.30478553e+05],
+...
+        [3.76327356e+03, 5.90318123e+03, 7.09374016e+03, ...,
+         3.48876865e+03, 1.80375581e+03, 2.81990737e+03],
+        [8.82378322e+02, 5.29886523e+03, 4.15261802e+03, ...,
+         3.55715515e+03, 6.81329451e+03, 4.20227082e+03],
+        [3.88673757e+03, 3.86514447e+03, 6.30796901e+02, ...,
+         2.16371535e+03, 4.55540651e+03, 4.81213176e+03]],
+
+       [[1.01801362e+06, 1.02508266e+06, 1.02864960e+06, ...,
+         1.08992209e+06, 1.08591561e+06, 1.08142342e+06],
+        [7.12457274e+05, 7.17626568e+05, 7.18751830e+05, ...,
+         7.62464225e+05, 7.61834310e+05, 7.58975903e+05],
+        [5.28710840e+05, 5.28738583e+05, 5.31177651e+05, ...,
+         5.60728226e+05, 5.57465221e+05, 5.57580578e+05],
+        ...,
+        [3.71451064e+03, 5.74000829e+03, 7.35903680e+03, ...,
+         3.65406461e+03, 1.73821705e+03, 2.46722201e+03],
+        [5.59297269e+02, 5.28302397e+03, 4.00042650e+03, ...,
+         3.38834700e+03, 6.98822327e+03, 4.05288963e+03],
+        [3.95719485e+03, 3.66673357e+03, 5.78891509e+02, ...,
+         2.24309364e+03, 4.51244898e+03, 4.89947060e+03]]])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>raw_errors</span></div><div class="xr-var-dims">(apertures, star, time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">153.4 148.1 ... 1.56e+03 1.561e+03</div><input class="xr-var-attrs-in" disabled="" id="attrs-2658da13-0744-4e40-bb47-578ce4a9eeb0" type="checkbox"/><label for="attrs-2658da13-0744-4e40-bb47-578ce4a9eeb0" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-a0a6b24c-cec4-40ea-a771-599badaa775c" type="checkbox"/><label for="data-a0a6b24c-cec4-40ea-a771-599badaa775c" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[[ 153.38505761,  148.07454223,  156.52830977, ...,
+          156.3350159 ,  155.89596592,  155.7030087 ],
+        [ 130.13465648,  127.54537368,  126.48663875, ...,
+          133.94236109,  135.08445349,  128.14552376],
+        [ 112.12386396,  110.57629076,  107.98504437, ...,
+          113.29565933,  115.5680444 ,  111.05606221],
+        ...,
+        [  16.15727637,   15.70911808,   15.66359918, ...,
+           15.16491141,   15.79355671,   15.67213923],
+        [  14.7353715 ,   14.684044  ,   15.8484595 , ...,
+           14.8966132 ,   15.76647347,   15.03993401],
+        [  15.06620724,   14.87523828,   14.20132991, ...,
+           14.82137954,   15.05339895,   15.03717505]],
+
+       [[ 489.72593855,  494.02849669,  489.73096124, ...,
+          506.58789186,  506.42124099,  505.31956695],
+        [ 409.51825845,  412.57863993,  413.58384353, ...,
+          423.12902144,  421.52055383,  424.81810459],
+        [ 351.99590845,  355.01675371,  357.01961506, ...,
+          363.76340743,  360.69493826,  363.80923005],
+...
+        [1481.86657298, 1482.41956637, 1482.71224952, ...,
+         1480.99983189, 1480.39023874, 1481.07484502],
+        [1480.89420449, 1482.21572477, 1481.72011282, ...,
+         1481.02291966, 1482.08123855, 1481.54144728],
+        [1481.90823067, 1481.73200478, 1480.53121264, ...,
+         1480.55241338, 1481.31931388, 1481.74725272]],
+
+       [[1857.45302675, 1859.20555906, 1860.06833327, ...,
+         1876.03188601, 1874.92820355, 1874.02923037],
+        [1773.29506939, 1774.59550779, 1774.81166279, ...,
+         1786.62748549, 1786.41385646, 1785.92778144],
+        [1720.70595079, 1720.55259451, 1721.15724438, ...,
+         1729.24890438, 1728.26658179, 1728.62451533],
+        ...,
+        [1560.71542546, 1561.18629769, 1561.59010168, ...,
+         1559.88064016, 1559.22364445, 1559.81709154],
+        [1559.70427514, 1561.0399328 , 1560.51434962, ...,
+         1559.79546542, 1560.90626869, 1560.32529515],
+        [1560.79317127, 1560.52215024, 1559.4176799 , ...,
+         1559.42830569, 1560.11301044, 1560.59655506]]])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>apertures_area</span></div><div class="xr-var-dims">(apertures, time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">0.4009 0.4009 ... 2.47e+03 2.47e+03</div><input class="xr-var-attrs-in" disabled="" id="attrs-b79bf6ee-215e-41ef-ae20-c14fe7b85d4b" type="checkbox"/><label for="attrs-b79bf6ee-215e-41ef-ae20-c14fe7b85d4b" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-0de24f65-bc2d-460e-b106-9b9689a721ac" type="checkbox"/><label for="data-0de24f65-bc2d-460e-b106-9b9689a721ac" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[4.00889949e-01, 4.00889949e-01, 4.00889949e-01, ...,
+        4.00889949e-01, 4.00889949e-01, 4.00889949e-01],
+       [4.91090187e+00, 4.91090187e+00, 4.91090187e+00, ...,
+        4.91090187e+00, 4.91090187e+00, 4.91090187e+00],
+       [1.44320382e+01, 1.44320382e+01, 1.44320382e+01, ...,
+        1.44320382e+01, 1.44320382e+01, 1.44320382e+01],
+       ...,
+       [2.16570773e+03, 2.16570773e+03, 2.16570773e+03, ...,
+        2.16570773e+03, 2.16570773e+03, 2.16570773e+03],
+       [2.31554034e+03, 2.31554034e+03, 2.31554034e+03, ...,
+        2.31554034e+03, 2.31554034e+03, 2.31554034e+03],
+       [2.47038409e+03, 2.47038409e+03, 2.47038409e+03, ...,
+        2.47038409e+03, 2.47038409e+03, 2.47038409e+03]])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>apertures_radii</span></div><div class="xr-var-dims">(apertures, time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">0.3572 0.3572 ... 28.04 28.04</div><input class="xr-var-attrs-in" disabled="" id="attrs-6e4cc732-ab87-48fb-9edf-6830b89523b7" type="checkbox"/><label for="attrs-6e4cc732-ab87-48fb-9edf-6830b89523b7" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-4654dda9-e4c9-4e75-aecf-ffda0ae78c6a" type="checkbox"/><label for="data-4654dda9-e4c9-4e75-aecf-ffda0ae78c6a" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[ 0.35722155,  0.35722155,  0.35722155, ...,  0.35722155,
+         0.35722155,  0.35722155],
+       [ 1.25027542,  1.25027542,  1.25027542, ...,  1.25027542,
+         1.25027542,  1.25027542],
+       [ 2.14332928,  2.14332928,  2.14332928, ...,  2.14332928,
+         2.14332928,  2.14332928],
+       ...,
+       [26.25578373, 26.25578373, 26.25578373, ..., 26.25578373,
+        26.25578373, 26.25578373],
+       [27.1488376 , 27.1488376 , 27.1488376 , ..., 27.1488376 ,
+        27.1488376 , 27.1488376 ],
+       [28.04189147, 28.04189147, 28.04189147, ..., 28.04189147,
+        28.04189147, 28.04189147]])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>annulus_rin</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">17.86 17.86 17.86 ... 17.86 17.86</div><input class="xr-var-attrs-in" disabled="" id="attrs-6e60b2af-0b26-4dd7-963a-360d91418636" type="checkbox"/><label for="attrs-6e60b2af-0b26-4dd7-963a-360d91418636" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-d58a84ba-9555-4a7c-aa9a-4cd7bae13160" type="checkbox"/><label for="data-d58a84ba-9555-4a7c-aa9a-4cd7bae13160" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737,
+       17.86107737, 17.86107737, 17.86107737, 17.86107737, 17.86107737])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>annulus_rout</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">28.58 28.58 28.58 ... 28.58 28.58</div><input class="xr-var-attrs-in" disabled="" id="attrs-c5c95146-6d13-432b-9f29-44039e3d7850" type="checkbox"/><label for="attrs-c5c95146-6d13-432b-9f29-44039e3d7850" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-ffd72252-e54d-4e60-a5c4-8e9740660d75" type="checkbox"/><label for="data-ffd72252-e54d-4e60-a5c4-8e9740660d75" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379,
+       28.57772379, 28.57772379, 28.57772379, 28.57772379, 28.57772379])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>annulus_area</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">1.563e+03 1.563e+03 ... 1.563e+03</div><input class="xr-var-attrs-in" disabled="" id="attrs-51c39900-a2a2-492b-bdc1-0c566a2af0d0" type="checkbox"/><label for="attrs-51c39900-a2a2-492b-bdc1-0c566a2af0d0" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-269c1960-a687-4138-b951-94d7496d3ebe" type="checkbox"/><label for="data-269c1960-a687-4138-b951-94d7496d3ebe" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969,
+       1563.47079969, 1563.47079969, 1563.47079969, 1563.47079969])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>peaks</span></div><div class="xr-var-dims">(star, time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">5.909e+04 5.646e+04 ... 484.1 482.1</div><input class="xr-var-attrs-in" disabled="" id="attrs-1ef5a42f-3c56-45c8-a31d-a91f82489026" type="checkbox"/><label for="attrs-1ef5a42f-3c56-45c8-a31d-a91f82489026" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-67aca94a-b114-4088-a0a6-7892bca68a6e" type="checkbox"/><label for="data-67aca94a-b114-4088-a0a6-7892bca68a6e" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[59085.57482515, 56463.02900253, 61036.75526962, ...,
+        61317.40894048, 61331.90739225, 61232.95123045],
+       [42220.17096361, 41300.20588161, 40255.3215359 , ...,
+        44780.56426191, 45436.80959335, 41907.36874738],
+       [31277.60226632, 30859.44062051, 29745.3559997 , ...,
+        32280.45435159, 33233.67492091, 31575.02044774],
+       ...,
+       [  569.53146618,   538.75340545,   538.54722116, ...,
+          498.87943035,   541.78226674,   531.69771559],
+       [  507.87942856,   477.93174396,   544.4011816 , ...,
+          479.03408966,   544.79280752,   509.39948756],
+       [  484.25630283,   480.34836744,   497.63969792, ...,
+          473.73191869,   484.11640367,   482.07531047]])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>diff_fluxes</span></div><div class="xr-var-dims">(apertures, star, time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">0.9741 0.9391 1.085 ... 1.446 1.573</div><input class="xr-var-attrs-in" disabled="" id="attrs-bb890ba4-2376-4440-8695-9c9f43729b26" type="checkbox"/><label for="attrs-bb890ba4-2376-4440-8695-9c9f43729b26" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-cd50ae99-81ad-47e0-a120-4656ac470c9b" type="checkbox"/><label for="data-cd50ae99-81ad-47e0-a120-4656ac470c9b" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[[0.9741159 , 0.93907385, 1.08479176, ..., 0.97277102,
+         0.94005336, 1.02958746],
+        [0.9925379 , 0.9802814 , 1.01135876, ..., 1.03009394,
+         1.00661104, 0.98097568],
+        [1.0075182 , 1.02011525, 0.98876881, ..., 0.97078525,
+         0.99343238, 1.01939327],
+        ...,
+        [1.16221032, 1.04418801, 1.06248413, ..., 0.7972666 ,
+         0.97043674, 1.02259779],
+        [0.83915394, 0.84846745, 1.37420795, ..., 0.86857451,
+         1.17026373, 0.9835829 ],
+        [1.12071519, 1.07073868, 0.7890901 , ..., 0.97285668,
+         1.04366726, 1.13724524]],
+
+       [[1.00795328, 1.00938941, 0.98368625, ..., 1.00975579,
+         1.02171467, 1.00050272],
+        [0.99856517, 0.99627651, 0.98982138, ..., 0.99792258,
+         1.0074377 , 1.00573483],
+        [1.0014369 , 1.0037374 , 1.01028329, ..., 1.00208175,
+         0.99261721, 0.99429787],
+...
+        [1.01433874, 1.58404755, 1.89769454, ..., 0.88240605,
+         0.45767652, 0.71699551],
+        [0.24677319, 1.47533584, 1.15265393, ..., 0.93352302,
+         1.7937585 , 1.10864257],
+        [1.32199756, 1.3088083 , 0.21294566, ..., 0.69059693,
+         1.4586001 , 1.54400007]],
+
+       [[0.99900715, 1.00229894, 1.002686  , ..., 1.00396352,
+         1.00360828, 1.00123581],
+        [0.99053928, 0.99767387, 0.99464994, ..., 0.99953532,
+         1.00455528, 1.00057913],
+        [1.00955108, 1.00233155, 1.00537884, ..., 1.0004649 ,
+         0.99546537, 0.9994212 ],
+        ...,
+        [0.99976019, 1.53932431, 1.96742277, ..., 0.92316201,
+         0.440607  , 0.62651007],
+        [0.15678469, 1.47559406, 1.11390902, ..., 0.89157173,
+         1.84493413, 1.0718927 ],
+        [1.34689575, 1.24350999, 0.19571595, ..., 0.71664062,
+         1.44647857, 1.57333534]]])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>diff_errors</span></div><div class="xr-var-dims">(apertures, star, time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">0.01026 0.01002 ... 0.4904 0.4906</div><input class="xr-var-attrs-in" disabled="" id="attrs-45480bff-56b3-4ed1-ad16-875db41761fc" type="checkbox"/><label for="attrs-45480bff-56b3-4ed1-ad16-875db41761fc" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-dbee3001-4806-4ae3-a9e5-b3aec6031631" type="checkbox"/><label for="data-dbee3001-4806-4ae3-a9e5-b3aec6031631" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[[0.01026092, 0.01002493, 0.01012537, ..., 0.0104529 ,
+         0.01054273, 0.01024073],
+        [0.01155797, 0.01136885, 0.01117464, ..., 0.01177074,
+         0.01194867, 0.01141992],
+        [0.01155797, 0.01136885, 0.01117464, ..., 0.01177074,
+         0.01194867, 0.01141992],
+        ...,
+        [0.16888309, 0.16420326, 0.16372192, ..., 0.15854335,
+         0.16510424, 0.16381943],
+        [0.18735283, 0.18669566, 0.20146838, ..., 0.18940561,
+         0.20045009, 0.19121375],
+        [0.2216767 , 0.21886577, 0.20895872, ..., 0.21808505,
+         0.22149887, 0.22124653]],
+
+       [[0.00310012, 0.00312605, 0.00312434, ..., 0.00320475,
+         0.00319139, 0.00320529],
+        [0.0034696 , 0.00349775, 0.00351276, ..., 0.0035853 ,
+         0.00356208, 0.00359161],
+        [0.0034696 , 0.00349775, 0.00351276, ..., 0.0035853 ,
+         0.00356208, 0.00359161],
+...
+        [0.3687469 , 0.3688845 , 0.36895734, ..., 0.36853135,
+         0.36837965, 0.36855   ],
+        [0.38235651, 0.38269771, 0.38256975, ..., 0.38238985,
+         0.38266308, 0.38252372],
+        [0.46533409, 0.46527876, 0.46490171, ..., 0.46490845,
+         0.46514926, 0.46528363]],
+
+       [[0.00316391, 0.00316524, 0.00316626, ..., 0.00318625,
+         0.0031848 , 0.00318443],
+        [0.00378857, 0.00378937, 0.00379039, ..., 0.00381091,
+         0.00380937, 0.00380949],
+        [0.00378857, 0.00378937, 0.00379039, ..., 0.00381091,
+         0.00380937, 0.00380949],
+        ...,
+        [0.38794694, 0.38806398, 0.38816435, ..., 0.38773955,
+         0.38757624, 0.38772375],
+        [0.40379113, 0.40413691, 0.40400085, ..., 0.40381485,
+         0.4041024 , 0.403952  ],
+        [0.49061678, 0.49053159, 0.49018443, ..., 0.49018785,
+         0.49040306, 0.49055505]]])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>comps</span></div><div class="xr-var-dims">(apertures, ncomps)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">1 2 1 2 2 1 2 1 ... 2 1 2 1 2 1 2 1</div><input class="xr-var-attrs-in" disabled="" id="attrs-afe0dc41-2e17-43fa-99f5-c44c2b214088" type="checkbox"/><label for="attrs-afe0dc41-2e17-43fa-99f5-c44c2b214088" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-ee88e7c5-206b-4d46-a199-116f86a8d525" type="checkbox"/><label for="data-ee88e7c5-206b-4d46-a199-116f86a8d525" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[1, 2],
+       [1, 2],
+       [2, 1],
+       [2, 1],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [1, 2],
+       [2, 1],
+       [2, 1],
+       [2, 1],
+       [2, 1],
+       [2, 1]])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>weights</span></div><div class="xr-var-dims">(apertures, ncomps)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">1 1 1 1 1 1 1 1 ... 1 1 1 1 1 1 1 1</div><input class="xr-var-attrs-in" disabled="" id="attrs-d3578dcc-4ed7-4a7f-94ff-eb837baab632" type="checkbox"/><label for="attrs-d3578dcc-4ed7-4a7f-94ff-eb837baab632" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-f37c4a71-fbcc-477d-835c-09c0c8589f62" type="checkbox"/><label for="data-f37c4a71-fbcc-477d-835c-09c0c8589f62" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1]])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>alc</span></div><div class="xr-var-dims">(apertures, time)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">0.9706 0.9378 ... 0.9806 0.9789</div><input class="xr-var-attrs-in" disabled="" id="attrs-36a62358-e9a8-4479-856f-2f5f2f29b288" type="checkbox"/><label for="attrs-36a62358-e9a8-4479-856f-2f5f2f29b288" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-9b19279a-0397-4f2d-9916-c9061005a792" type="checkbox"/><label for="data-9b19279a-0397-4f2d-9916-c9061005a792" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[0.97057735, 0.93784009, 0.90787935, ..., 1.00991706, 1.03916806,
+        0.94643592],
+       [0.91357262, 0.92850188, 0.93613211, ..., 0.97633399, 0.96426726,
+        0.98039641],
+       [0.91701723, 0.92642337, 0.93473224, ..., 0.97782998, 0.97102404,
+        0.97980195],
+       ...,
+       [0.92315986, 0.92719824, 0.93000336, ..., 0.98372373, 0.98120224,
+        0.97862796],
+       [0.92319086, 0.92731359, 0.93016006, ..., 0.98381269, 0.98068116,
+        0.97864938],
+       [0.92351513, 0.92687388, 0.92974003, ..., 0.98386735, 0.98059769,
+        0.97885513]])</pre></div></li></ul></div></li><li class="xr-section-item"><input class="xr-section-summary-in" id="section-5e998c73-01c0-4ca7-891b-3103414136a4" type="checkbox"/><label class="xr-section-summary" for="section-5e998c73-01c0-4ca7-891b-3103414136a4">Attributes: <span>(39)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>SIMPLE :</span></dt><dd>1</dd><dt><span>BITPIX :</span></dt><dd>-64</dd><dt><span>NAXIS :</span></dt><dd>2</dd><dt><span>NAXIS1 :</span></dt><dd>600</dd><dt><span>NAXIS2 :</span></dt><dd>600</dd><dt><span>TELESCOP :</span></dt><dd>A</dd><dt><span>EXPTIME :</span></dt><dd>1</dd><dt><span>FILTER :</span></dt><dd>a</dd><dt><span>OBJECT :</span></dt><dd>prose</dd><dt><span>IMAGETYP :</span></dt><dd>stack</dd><dt><span>AIRMASS :</span></dt><dd>1</dd><dt><span>JD :</span></dt><dd>2450000.0</dd><dt><span>RA :</span></dt><dd>12.84412</dd><dt><span>DEC :</span></dt><dd>-22.85886</dd><dt><span>DATE-OBS :</span></dt><dd>2022-07-15T15:37:34.614</dd><dt><span>WCSAXES :</span></dt><dd>2</dd><dt><span>CRPIX1 :</span></dt><dd>-40.0</dd><dt><span>CRPIX2 :</span></dt><dd>-40.0</dd><dt><span>CDELT1 :</span></dt><dd>1.0</dd><dt><span>CDELT2 :</span></dt><dd>1.0</dd><dt><span>CRVAL1 :</span></dt><dd>0.0</dd><dt><span>CRVAL2 :</span></dt><dd>0.0</dd><dt><span>LATPOLE :</span></dt><dd>90.0</dd><dt><span>WCSNAME :</span></dt><dd>DEFAULTS</dd><dt><span>MJDREF :</span></dt><dd>0.0</dd><dt><span>MJD-OBS :</span></dt><dd>59775.651095069</dd><dt><span>BZERO :</span></dt><dd>0</dd><dt><span>REDDATE :</span></dt><dd>2022-07-28T15:15:55.055</dd><dt><span>NIMAGES :</span></dt><dd>100</dd><dt><span>telescope :</span></dt><dd>A</dd><dt><span>filter :</span></dt><dd>a</dd><dt><span>exptime :</span></dt><dd>1</dd><dt><span>name :</span></dt><dd>prose</dd><dt><span>date :</span></dt><dd>2022-07-15</dd><dt><span>time_format :</span></dt><dd>bjd_tdb</dd><dt><span>photometry :</span></dt><dd>['Calibration', 'Trim', 'SegmentedPeaks', 'Cutouts', 'MedianPSF', 'Moffat2D', 'LimitStars', 'Twirl', 'Set', 'AffineTransform', 'BalletCentroid', 'PhotutilsAperturePhotometry', 'Peaks', 'XArray', 'AffineTransform', 'Stack']</dd><dt><span>target :</span></dt><dd>0</dd><dt><span>method_diff :</span></dt><dd>broeg</dd><dt><span>aperture :</span></dt><dd>7</dd></dl></div></li></ul></div></div></div>
+</div>
+<p>All the information is self contained in the structure above from which you can retrieve any data, like:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs</span><span class="o">.</span><span class="n">sky</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+array([300.33358828, 300.24643694, 300.19026294, 300.10322184,
+       299.77850503, 300.15966624, 299.79727219, 299.93715704,
+       299.84975881, 300.26396151, 299.45741991, 299.89604983,
+       300.07863016, 300.28553046, 300.2225105 , 300.05819903,
+       300.20567016, 299.83406674, 299.77637339, 300.18553343,
+       300.06854887, 299.9474951 , 300.27830038, 300.32144013,
+       300.68644889, 300.26807479, 299.8861114 , 300.42111644,
+       299.94609841, 300.41862369, 300.06907006, 299.89584014,
+       300.69866164, 300.13074116, 299.94715364, 299.94873544,
+       299.92009911, 300.02695599, 300.13091072, 300.1762975 ,
+       300.0062598 , 300.48019558, 299.86701661, 300.52858756,
+       300.38999332, 300.05007048, 300.14188112, 299.8463647 ,
+       300.12078918, 300.12128479, 300.3143596 , 300.26257969,
+       299.90357354, 299.9196207 , 300.03872502, 299.69593592,
+       300.02555361, 300.31488537, 300.20301057, 299.87482889,
+       299.97546567, 300.11229394, 299.85396628, 299.87483113,
+       300.10637844, 300.37778246, 300.01221029, 300.23991531,
+       300.27827965, 300.17227458, 300.13408625, 299.91958713,
+       300.33719992, 299.42047305, 300.05153551, 299.92460677,
+       300.2440425 , 299.78642646, 299.91461697, 299.98963675,
+       300.3298671 , 299.95726486, 300.45127595, 300.22246753,
+       300.26723635, 300.35498517, 299.870513  , 300.15622227,
+       299.98594011, 299.9553161 , 299.97577512, 299.58635676,
+       300.12035274, 300.10844075, 299.97255876, 300.28431132,
+       299.56213455, 299.93435989, 299.91343177, 300.08946328])
+</pre></div></div>
+</div>
+<p>The underlying structure supporting this labelled array is called an <a class="reference external" href="http://xarray.pydata.org/en/stable/index.html">xarray</a></p>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="extra.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Useful tips</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="hiaka_occultation.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Hi’iaka occultation</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, Lionel Garcia
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/thebelab-helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </body>
+</html>

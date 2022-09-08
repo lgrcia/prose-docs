@@ -5,3 +5,4 @@ source/notebooks/tutorial_dataset/*.fits
 build/jupyter_execute
 source/generated
 build/doctrees
+html/_sources

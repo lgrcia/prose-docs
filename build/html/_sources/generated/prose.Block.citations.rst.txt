@@ -1,6 +1,0 @@
-﻿prose.Block.citations
-=====================
-
-.. currentmodule:: prose
-
-.. autoproperty:: Block.citations
