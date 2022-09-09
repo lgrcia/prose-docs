@@ -515,12 +515,12 @@ div.rendered_html tbody tr:hover {
 <h2>Images<a class="headerlink" href="#Images" title="Permalink to this headline">#</a></h2>
 <p>We start by scanning our dataset</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">FitsManager</span><span class="p">,</span> <span class="n">utils</span>
 
-<span class="n">fm</span> <span class="o">=</span> <span class="n">FitsManager</span><span class="p">(</span><span class="s2">"/Users/lgrcia/Downloads/occultation2002ms4artemis20220609"</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fm</span> <span class="o">=</span> <span class="n">FitsManager</span><span class="p">(</span><span class="s2">"/Users/lgrcia/data/Hiaka_occultation_20220609_Artemis"</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">fm</span><span class="o">.</span><span class="n">observations</span><span class="p">(</span><span class="n">hide_exposure</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -530,7 +530,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-blue-intense-fg">RUN</span> Parsing FITS:   9%|<span class="ansi-blue-intense-fg">█▊                 </span>| 52/561 [00:00&lt;00:00, 512.61images/s]
+<span class="ansi-blue-intense-fg">RUN</span> Parsing FITS:  58%|<span class="ansi-blue-intense-fg">█████████▊       </span>| 325/561 [00:00&lt;00:00, 1650.60images/s]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -546,11 +546,11 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-blue-intense-fg">RUN</span> Parsing FITS: 100%|<span class="ansi-blue-intense-fg">██████████████████</span>| 561/561 [00:01&lt;00:00, 512.36images/s]
+<span class="ansi-blue-intense-fg">RUN</span> Parsing FITS: 100%|<span class="ansi-blue-intense-fg">█████████████████</span>| 561/561 [00:00&lt;00:00, 1685.08images/s]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -626,7 +626,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>For this observation we only have bias calibration images. We see that some images could not be recognized. To solve this problem we can define an Image loader with the telescope pre-defined</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">Image</span>
@@ -640,7 +640,7 @@ div.rendered_html tbody tr:hover {
 <h2>Reference<a class="headerlink" href="#Reference" title="Permalink to this headline">#</a></h2>
 <p>We then detect the stars for which the photomety will be extracted</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">blocks</span><span class="p">,</span> <span class="n">Image</span>
@@ -669,7 +669,7 @@ div.rendered_html tbody tr:hover {
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -688,7 +688,7 @@ div.rendered_html tbody tr:hover {
 <section id="The-reduction-sequence">
 <h2>The reduction sequence<a class="headerlink" href="#The-reduction-sequence" title="Permalink to this headline">#</a></h2>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># to retrieve time and flux from images</span>
@@ -711,12 +711,12 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">█████████████████████████████████</span>| 556/556 [00:34&lt;00:00, 15.93images/s]
+<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">█████████████████████████████████</span>| 556/556 [00:09&lt;00:00, 56.73images/s]
 </pre></div></div>
 </div>
 <p>we can now vizualise our light curve</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -733,7 +733,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -754,7 +754,7 @@ div.rendered_html tbody tr:hover {
 <h2>Seeing the star disapear<a class="headerlink" href="#Seeing-the-star-disapear" title="Permalink to this headline">#</a></h2>
 <p>In order to see the images as they are processed, we will use the blocks from the <code class="docutils literal notranslate"><span class="pre">prose.blocks.vizualisation</span></code> module. The <code class="docutils literal notranslate"><span class="pre">PlotVideo</span></code> block takes a plotting function as argument, which takes as input an <code class="docutils literal notranslate"><span class="pre">Image</span></code> object. Let’s implement it</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
@@ -774,7 +774,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>and use it within a sequence that also contain the photometric extraction blocks</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this is set in plot</span>
@@ -793,25 +793,13 @@ div.rendered_html tbody tr:hover {
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area docutils container">
+<div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Input <span class="ansi-green-fg">In [1]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 4&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span style="color: rgb(95,135,135)"># this is set in plot</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> time <span style="color: rgb(98,98,98)">=</span> []; flux <span style="color: rgb(98,98,98)">=</span> []
-<span class="ansi-green-fg">----&gt; 4</span> viz <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">Sequence</span>([
-<span class="ansi-green-intense-fg ansi-bold">      5</span>     <span style="color: rgb(98,98,98)">*</span>reduction,
-<span class="ansi-green-intense-fg ansi-bold">      6</span>     blocks<span style="color: rgb(98,98,98)">.</span>vizualisation<span style="color: rgb(98,98,98)">.</span>PlotVideo(plot, <span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">static/hiaka.gif</span><span style="color: rgb(175,0,0)">"</span>, fps<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">17</span>)
-<span class="ansi-green-intense-fg ansi-bold">      7</span> ])
-<span class="ansi-green-intense-fg ansi-bold">      9</span> <span style="color: rgb(95,135,135)"># Only the images close to the occultation</span>
-<span class="ansi-green-intense-fg ansi-bold">     10</span> viz<span style="color: rgb(98,98,98)">.</span>run(images[<span style="color: rgb(98,98,98)">191</span>:<span style="color: rgb(98,98,98)">260</span>], loader<span style="color: rgb(98,98,98)">=</span>loader)
-
-<span class="ansi-red-fg">NameError</span>: name 'Sequence' is not defined
+<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">███████████████████████████████████</span>| 69/69 [00:05&lt;00:00, 12.62images/s]
 </pre></div></div>
 </div>
 <p>Here is the <code class="docutils literal notranslate"><span class="pre">movie.gif</span></code> where we indeed see the star being occulted</p>
-<img alt="notebooks/static/hiaka.gif" src="notebooks/static/hiaka.gif"/>
+<img alt="../_images/hiaka.gif" src="../_images/hiaka.gif"/>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Setting <code class="docutils literal notranslate"><span class="pre">limit=3</span></code> in <code class="docutils literal notranslate"><span class="pre">blocks.centroids.Quadratic</span></code> allows to keep the aperture fixed when the star’s centroid is farther than <code class="docutils literal notranslate"><span class="pre">limit</span></code> pixel away from the initial position (we see that on the video when the star is occulted)</p>

@@ -515,13 +515,13 @@ div.rendered_html tbody tr:hover {
 <h2>Retrieving the images<a class="headerlink" href="#Retrieving-the-images" title="Permalink to this headline">#</a></h2>
 <p>As usual, we parse our images folder with a <code class="docutils literal notranslate"><span class="pre">FitsManager</span></code> instance</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">FitsManager</span>
 
 <span class="n">fm</span> <span class="o">=</span> <span class="n">FitsManager</span><span class="p">(</span><span class="s2">"/Users/lgrcia/data/RAW_Callisto_20210927_Sp2315-0627_I+z/"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">fm</span><span class="p">)</span>
+<span class="n">fm</span>
 </pre></div>
 </div>
 </div>
@@ -530,61 +530,118 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-blue-intense-fg">RUN</span> Parsing FITS: 100%|<span class="ansi-blue-intense-fg">█████████████████</span>| 255/255 [00:00&lt;00:00, 1103.93images/s]
-</pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-╒═════════╤════════════╤═════════════╤═════════════╤══════════╤════════╤════════════╕
-│   index │ date       │ telescope   │ target      │ filter   │ type   │   quantity │
-╞═════════╪════════════╪═════════════╪═════════════╪══════════╪════════╪════════════╡
-│       0 │ 2021-09-26 │ Callisto    │ Sp2315-0627 │ I+z      │ light  │        232 │
-╘═════════╧════════════╧═════════════╧═════════════╧══════════╧════════╧════════════╛
-Calibrations:
-╒════════════╤═════════════╤══════════╤══════════╤════════╤════════════╕
-│ date       │ telescope   │ target   │ filter   │ type   │   quantity │
-╞════════════╪═════════════╪══════════╪══════════╪════════╪════════════╡
-│ 2021-09-26 │ Callisto    │          │          │ bias   │          2 │
-├────────────┼─────────────┼──────────┼──────────┼────────┼────────────┤
-│ 2021-09-26 │ Callisto    │          │          │ dark   │          8 │
-├────────────┼─────────────┼──────────┼──────────┼────────┼────────────┤
-│ 2021-09-26 │ Callisto    │          │ I+z      │ flat   │         13 │
-╘════════════╧═════════════╧══════════╧══════════╧════════╧════════════╛
-Others:
-╒════════════╤═════════════╤═════════════╤══════════╤════════╤════════════╕
-│ date       │ telescope   │ target      │ filter   │ type   │   quantity │
-╞════════════╪═════════════╪═════════════╪══════════╪════════╪════════════╡
-│ 2021-09-26 │ Callisto    │ Sp2315-0627 │ I+z      │ light  │        232 │
-╘════════════╧═════════════╧═════════════╧══════════╧════════╧════════════╛
+<span class="ansi-blue-intense-fg">RUN</span> Parsing FITS: 100%|<span class="ansi-blue-intense-fg">█████████████████</span>| 255/255 [00:00&lt;00:00, 1354.34images/s]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
 </div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-</pre></div></div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<div class="table-wrapper"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>date</th>
+<th>telescope</th>
+<th>filter</th>
+<th>type</th>
+<th>target</th>
+<th>width</th>
+<th>height</th>
+<th>files</th>
+</tr>
+<tr>
+<th>id</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>4</th>
+<td>2021-09-26</td>
+<td>Callisto</td>
+<td></td>
+<td>bias</td>
+<td></td>
+<td>2048</td>
+<td>2088</td>
+<td>2</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2021-09-26</td>
+<td>Callisto</td>
+<td></td>
+<td>dark</td>
+<td></td>
+<td>2048</td>
+<td>2088</td>
+<td>8</td>
+</tr>
+<tr>
+<th>15</th>
+<td>2021-09-26</td>
+<td>Callisto</td>
+<td>I+z</td>
+<td>flat</td>
+<td></td>
+<td>2048</td>
+<td>2088</td>
+<td>13</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2021-09-26</td>
+<td>Callisto</td>
+<td>I+z</td>
+<td>light</td>
+<td>Sp2315-0627</td>
+<td>2048</td>
+<td>2088</td>
+<td>232</td>
+</tr>
+</tbody>
+</table></div>
+</div></div>
 </div>
 </section>
 <section id="Reference-sequence">
 <h2>Reference sequence<a class="headerlink" href="#Reference-sequence" title="Permalink to this headline">#</a></h2>
 <p>Since the goal is to align raw images, let’s detect reference stars on a reference image.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">blocks</span>
 
 <span class="c1"># We take one of the image as a reference one</span>
-<span class="n">reference</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">50</span><span class="p">])</span>
+<span class="n">reference</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">all_images</span><span class="p">[</span><span class="mi">50</span><span class="p">])</span>
 
 <span class="c1"># Defining the reference sequence</span>
 <span class="n">reference_sequence</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">([</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">Calibration</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">darks</span><span class="p">,</span> <span class="n">fm</span><span class="o">.</span><span class="n">flats</span><span class="p">,</span> <span class="n">fm</span><span class="o">.</span><span class="n">bias</span><span class="p">),</span> <span class="c1"># calibration</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">Calibration</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">all_darks</span><span class="p">,</span> <span class="n">fm</span><span class="o">.</span><span class="n">all_flats</span><span class="p">,</span> <span class="n">fm</span><span class="o">.</span><span class="n">all_bias</span><span class="p">),</span> <span class="c1"># calibration</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">Trim</span><span class="p">(),</span>                                   <span class="c1"># triming</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">SegmentedPeaks</span><span class="p">(</span><span class="n">n_stars</span><span class="o">=</span><span class="mi">15</span><span class="p">),</span>               <span class="c1"># stars detection</span>
 <span class="p">])</span>
@@ -605,11 +662,20 @@ Others:
 <span class="ansi-blue-intense-fg">INFO</span> Building master flat
 </pre></div></div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;AxesSubplot:&gt;
+</pre></div></div>
+</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/notebooks_diagnostic_video_5_1.png" src="../_images/notebooks_diagnostic_video_5_1.png"/>
+<img alt="../_images/notebooks_diagnostic_video_5_2.png" src="../_images/notebooks_diagnostic_video_5_2.png"/>
 </div>
 </div>
 <p>We can now reuse this sequence and apply it to the complete set of images.</p>
@@ -622,14 +688,14 @@ Others:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Just running it on a test image</span>
-<span class="n">test_image</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">10</span><span class="p">])</span>
+<span class="n">test_image</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">all_images</span><span class="p">[</span><span class="mi">10</span><span class="p">])</span>
 
 <span class="n">main_sequence</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">([</span>
     <span class="o">*</span><span class="n">reference_sequence</span><span class="p">,</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">XYShift</span><span class="p">(</span><span class="n">reference</span><span class="p">),</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">Cutouts</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">41</span><span class="p">),</span>
     <span class="n">blocks</span><span class="o">.</span><span class="n">MedianPSF</span><span class="p">(),</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">Moffat2D</span><span class="p">()</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">Moffat2D</span><span class="p">()</span>
 <span class="p">])</span>
 
 <span class="n">main_sequence</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">test_image</span><span class="p">)</span>
@@ -641,7 +707,7 @@ Others:
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">█████████████████████████████████████</span>| 1/1 [00:00&lt;00:00,  6.59images/s]
+<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">█████████████████████████████████████</span>| 1/1 [00:00&lt;00:00,  1.10images/s]
 </pre></div></div>
 </div>
 </section>
@@ -719,7 +785,7 @@ Others:
 </div>
 <p>And use it within the full sequence</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">process</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">([</span>
@@ -727,7 +793,8 @@ Others:
     <span class="n">blocks</span><span class="o">.</span><span class="n">vizualisation</span><span class="o">.</span><span class="n">PlotVideo</span><span class="p">(</span><span class="n">plot</span><span class="p">,</span> <span class="s2">"static/diagnostic_video.gif"</span><span class="p">)</span>
 <span class="p">])</span>
 
-<span class="n">process</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">images</span><span class="p">)</span>
+<span class="c1"># only 10 images for example</span>
+<span class="n">process</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">all_images</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -736,8 +803,7 @@ Others:
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">█████████████████████████████████</span>| 232/232 [01:37&lt;00:00,  2.38images/s]
-IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (720, 360) to (720, 368) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">███████████████████████████████████</span>| 10/10 [00:14&lt;00:00,  1.46s/images]
 </pre></div></div>
 </div>
 <div class="admonition note">
@@ -749,20 +815,20 @@ IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=
 <h2>A concise code<a class="headerlink" href="#A-concise-code" title="Permalink to this headline">#</a></h2>
 <p>We have seen all the steps and details on how to use a plotting function within a sequence. For reference and clarity here is the final code containing the reference and main sequences:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">prose</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">blocks</span>
 
 <span class="c1"># We take one of the image as a reference one</span>
-<span class="n">reference</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">50</span><span class="p">])</span>
+<span class="n">reference</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">all_images</span><span class="p">[</span><span class="mi">50</span><span class="p">])</span>
 
 <span class="c1"># Reference sequence</span>
 <span class="c1"># ------------------</span>
 <span class="n">reference_sequence</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">([</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">Calibration</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">darks</span><span class="p">,</span> <span class="n">fm</span><span class="o">.</span><span class="n">flats</span><span class="p">,</span> <span class="n">fm</span><span class="o">.</span><span class="n">bias</span><span class="p">),</span>  <span class="c1"># calibration</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">Trim</span><span class="p">(),</span>                                    <span class="c1"># triming</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">SegmentedPeaks</span><span class="p">(</span><span class="n">n_stars</span><span class="o">=</span><span class="mi">15</span><span class="p">),</span>                <span class="c1"># stars detection</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">Calibration</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">all_darks</span><span class="p">,</span> <span class="n">fm</span><span class="o">.</span><span class="n">all_flats</span><span class="p">,</span> <span class="n">fm</span><span class="o">.</span><span class="n">all_bias</span><span class="p">),</span>  <span class="c1"># calibration</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">Trim</span><span class="p">(),</span>                                                <span class="c1"># triming</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">SegmentedPeaks</span><span class="p">(</span><span class="n">n_stars</span><span class="o">=</span><span class="mi">15</span><span class="p">),</span>                            <span class="c1"># stars detection</span>
 <span class="p">])</span>
 
 <span class="n">reference_sequence</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">reference</span><span class="p">,</span> <span class="n">show_progress</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -771,17 +837,17 @@ IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=
 <span class="c1"># -------------</span>
 <span class="n">main_sequence</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">([</span>
     <span class="o">*</span><span class="n">reference_sequence</span><span class="p">,</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">XYShift</span><span class="p">(</span><span class="n">reference</span><span class="p">),</span>                        <span class="c1"># computing shift</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">Cutouts</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">41</span><span class="p">),</span>                          <span class="c1"># extracting stars cutouts</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">MedianPSF</span><span class="p">(),</span>                               <span class="c1"># combining into a median PSF</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">Moffat2D</span><span class="p">(),</span>                                <span class="c1"># PSF model</span>
-    <span class="n">blocks</span><span class="o">.</span><span class="n">vizualisation</span><span class="o">.</span><span class="n">PlotVideo</span><span class="p">(</span>                   <span class="c1"># Video block (here a gif to display in the notebook)</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">XYShift</span><span class="p">(</span><span class="n">reference</span><span class="p">),</span>          <span class="c1"># computing shift</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">Cutouts</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">41</span><span class="p">),</span>            <span class="c1"># extracting stars cutouts</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">MedianPSF</span><span class="p">(),</span>                 <span class="c1"># combining into a median PSF</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">Moffat2D</span><span class="p">(),</span>              <span class="c1"># PSF model</span>
+    <span class="n">blocks</span><span class="o">.</span><span class="n">vizualisation</span><span class="o">.</span><span class="n">PlotVideo</span><span class="p">(</span>     <span class="c1"># Video block (here a gif to display in the notebook)</span>
         <span class="n">plot</span><span class="p">,</span>
         <span class="s2">"static/diagnostic_video.gif"</span>
     <span class="p">)</span>
 <span class="p">])</span>
 
-<span class="n">main_sequence</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="mi">50</span><span class="p">:</span><span class="mi">60</span><span class="p">])</span> <span class="c1"># just 10 for example</span>
+<span class="n">main_sequence</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">fm</span><span class="o">.</span><span class="n">all_images</span><span class="p">[</span><span class="mi">50</span><span class="p">:</span><span class="mi">60</span><span class="p">])</span> <span class="c1"># just 10 for example</span>
 </pre></div>
 </div>
 </div>
@@ -800,7 +866,7 @@ IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">███████████████████████████████████</span>| 10/10 [00:06&lt;00:00,  1.56images/s]
+<span class="ansi-blue-intense-fg">RUN</span> 100%|<span class="ansi-blue-intense-fg">███████████████████████████████████</span>| 10/10 [00:11&lt;00:00,  1.15s/images]
 </pre></div></div>
 </div>
 <img alt="../_images/diagnostic_video.gif" src="../_images/diagnostic_video.gif"/>
