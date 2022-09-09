@@ -45,6 +45,10 @@ h2 {
     margin-bottom: 20px;
 }
 
+h3 {
+    font-size: 20px;
+}
+
 p,
 .highlight {
     font-size: 15px
@@ -243,12 +247,13 @@ div.nboutput.container div.output_area {
 
 .highlight .sa,
 .highlight .sé,
-.highlight .s2 {
+.highlight .s2,
+.highlight .sd {
     color: #032f62 !important
 }
 
-.highlight .nc {
-    color: #6f42c1 !important;
+.highlight .nd {
+    color: #005cc5 !important;
     font-weight: normal !important;
 }
 
